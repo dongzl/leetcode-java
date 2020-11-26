@@ -15,7 +15,7 @@ Input: 2 Output: 91 Explanation: The answer should be the total numbers in the r
 解题思路 #   输出 n 位数中不出现重复数字的数字的个数 这道题摸清楚规律以后，可以直接写出最终所有答案，答案只有 11 个。 考虑不重复数字是如生成的。如果只是一位数，不存在重复的数字，结果是 10 。如果是二位数，第一位一定不能取 0，那么第一位有 1-9，9种取法，第二位为了和第一位不重复，只能有 0-9，10种取法中减去第一位取的数字，那么也是 9 种取法。以此类推，如果是三位数，第三位是 8 种取法；四位数，第四位是 7 种取法；五位数，第五位是 6 种取法；六位数，第六位是 5 种取法；七位数，第七位是 4 种取法；八位数，第八位是 3 种取法；九位数，第九位是 2 种取法；十位数，第十位是 1 种取法；十一位数，第十一位是 0 种取法；十二位数，第十二位是 0 种取法；那么第 11 位数以后，每个数都是重复数字的数字。知道这个规律以后，可以累积上面的结果，把结果直接存在数组里面，暴力打表即可。O(1) 的时间复杂度。  代码 #  package leetcode // 暴力打表法 func countNumbersWithUniqueDigits1(n int) int { res := []int{1, 10, 91, 739, 5275, 32491, 168571, 712891, 2345851, 5611771, 8877691} if n &gt;= 10 { return res[10] } return res[n] } // 打表方法 func countNumbersWithUniqueDigits(n int) int { if n == 0 { return 1 } res, uniqueDigits, availableNumber := 10, 9, 9 for n &gt; 1 &amp;&amp; availableNumber &gt; 0 { uniqueDigits = uniqueDigits * availableNumber res &#43;= uniqueDigits availableNumber-- n-- } return res } " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04.Leetcode/0357.Count-Numbers-with-Unique-Digits/" />
-
+<meta property="article:modified_time" content="2020-11-26T16:43:19+08:00" />
 <title>0357. Count Numbers With Unique Digits | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
@@ -79,7 +79,7 @@ https://github.com/alex-shpak/hugo-book
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
 
-  <a href="https://github.com/halfrost/LeetCode-Go" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;z-index: 100;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  <a href="https://github.com/dongzl/leetcode-java" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;z-index: 100;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
   <main class="container flex">
     <aside class="book-menu">
@@ -878,6 +878,12 @@ Explanation: The answer should be the total numbers in the range of 0 ≤ x &lt;
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/4da4d651865d8f2e2021f66076d77f98e260247c" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+      <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Nov 26, 2020</span>
+    </a>
+  </div>
 
 
 
