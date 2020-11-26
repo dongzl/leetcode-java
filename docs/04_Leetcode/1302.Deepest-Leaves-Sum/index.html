@@ -19,12 +19,12 @@ Example 1:
  树中节点数目在 1 到 10^4 之间。 每个节点的值在 1 到 100 之间。  解题思路 #   给你一棵二叉树，请你返回层数最深的叶子节点的和。 这一题不难，DFS 遍历把最底层的叶子节点和都加起来即可。  代码 #  func deepestLeavesSum(root *TreeNode) int { maxLevel, sum := 0, 0 dfsDeepestLeavesSum(root, 0, &amp;maxLevel, &amp;sum) return sum } func dfsDeepestLeavesSum(root *TreeNode, level int, maxLevel, sum *int) { if root == nil { return } if level &gt; *maxLevel { *maxLevel, *sum = level, root." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/1302.Deepest-Leaves-Sum/" />
-
+<meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
 <title>1302. Deepest Leaves Sum | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.ec26c0054e1274e77e1145f41bceb4fcd93c19a8ca36531d742365ccd04918f3.js" integrity="sha256-7CbABU4SdOd&#43;EUX0G860/Nk8GajKNlMddCNlzNBJGPM="></script>
+<script defer src="/leetcode-java/en.search.min.497b6fd91d82936f7424b285b0271fe0bb308cf2cee66076350a19a85f61ba12.js" integrity="sha256-SXtv2R2Ck290JLKFsCcf4LswjPLO5mB2NQoZqF9huhI="></script>
 
 
 <script async>
@@ -755,6 +755,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
 </ul>
 </li>
 <li>
@@ -763,7 +765,9 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0001.Two-Sum/">0001.Two-Sum</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a>
+  <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a>
 <br /></li>
 </ul>
 </li>
@@ -881,6 +885,12 @@ Output: 15
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/a7377273c0f6cbe691676b820e68cba67fd3f353" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+      <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Nov 26, 2020</span>
+    </a>
+  </div>
 
 
 

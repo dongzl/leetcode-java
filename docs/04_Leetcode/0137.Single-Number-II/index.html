@@ -21,12 +21,12 @@ Input: [0,1,0,1,0,1,99] Output: 99  题目大意 #  给定一个非空整数数�
 解题思路 #   这一题是第 136 题的加强版。这类题也可以扩展，在数组中每个元素都出现 5 次，找出只出现 1 次的数。 本题中要求找出只出现 1 次的数，出现 3 次的数都要被消除。第 136 题是消除出现 2 次的数。这一题也会相当相同的解法，出现 3 次的数也要被消除。定义状态，00、10、01，这 3 个状态。当一个数出现 3 次，那么它每个位置上的 1 出现的次数肯定是 3 的倍数，所以当 1 出现 3 次以后，就归零清除。如何能做到这点呢？仿造三进制(00，10，01) 就可以做到。 变量 ones 中记录遍历中每个位上出现 1 的个数。将它与 A[i] 进行异或，目的是：  每位上两者都是 1 的，表示历史统计结果 ones 出现1次、A[i]中又出现1次，则是出现 2 次，需要进位到 twos 变量中。 每位上两者分别为 0、1 的，加入到 ones 统计结果中。 最后还要 &amp; ^twos ，是为了能做到三进制，出现 3 次就清零。例如 ones = x，那么 twos = 0，当 twos = x，那么 ones = 0；   变量 twos 中记录遍历中每个位上出现 1 ，2次 的个数。与 A[i] 进行异或的目的和上述描述相同，不再赘述。   在 golang 中，&amp;^ 表示 AND NOT 的意思。这里的 ^ 作为一元操作符，表示按位取反 (^0001 0100 = 1110 1011)，X &amp;^ Y 的意思是将 X 中与 Y 相异的位保留，相同的位清零。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0137.Single-Number-II/" />
-
+<meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
 <title>0137. Single Number I I | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.ec26c0054e1274e77e1145f41bceb4fcd93c19a8ca36531d742365ccd04918f3.js" integrity="sha256-7CbABU4SdOd&#43;EUX0G860/Nk8GajKNlMddCNlzNBJGPM="></script>
+<script defer src="/leetcode-java/en.search.min.497b6fd91d82936f7424b285b0271fe0bb308cf2cee66076350a19a85f61ba12.js" integrity="sha256-SXtv2R2Ck290JLKFsCcf4LswjPLO5mB2NQoZqF9huhI="></script>
 
 
 <script async>
@@ -757,6 +757,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
 </ul>
 </li>
 <li>
@@ -765,7 +767,9 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0001.Two-Sum/">0001.Two-Sum</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a>
+  <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a>
 <br /></li>
 </ul>
 </li>
@@ -934,6 +938,12 @@ func singleNumberIIII(nums []int) int {
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/a7377273c0f6cbe691676b820e68cba67fd3f353" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+      <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Nov 26, 2020</span>
+    </a>
+  </div>
 
 
 

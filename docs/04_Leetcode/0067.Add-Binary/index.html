@@ -19,12 +19,12 @@ Input: a = &quot;1010&quot;, b = &quot;1011&quot; Output: &quot;10101&quot; 题�
 解题思路 #   要求输出 2 个二进制数的和，结果也用二进制表示。 简单题。按照二进制的加法规则做加法即可。  代码 #  package leetcode import ( &#34;strconv&#34; &#34;strings&#34; ) func addBinary(a string, b string) string { if len(b) &gt; len(a) { a, b = b, a } res := make([]string, len(a)&#43;1) i, j, k, c := len(a)-1, len(b)-1, len(a), 0 for i &gt;= 0 &amp;&amp; j &gt;= 0 { ai, _ := strconv." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0067.Add-Binary/" />
-
+<meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
 <title>0067. Add Binary | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.ec26c0054e1274e77e1145f41bceb4fcd93c19a8ca36531d742365ccd04918f3.js" integrity="sha256-7CbABU4SdOd&#43;EUX0G860/Nk8GajKNlMddCNlzNBJGPM="></script>
+<script defer src="/leetcode-java/en.search.min.497b6fd91d82936f7424b285b0271fe0bb308cf2cee66076350a19a85f61ba12.js" integrity="sha256-SXtv2R2Ck290JLKFsCcf4LswjPLO5mB2NQoZqF9huhI="></script>
 
 
 <script async>
@@ -755,6 +755,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
 </ul>
 </li>
 <li>
@@ -763,7 +765,9 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0001.Two-Sum/">0001.Two-Sum</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a>
+  <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a>
 <br /></li>
 </ul>
 </li>
@@ -895,6 +899,12 @@ Output: &quot;10101&quot;
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/a7377273c0f6cbe691676b820e68cba67fd3f353" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+      <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Nov 26, 2020</span>
+    </a>
+  </div>
 
 
 
