@@ -12,9 +12,11 @@ headless: true
   - [0001.Two-Sum]({{< relref "/04_Leetcode/0001.Two-Sum.md" >}})
 - [第四章 Tree]({{< relref "/03_Topic/Tree.md" >}})
   - [0110.Balanced-Binary-Tree]({{< relref "/04_Leetcode/0110.Balanced-Binary-Tree.md" >}})
+  - [0222.Count-Complete-Tree-Nodes]({{< relref "/04_Leetcode/0222.Count-Complete-Tree-Nodes.md" >}})
   - [0589.N-Ary-Tree-Preorder-Traversal]({{< relref "/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal.md" >}})
 - [第N章 题解汇总]({{< relref "/04_Leetcode/_index.md" >}})
   - [0001.Two-Sum]({{< relref "/04_Leetcode/0001.Two-Sum.md" >}})
   - [0110.Balanced-Binary-Tree]({{< relref "/04_Leetcode/0110.Balanced-Binary-Tree.md" >}})
+  - [0222.Count-Complete-Tree-Nodes]({{< relref "/04_Leetcode/0222.Count-Complete-Tree-Nodes.md" >}})
   - [0589.N-Ary-Tree-Preorder-Traversal]({{< relref "/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal.md" >}})
 <br />

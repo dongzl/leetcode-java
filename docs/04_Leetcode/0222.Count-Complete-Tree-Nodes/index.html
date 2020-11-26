@@ -4,13 +4,19 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="222. Count Complete Tree Nodes #  题目 #  Given a complete binary tree, count the number of nodes.
-Note:
-Definition of a complete binary tree from Wikipedia: In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.">
+<meta name="description" content="222. 完全二叉树的节点个数 #  Difficulty: 中等
+给出一个完全二叉树，求出该树的节点个数。
+说明：
+的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2h 个节点。
+示例：
+输入: 1 / \ 2 3 / \ / 4 5 6 输出: 6 题解 #  解法一：递归遍历（前、中、后序遍历） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int countNodes(TreeNode root) { List&lt;TreeNode&gt; list = new ArrayList&lt;&gt;(); helper(root, list); return list.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="222. Count Complete Tree Nodes #  题目 #  Given a complete binary tree, count the number of nodes.
-Note:
-Definition of a complete binary tree from Wikipedia: In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h." />
+<meta property="og:description" content="222. 完全二叉树的节点个数 #  Difficulty: 中等
+给出一个完全二叉树，求出该树的节点个数。
+说明：
+的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2h 个节点。
+示例：
+输入: 1 / \ 2 3 / \ / 4 5 6 输出: 6 题解 #  解法一：递归遍历（前、中、后序遍历） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int countNodes(TreeNode root) { List&lt;TreeNode&gt; list = new ArrayList&lt;&gt;(); helper(root, list); return list." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0222.Count-Complete-Tree-Nodes/" />
 <meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
@@ -18,7 +24,7 @@ Definition of a complete binary tree from Wikipedia: In a complete binary tree e
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.497b6fd91d82936f7424b285b0271fe0bb308cf2cee66076350a19a85f61ba12.js" integrity="sha256-SXtv2R2Ck290JLKFsCcf4LswjPLO5mB2NQoZqF9huhI="></script>
+<script defer src="/leetcode-java/en.search.min.a5259ceee694b077c1d81742734c22cada4d80344973dc320da732e7b9f2f40f.js" integrity="sha256-pSWc7uaUsHfB2BdCc0wiytpNgDRJc9wyDacy57ny9A8="></script>
 
 
 <script async>
@@ -750,6 +756,8 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0222.Count-Complete-Tree-Nodes/"class=active>0222.Count-Complete-Tree-Nodes</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
 </ul>
 </li>
@@ -760,6 +768,8 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/04_Leetcode/0001.Two-Sum/">0001.Two-Sum</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0222.Count-Complete-Tree-Nodes/"class=active>0222.Count-Complete-Tree-Nodes</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a>
 <br /></li>
@@ -810,85 +820,128 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="222-count-complete-tree-nodeshttpsleetcodecomproblemscount-complete-tree-nodes">
+  <article class="markdown"><h1 id="222-完全二叉树的节点个数httpsleetcode-cncomproblemscount-complete-tree-nodes">
   
-  <a href="https://leetcode.com/problems/count-complete-tree-nodes/">222. Count Complete Tree Nodes</a>
-  <a class="anchor" href="#222-count-complete-tree-nodeshttpsleetcodecomproblemscount-complete-tree-nodes">#</a>
+  <a href="https://leetcode-cn.com/problems/count-complete-tree-nodes/">222. 完全二叉树的节点个数</a>
+  <a class="anchor" href="#222-%e5%ae%8c%e5%85%a8%e4%ba%8c%e5%8f%89%e6%a0%91%e7%9a%84%e8%8a%82%e7%82%b9%e4%b8%aa%e6%95%b0httpsleetcode-cncomproblemscount-complete-tree-nodes">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
-</h2>
-<p>Given a complete binary tree, count the number of nodes.</p>
-<p><strong>Note</strong>:</p>
-<p>Definition of a complete binary tree from Wikipedia:
-In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.</p>
-<p><strong>Example</strong>:</p>
-<pre><code>
-Input: 
+<p>Difficulty: <strong>中等</strong></p>
+<p>给出一个<strong>完全二叉树</strong>，求出该树的节点个数。</p>
+<p><strong>说明：</strong></p>
+<p>的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。若最底层为第 h 层，则该层包含 1~ 2<sup>h</sup> 个节点。</p>
+<p><strong>示例：</strong></p>
+<pre><code>输入: 
     1
    / \
   2   3
  / \  /
 4  5 6
 
-Output: 6
-
-</code></pre><h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
+输出: 6
+</code></pre><h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
 </h2>
-<p>输出一颗完全二叉树的结点个数。</p>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
-</h2>
-<p>这道题其实按照层序遍历一次树，然后把每一层的结点个数相加即可。</p>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
-
-<span style="color:#75715e">/**
+<h3 id="解法一递归遍历前中后序遍历">
+  解法一：递归遍历（前、中、后序遍历）
+  <a class="anchor" href="#%e8%a7%a3%e6%b3%95%e4%b8%80%e9%80%92%e5%bd%92%e9%81%8d%e5%8e%86%e5%89%8d%e4%b8%ad%e5%90%8e%e5%ba%8f%e9%81%8d%e5%8e%86">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * Definition for a binary tree node.
-</span><span style="color:#75715e"> * type TreeNode struct {
-</span><span style="color:#75715e"> *     Val int
-</span><span style="color:#75715e"> *     Left *TreeNode
-</span><span style="color:#75715e"> *     Right *TreeNode
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
 </span><span style="color:#75715e"> * }
 </span><span style="color:#75715e"> */</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">countNodes</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) <span style="color:#66d9ef">int</span> {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-	}
-	<span style="color:#a6e22e">queue</span> <span style="color:#f92672">:=</span> []<span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>{}
-	<span style="color:#a6e22e">queue</span> = append(<span style="color:#a6e22e">queue</span>, <span style="color:#a6e22e">root</span>)
-	<span style="color:#a6e22e">curNum</span>, <span style="color:#a6e22e">nextLevelNum</span>, <span style="color:#a6e22e">res</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>
-	<span style="color:#66d9ef">for</span> len(<span style="color:#a6e22e">queue</span>) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">curNum</span> &gt; <span style="color:#ae81ff">0</span> {
-			<span style="color:#a6e22e">node</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">queue</span>[<span style="color:#ae81ff">0</span>]
-			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-				<span style="color:#a6e22e">queue</span> = append(<span style="color:#a6e22e">queue</span>, <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span>)
-				<span style="color:#a6e22e">nextLevelNum</span><span style="color:#f92672">++</span>
-			}
-			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-				<span style="color:#a6e22e">queue</span> = append(<span style="color:#a6e22e">queue</span>, <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span>)
-				<span style="color:#a6e22e">nextLevelNum</span><span style="color:#f92672">++</span>
-			}
-			<span style="color:#a6e22e">curNum</span><span style="color:#f92672">--</span>
-			<span style="color:#a6e22e">queue</span> = <span style="color:#a6e22e">queue</span>[<span style="color:#ae81ff">1</span>:]
-		}
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">curNum</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-			<span style="color:#a6e22e">res</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">nextLevelNum</span>
-			<span style="color:#a6e22e">curNum</span> = <span style="color:#a6e22e">nextLevelNum</span>
-			<span style="color:#a6e22e">nextLevelNum</span> = <span style="color:#ae81ff">0</span>
-		}
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
-}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">countNodes</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        helper<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> list<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
 
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">helper</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> list<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">);</span>
+        helper<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> list<span style="color:#f92672">);</span>
+        helper<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> list<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="解法二递归遍历一行递归">
+  解法二：递归遍历（一行递归）
+  <a class="anchor" href="#%e8%a7%a3%e6%b3%95%e4%ba%8c%e9%80%92%e5%bd%92%e9%81%8d%e5%8e%86%e4%b8%80%e8%a1%8c%e9%80%92%e5%bd%92">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">countNodes</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> countNodes<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> countNodes<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="解法三二分查找--位运算官方">
+  解法三：二分查找 + 位运算（官方）
+  <a class="anchor" href="#%e8%a7%a3%e6%b3%95%e4%b8%89%e4%ba%8c%e5%88%86%e6%9f%a5%e6%89%be--%e4%bd%8d%e8%bf%90%e7%ae%97%e5%ae%98%e6%96%b9">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">countNodes</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">int</span> level <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        TreeNode node <span style="color:#f92672">=</span> root<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            level<span style="color:#f92672">++;</span>
+            node <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">int</span> low <span style="color:#f92672">=</span> 1 <span style="color:#f92672">&lt;&lt;</span> level<span style="color:#f92672">,</span> high <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>1 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">(</span>level <span style="color:#f92672">+</span> 1<span style="color:#f92672">))</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>low <span style="color:#f92672">&lt;</span> high<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>high <span style="color:#f92672">-</span> low <span style="color:#f92672">+</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2 <span style="color:#f92672">+</span> low<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>exists<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> level<span style="color:#f92672">,</span> mid<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                low <span style="color:#f92672">=</span> mid<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                high <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> low<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">exists</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> level<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> bits <span style="color:#f92672">=</span> 1 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">(</span>level <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+        TreeNode node <span style="color:#f92672">=</span> root<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> bits <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">((</span>bits <span style="color:#f92672">&amp;</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                node <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                node <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            bits <span style="color:#f92672">&gt;&gt;=</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> node <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div></article>
  
       
