@@ -9,9 +9,7 @@ type: docs
 
 {{< columns >}}
 
-Life and Death
-
-       author: Walter Savage Landor
+Life and Death 
 
 I strove with none;
 
@@ -29,9 +27,7 @@ and I am ready to depart.
 
 <--->
 
-生与死
-
-   译者：杨绛
+生与死（译者：杨绛）
 
 我和谁都不争，
 
