@@ -9,7 +9,7 @@ type: docs
 
 {{< columns >}}
 
-Life and Death 
+Life and Death (author: Walter Savage Landor)
 
 I strove with none;
 
