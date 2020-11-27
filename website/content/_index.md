@@ -11,7 +11,7 @@ type: docs
 
 Life and Death
 
-      --Walter Savage Landor
+       author: Walter Savage Landor
 
 I strove with none;
 
@@ -31,7 +31,7 @@ and I am ready to depart.
 
 生与死
 
-   --杨绛翻译
+   译者：杨绛
 
 我和谁都不争，
 
