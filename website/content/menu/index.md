@@ -15,4 +15,5 @@ headless: true
   - [0110.Balanced-Binary-Tree]({{< relref "/04_Leetcode/0110.Balanced-Binary-Tree.md" >}})
   - [0222.Count-Complete-Tree-Nodes]({{< relref "/04_Leetcode/0222.Count-Complete-Tree-Nodes.md" >}})
   - [0589.N-Ary-Tree-Preorder-Traversal]({{< relref "/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal.md" >}})
+  - [1530.Number-Of-Good-Leaf-Nodes-Pairs]({{< relref "/04_Leetcode/1530.Number-Of-Good-Leaf-Nodes-Pairs.md" >}})
 <br />
