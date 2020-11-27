@@ -4,19 +4,27 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="94. Binary Tree Inorder Traversal #  题目 #  Given a binary tree, return the inorder traversal of its nodes&rsquo; values.
-Example:
- Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2] Follow up: Recursive solution is trivial, could you do it iteratively?
-题目大意 #  中根遍历一颗树。
-解题思路 #  递归的实现方法，见代码。
-代码 #  package leetcode /** * Definition for a binary tree node. * type TreeNode struct { * Val int * Left *TreeNode * Right *TreeNode * } */ func inorderTraversal(root *TreeNode) []int { var result []int inorder(root, &amp;result) return result } func inorder(root *TreeNode, output *[]int) { if root !">
+<meta name="description" content="94. 二叉树的中序遍历 #  Difficulty: 中等
+给定一个二叉树的根节点 root ，返回它的 中序 遍历。
+示例 1：
+ 输入：root = [1,null,2,3] 输出：[1,3,2] 示例 2：
+输入：root = [] 输出：[] 示例 3：
+输入：root = [1] 输出：[1] 示例 4：
+ 输入：root = [1,2] 输出：[2,1] 示例 5：
+ 输入：root = [1,null,2] 输出：[1,2] 提示：
+ 树中节点数目在范围 [0, 100] 内 -100 &lt;= Node.val &lt;= 100  进阶: 递归算法很简单，你可以通过迭代算法完成吗？
+题解 #  解法一：递归中序遍历 #  /** * Definition for a binary tree node.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="94. Binary Tree Inorder Traversal #  题目 #  Given a binary tree, return the inorder traversal of its nodes&rsquo; values.
-Example:
- Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2] Follow up: Recursive solution is trivial, could you do it iteratively?
-题目大意 #  中根遍历一颗树。
-解题思路 #  递归的实现方法，见代码。
-代码 #  package leetcode /** * Definition for a binary tree node. * type TreeNode struct { * Val int * Left *TreeNode * Right *TreeNode * } */ func inorderTraversal(root *TreeNode) []int { var result []int inorder(root, &amp;result) return result } func inorder(root *TreeNode, output *[]int) { if root !" />
+<meta property="og:description" content="94. 二叉树的中序遍历 #  Difficulty: 中等
+给定一个二叉树的根节点 root ，返回它的 中序 遍历。
+示例 1：
+ 输入：root = [1,null,2,3] 输出：[1,3,2] 示例 2：
+输入：root = [] 输出：[] 示例 3：
+输入：root = [1] 输出：[1] 示例 4：
+ 输入：root = [1,2] 输出：[2,1] 示例 5：
+ 输入：root = [1,null,2] 输出：[1,2] 提示：
+ 树中节点数目在范围 [0, 100] 内 -100 &lt;= Node.val &lt;= 100  进阶: 递归算法很简单，你可以通过迭代算法完成吗？
+题解 #  解法一：递归中序遍历 #  /** * Definition for a binary tree node." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0094.Binary-Tree-Inorder-Traversal/" />
 <meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
@@ -24,7 +32,7 @@ Example:
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.a5259ceee694b077c1d81742734c22cada4d80344973dc320da732e7b9f2f40f.js" integrity="sha256-pSWc7uaUsHfB2BdCc0wiytpNgDRJc9wyDacy57ny9A8="></script>
+<script defer src="/leetcode-java/en.search.min.96827f461e301b119b849b1c2a188241d5007be5d269a9fdc3908037adaaaf9c.js" integrity="sha256-loJ/Rh4wGxGbhJscKhiCQdUAe&#43;XSaan9w5CAN62qr5w="></script>
 
 
 <script async>
@@ -754,18 +762,7 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/03_Topic/Tree/">第四章 Tree</a>
 <ul>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
-<li>
-  <a href="/leetcode-java/04_Leetcode/0222.Count-Complete-Tree-Nodes/">0222.Count-Complete-Tree-Nodes</a></li>
-<li>
-  <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
-</ul>
-</li>
-<li>
-  <a href="/leetcode-java/04_Leetcode/">第N章 题解汇总</a>
-<ul>
-<li>
-  <a href="/leetcode-java/04_Leetcode/0001.Two-Sum/">0001.Two-Sum</a></li>
+  <a href="/leetcode-java/04_Leetcode/0094.Binary-Tree-Inorder-Traversal/"class=active>0094.Binary-Tree-Inorder-Traversal</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
 <li>
@@ -820,67 +817,103 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="94-binary-tree-inorder-traversalhttpsleetcodecomproblemsbinary-tree-inorder-traversal">
+  <article class="markdown"><h1 id="94-二叉树的中序遍历httpsleetcode-cncomproblemsbinary-tree-inorder-traversal">
   
-  <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">94. Binary Tree Inorder Traversal</a>
-  <a class="anchor" href="#94-binary-tree-inorder-traversalhttpsleetcodecomproblemsbinary-tree-inorder-traversal">#</a>
+  <a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal/">94. 二叉树的中序遍历</a>
+  <a class="anchor" href="#94-%e4%ba%8c%e5%8f%89%e6%a0%91%e7%9a%84%e4%b8%ad%e5%ba%8f%e9%81%8d%e5%8e%86httpsleetcode-cncomproblemsbinary-tree-inorder-traversal">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
+<p>Difficulty: <strong>中等</strong></p>
+<p>给定一个二叉树的根节点 <code>root</code> ，返回它的 <strong>中序</strong> 遍历。</p>
+<p><strong>示例 1：</strong></p>
+<p>
+  <img src="https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg" alt="" /></p>
+<pre><code>输入：root = [1,null,2,3]
+输出：[1,3,2]
+</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入：root = []
+输出：[]
+</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：root = [1]
+输出：[1]
+</code></pre><p><strong>示例 4：</strong></p>
+<p>
+  <img src="https://assets.leetcode.com/uploads/2020/09/15/inorder_5.jpg" alt="" /></p>
+<pre><code>输入：root = [1,2]
+输出：[2,1]
+</code></pre><p><strong>示例 5：</strong></p>
+<p>
+  <img src="https://assets.leetcode.com/uploads/2020/09/15/inorder_4.jpg" alt="" /></p>
+<pre><code>输入：root = [1,null,2]
+输出：[1,2]
+</code></pre><p><strong>提示：</strong></p>
+<ul>
+<li>树中节点数目在范围 <code>[0, 100]</code> 内</li>
+<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+</ul>
+<p><strong>进阶:</strong> 递归算法很简单，你可以通过迭代算法完成吗？</p>
+<h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
 </h2>
-<p>Given a binary tree, return the inorder traversal of its nodes&rsquo; values.</p>
-<p><strong>Example</strong>:</p>
-<pre><code>
-Input: [1,null,2,3]
-   1
-    \
-     2
-    /
-   3
-
-Output: [1,3,2]
-
-</code></pre><p><strong>Follow up</strong>: Recursive solution is trivial, could you do it iteratively?</p>
-<h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
-</h2>
-<p>中根遍历一颗树。</p>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
-</h2>
-<p>递归的实现方法，见代码。</p>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
-
-<span style="color:#75715e">/**
+<h3 id="解法一递归中序遍历">
+  解法一：递归中序遍历
+  <a class="anchor" href="#%e8%a7%a3%e6%b3%95%e4%b8%80%e9%80%92%e5%bd%92%e4%b8%ad%e5%ba%8f%e9%81%8d%e5%8e%86">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * Definition for a binary tree node.
-</span><span style="color:#75715e"> * type TreeNode struct {
-</span><span style="color:#75715e"> *     Val int
-</span><span style="color:#75715e"> *     Left *TreeNode
-</span><span style="color:#75715e"> *     Right *TreeNode
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
 </span><span style="color:#75715e"> * }
 </span><span style="color:#75715e"> */</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">inorderTraversal</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) []<span style="color:#66d9ef">int</span> {
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span> []<span style="color:#66d9ef">int</span>
-	<span style="color:#a6e22e">inorder</span>(<span style="color:#a6e22e">root</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">result</span>)
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>
-}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">inorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;();</span>
+        helper<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">inorder</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>, <span style="color:#a6e22e">output</span> <span style="color:#f92672">*</span>[]<span style="color:#66d9ef">int</span>) {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">inorder</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>, <span style="color:#a6e22e">output</span>)
-		<span style="color:#f92672">*</span><span style="color:#a6e22e">output</span> = append(<span style="color:#f92672">*</span><span style="color:#a6e22e">output</span>, <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span>)
-		<span style="color:#a6e22e">inorder</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>, <span style="color:#a6e22e">output</span>)
-	}
-}
-
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">helper</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        helper<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+        result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+        helper<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="解法二stack-数据结构">
+  解法二：Stack 数据结构
+  <a class="anchor" href="#%e8%a7%a3%e6%b3%95%e4%ba%8cstack-%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">inorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;();</span>
+        TreeNode cur <span style="color:#f92672">=</span> root<span style="color:#f92672">;</span>
+        Stack<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;();</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>cur <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>cur <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>cur<span style="color:#f92672">);</span>
+                cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            cur <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+            result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>cur<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+            cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div></article>
  
       
