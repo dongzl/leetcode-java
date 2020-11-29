@@ -18,7 +18,10 @@ headless: true
   - [0222.Count-Complete-Tree-Nodes]({{< relref "/04_Leetcode/0222.Count-Complete-Tree-Nodes.md" >}})
   - [0589.N-Ary-Tree-Preorder-Traversal]({{< relref "/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal.md" >}})
   - [0814.Binary-Tree-Pruning]({{< relref "/04_Leetcode/0814.Binary-Tree-Pruning.md" >}})
+  - [0897.Increasing-Order-Search-Tree]({{< relref "/04_Leetcode/0897.Increasing-Order-Search-Tree.md" >}})
   - [0998.Maximum-Binary-Tree-II]({{< relref "/04_Leetcode/0998.Maximum-Binary-Tree-II.md" >}})
   - [1530.Number-Of-Good-Leaf-Nodes-Pairs]({{< relref "/04_Leetcode/1530.Number-Of-Good-Leaf-Nodes-Pairs.md" >}})
-  - [Interview.04.03.List-Of-Depth-Lcci]({{< relref "/04_Leetcode/Interview.04.03.List-Of-Depth-Lcci.md" >}})
+  - [Interview.04.03]({{< relref "/04_Leetcode/Interview.04.03.List-Of-Depth-Lcci.md" >}})
+  - [Offer.32]({{< relref "/04_Leetcode/Offer32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof.md" >}})
+  - [Offer.54]({{< relref "/04_Leetcode/Offer54.Er-Cha-Sou-Suo-Shu-De-Di-Kda-Jie-Dian-Lcof.md" >}})
 <br />
