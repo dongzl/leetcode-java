@@ -26,7 +26,7 @@ headless: true
   - [Interview.04.03]({{< relref "/04_Leetcode/Interview.04.03.List-Of-Depth-Lcci.md" >}})
   - [Interview.04.05]({{< relref "/04_Leetcode/Interview.04.05.Legal-Binary-Search-Tree-Lcci.md" >}})
   - [Interview.04.12]({{< relref "/04_Leetcode/Interview.04.12.Paths-With-Sum-Lcci.md" >}})
-  - [Offer.26]({{< relref "/04_Leetcode/Offer32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof.md" >}})
+  - [Offer.26]({{< relref "/04_Leetcode/Offer.26.Shu-De-Zi-Jie-Gou-Lcof.md" >}})
   - [Offer.32-II]({{< relref "/04_Leetcode/Offer.32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof.md" >}})
   - [Offer.54]({{< relref "/04_Leetcode/Offer.54.Er-Cha-Sou-Suo-Shu-De-Di-Kda-Jie-Dian-Lcof.md" >}})
   - [Offer.55-II]({{< relref "/04_Leetcode/Offer.55.II.Ping-Heng-Er-Cha-Shu-Lcof.md" >}})

@@ -4,23 +4,27 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="103. Binary Tree Zigzag Level Order Traversal #  题目 #  Given a binary tree, return the zigzag level order traversal of its nodes&rsquo; values. (ie, from left to right, then right to left for the next level and alternate between).
-For Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its zigzag level order traversal as:
- [ [3], [20,9], [15,7] ] 题目大意 #  按照 Z 字型层序遍历一棵树。">
+<meta name="description" content="103. 二叉树的锯齿形层次遍历 #  Difficulty: 中等
+给定一个二叉树，返回其节点值的锯齿形层次遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
+例如：
+给定二叉树 [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 返回锯齿形层次遍历如下：
+[ [3], [20,9], [15,7] ] 题解 #  题解一：BFS（广度优先遍历） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) { List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;(); if (root == null) { return result; } Deque&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;(); queue.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="103. Binary Tree Zigzag Level Order Traversal #  题目 #  Given a binary tree, return the zigzag level order traversal of its nodes&rsquo; values. (ie, from left to right, then right to left for the next level and alternate between).
-For Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its zigzag level order traversal as:
- [ [3], [20,9], [15,7] ] 题目大意 #  按照 Z 字型层序遍历一棵树。" />
+<meta property="og:description" content="103. 二叉树的锯齿形层次遍历 #  Difficulty: 中等
+给定一个二叉树，返回其节点值的锯齿形层次遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
+例如：
+给定二叉树 [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 返回锯齿形层次遍历如下：
+[ [3], [20,9], [15,7] ] 题解 #  题解一：BFS（广度优先遍历） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) { List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;(); if (root == null) { return result; } Deque&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;(); queue." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0103.Binary-Tree-Zigzag-Level-Order-Traversal/" />
-<meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
+<meta property="article:modified_time" content="2020-12-01T19:50:18+08:00" />
 <title>0103. Binary Tree Zigzag Level Order Traversal | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.7c4780f6332a8d13e2fc29289f0f89d836b56dccb00eb90d03f6d1ac16830ff5.js" integrity="sha256-fEeA9jMqjRPi/Ckonw&#43;J2Da1bcywDrkNA/bRrBaDD/U="></script>
+<script defer src="/leetcode-java/en.search.min.b79f9e93f5bf61307298800b26014fd69669fd9aaf6f106e4a707319dec85db2.js" integrity="sha256-t5&#43;ek/W/YTBymIALJgFP1pZp/ZqvbxBuSnBzGd7IXbI="></script>
 
 
 <script async>
@@ -747,24 +751,26 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 <li>
-  <a href="/leetcode-java/03_Topic/LinkedList/">第四章 Linked List</a>
-<ul>
-<li>[]</li>
-</ul>
-</li>
+  <a href="/leetcode-java/03_Topic/LinkedList/">第四章 Linked List</a></li>
 <li>
   <a href="/leetcode-java/03_Topic/Tree/">第五章 Tree</a>
 <ul>
 <li>
   <a href="/leetcode-java/04_Leetcode/0094.Binary-Tree-Inorder-Traversal/">0094.Binary-Tree-Inorder-Traversal</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0103.Binary-Tree-Zigzag-Level-Order-Traversal/"class=active>0103.Binary-Tree-Zigzag-Level-Order-Traversal</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0112.Path-Sum/">0112.Path-Sum</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0222.Count-Complete-Tree-Nodes/">0222.Count-Complete-Tree-Nodes</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0814.Binary-Tree-Pruning/">0814.Binary-Tree-Pruning</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0865.Smallest-Subtree-With-All-The-Deepest-Nodes/">0865.Smallest-Subtree-With-All-The-Deepest-Nodes</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0897.Increasing-Order-Search-Tree/">0897.Increasing-Order-Search-Tree</a></li>
 <li>
@@ -774,9 +780,17 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/Interview.04.03.List-Of-Depth-Lcci/">Interview.04.03</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Offer32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof/">Offer.32</a></li>
+  <a href="/leetcode-java/04_Leetcode/Interview.04.05.Legal-Binary-Search-Tree-Lcci/">Interview.04.05</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Offer54.Er-Cha-Sou-Suo-Shu-De-Di-Kda-Jie-Dian-Lcof/">Offer.54</a>
+  <a href="/leetcode-java/04_Leetcode/Interview.04.12.Paths-With-Sum-Lcci/">Interview.04.12</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.26.Shu-De-Zi-Jie-Gou-Lcof/">Offer.26</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof/">Offer.32-II</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.54.Er-Cha-Sou-Suo-Shu-De-Di-Kda-Jie-Dian-Lcof/">Offer.54</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.55.II.Ping-Heng-Er-Cha-Shu-Lcof/">Offer.55-II</a>
 <br /></li>
 </ul>
 </li>
@@ -825,129 +839,145 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="103-binary-tree-zigzag-level-order-traversalhttpsleetcodecomproblemsbinary-tree-zigzag-level-order-traversal">
+  <article class="markdown"><h1 id="103-二叉树的锯齿形层次遍历httpsleetcode-cncomproblemsbinary-tree-zigzag-level-order-traversal">
   
-  <a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/">103. Binary Tree Zigzag Level Order Traversal</a>
-  <a class="anchor" href="#103-binary-tree-zigzag-level-order-traversalhttpsleetcodecomproblemsbinary-tree-zigzag-level-order-traversal">#</a>
+  <a href="https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/">103. 二叉树的锯齿形层次遍历</a>
+  <a class="anchor" href="#103-%e4%ba%8c%e5%8f%89%e6%a0%91%e7%9a%84%e9%94%af%e9%bd%bf%e5%bd%a2%e5%b1%82%e6%ac%a1%e9%81%8d%e5%8e%86httpsleetcode-cncomproblemsbinary-tree-zigzag-level-order-traversal">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
-</h2>
-<p>Given a binary tree, return the zigzag level order traversal of its nodes&rsquo; values. (ie, from left to right, then right to left for the next level and alternate between).</p>
-<p><strong>For Example</strong>:
-Given binary tree [3,9,20,null,null,15,7],</p>
-<pre><code>
-    3
+<p>Difficulty: <strong>中等</strong></p>
+<p>给定一个二叉树，返回其节点值的锯齿形层次遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。</p>
+<p>例如：<br>
+给定二叉树 <code>[3,9,20,null,null,15,7]</code>,</p>
+<pre><code>    3
    / \
   9  20
     /  \
    15   7
-
-</code></pre><p>return its zigzag level order traversal as:</p>
-<pre><code>
-[
+</code></pre><p>返回锯齿形层次遍历如下：</p>
+<pre><code>[
   [3],
   [20,9],
   [15,7]
 ]
-
-</code></pre><h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
+</code></pre><h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
 </h2>
-<p>按照 Z 字型层序遍历一棵树。</p>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
-</h2>
-<ul>
-<li>按层序从上到下遍历一颗树，但是每一层的顺序是相互反转的，即上一层是从左往右，下一层就是从右往左，以此类推。用一个队列即可实现。</li>
-<li>第 102 题和第 107 题都是按层序遍历的。</li>
-</ul>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
-
-<span style="color:#75715e">/**
+<h3 id="题解一bfs广度优先遍历">
+  题解一：BFS（广度优先遍历）
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%b8%80bfs%e5%b9%bf%e5%ba%a6%e4%bc%98%e5%85%88%e9%81%8d%e5%8e%86">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * Definition for a binary tree node.
-</span><span style="color:#75715e"> * type TreeNode struct {
-</span><span style="color:#75715e"> *     Val int
-</span><span style="color:#75715e"> *     Left *TreeNode
-</span><span style="color:#75715e"> *     Right *TreeNode
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
 </span><span style="color:#75715e"> * }
 </span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">zigzagLevelOrder</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        Deque<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
+        queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+        queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+        LinkedList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> levelList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">boolean</span> isOrderLeft <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>queue<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            TreeNode currentNode <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span><span style="color:#a6e22e">pollFirst</span><span style="color:#f92672">();</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isOrderLeft<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    levelList<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    levelList<span style="color:#f92672">.</span><span style="color:#a6e22e">addFirst</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
 
-<span style="color:#75715e">// 解法一
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">zigzagLevelOrder</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) [][]<span style="color:#66d9ef">int</span> {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span> [][]<span style="color:#66d9ef">int</span>{}
-	}
-	<span style="color:#a6e22e">queue</span> <span style="color:#f92672">:=</span> []<span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>{}
-	<span style="color:#a6e22e">queue</span> = append(<span style="color:#a6e22e">queue</span>, <span style="color:#a6e22e">root</span>)
-	<span style="color:#a6e22e">curNum</span>, <span style="color:#a6e22e">nextLevelNum</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">tmp</span>, <span style="color:#a6e22e">curDir</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, [][]<span style="color:#66d9ef">int</span>{}, []<span style="color:#66d9ef">int</span>{}, <span style="color:#ae81ff">0</span>
-	<span style="color:#66d9ef">for</span> len(<span style="color:#a6e22e">queue</span>) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">curNum</span> &gt; <span style="color:#ae81ff">0</span> {
-			<span style="color:#a6e22e">node</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">queue</span>[<span style="color:#ae81ff">0</span>]
-			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-				<span style="color:#a6e22e">queue</span> = append(<span style="color:#a6e22e">queue</span>, <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span>)
-				<span style="color:#a6e22e">nextLevelNum</span><span style="color:#f92672">++</span>
-			}
-			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-				<span style="color:#a6e22e">queue</span> = append(<span style="color:#a6e22e">queue</span>, <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span>)
-				<span style="color:#a6e22e">nextLevelNum</span><span style="color:#f92672">++</span>
-			}
-			<span style="color:#a6e22e">curNum</span><span style="color:#f92672">--</span>
-			<span style="color:#a6e22e">tmp</span> = append(<span style="color:#a6e22e">tmp</span>, <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Val</span>)
-			<span style="color:#a6e22e">queue</span> = <span style="color:#a6e22e">queue</span>[<span style="color:#ae81ff">1</span>:]
-		}
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">curNum</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">curDir</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> {
-				<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>, len(<span style="color:#a6e22e">tmp</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#a6e22e">j</span>; <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span> = <span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">j</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> {
-					<span style="color:#a6e22e">tmp</span>[<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">tmp</span>[<span style="color:#a6e22e">j</span>] = <span style="color:#a6e22e">tmp</span>[<span style="color:#a6e22e">j</span>], <span style="color:#a6e22e">tmp</span>[<span style="color:#a6e22e">i</span>]
-				}
-			}
-			<span style="color:#a6e22e">res</span> = append(<span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">tmp</span>)
-			<span style="color:#a6e22e">curNum</span> = <span style="color:#a6e22e">nextLevelNum</span>
-			<span style="color:#a6e22e">nextLevelNum</span> = <span style="color:#ae81ff">0</span>
-			<span style="color:#a6e22e">tmp</span> = []<span style="color:#66d9ef">int</span>{}
-			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">curDir</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-				<span style="color:#a6e22e">curDir</span> = <span style="color:#ae81ff">1</span>
-			} <span style="color:#66d9ef">else</span> {
-				<span style="color:#a6e22e">curDir</span> = <span style="color:#ae81ff">0</span>
-			}
-		}
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
-}
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>currentNode<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span> 
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>levelList<span style="color:#f92672">);</span>
+                levelList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>queue<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    queue<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+                isOrderLeft <span style="color:#f92672">=</span> <span style="color:#f92672">!</span>isOrderLeft<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="复杂度分析">
+  复杂度分析
+  <a class="anchor" href="#%e5%a4%8d%e6%9d%82%e5%ba%a6%e5%88%86%e6%9e%90">#</a>
+</h4>
+<ul>
+<li>
+<p>时间复杂度：O(N)，其中 N 是树中节点的数量。</p>
+</li>
+<li>
+<p>空间复杂度：O(N)，其中 N 是树中节点的数量。</p>
+</li>
+</ul>
+<h3 id="解法二dfs-深度优先遍历">
+  解法二：DFS （深度优先遍历）
+  <a class="anchor" href="#%e8%a7%a3%e6%b3%95%e4%ba%8cdfs-%e6%b7%b1%e5%ba%a6%e4%bc%98%e5%85%88%e9%81%8d%e5%8e%86">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">DFS</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> level<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> results<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>level <span style="color:#f92672">&gt;=</span> results<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+      LinkedList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> newLevel <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;();</span>
+      newLevel<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+      results<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>newLevel<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>level <span style="color:#f92672">%</span> 2 <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+        results<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>level<span style="color:#f92672">).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">else</span>
+        results<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>level<span style="color:#f92672">).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-<span style="color:#75715e">// 解法二 递归
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">zigzagLevelOrder0</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) [][]<span style="color:#66d9ef">int</span> {
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">res</span> [][]<span style="color:#66d9ef">int</span>
-	<span style="color:#a6e22e">search</span>(<span style="color:#a6e22e">root</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">res</span>)
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
-}
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> DFS<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> level <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> results<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> DFS<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> level <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> results<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">search</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>, <span style="color:#a6e22e">depth</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">res</span> <span style="color:#f92672">*</span>[][]<span style="color:#66d9ef">int</span>) {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span>
-	}
-	<span style="color:#66d9ef">for</span> len(<span style="color:#f92672">*</span><span style="color:#a6e22e">res</span>) &lt; <span style="color:#a6e22e">depth</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> {
-		<span style="color:#f92672">*</span><span style="color:#a6e22e">res</span> = append(<span style="color:#f92672">*</span><span style="color:#a6e22e">res</span>, []<span style="color:#66d9ef">int</span>{})
-	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">depth</span><span style="color:#f92672">%</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-		(<span style="color:#f92672">*</span><span style="color:#a6e22e">res</span>)[<span style="color:#a6e22e">depth</span>] = append((<span style="color:#f92672">*</span><span style="color:#a6e22e">res</span>)[<span style="color:#a6e22e">depth</span>], <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span>)
-	} <span style="color:#66d9ef">else</span> {
-		(<span style="color:#f92672">*</span><span style="color:#a6e22e">res</span>)[<span style="color:#a6e22e">depth</span>] = append([]<span style="color:#66d9ef">int</span>{<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span>}, (<span style="color:#f92672">*</span><span style="color:#a6e22e">res</span>)[<span style="color:#a6e22e">depth</span>]<span style="color:#f92672">...</span>)
-	}
-	<span style="color:#a6e22e">search</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>, <span style="color:#a6e22e">depth</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">res</span>)
-	<span style="color:#a6e22e">search</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>, <span style="color:#a6e22e">depth</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">res</span>)
-}
-
-</code></pre></div></article>
+  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">zigzagLevelOrder</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;();</span>
+    <span style="color:#f92672">}</span>
+    List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> results <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;();</span>
+    DFS<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> results<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> results<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="复杂度分析-1">
+  复杂度分析
+  <a class="anchor" href="#%e5%a4%8d%e6%9d%82%e5%ba%a6%e5%88%86%e6%9e%90-1">#</a>
+</h4>
+<ul>
+<li>
+<p>时间复杂度：O(N)，其中 N 是树中节点的数量。</p>
+</li>
+<li>
+<p>空间复杂度：O(H)，其中 H 是树的高度。</p>
+</li>
+</ul>
+</article>
  
       
 
@@ -957,9 +987,9 @@ Given binary tree [3,9,20,null,null,15,7],</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/a7377273c0f6cbe691676b820e68cba67fd3f353" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/644d14be80984f831558b96c47d593aa15360f91" title='Last modified by Zonglei Dong | Dec 1, 2020' target="_blank" rel="noopener">
       <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 26, 2020</span>
+      <span>Dec 1, 2020</span>
     </a>
   </div>
 
