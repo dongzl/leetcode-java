@@ -11,6 +11,7 @@ headless: true
 - [第三章 Array]({{< relref "/03_Topic/Array.md" >}})
   - [0001.两数之和]({{< relref "/04_Leetcode/0001.Two-Sum.md" >}})
   - [0867.转置矩阵]({{< relref "/04_Leetcode/0867.Transpose-Matrix.md" >}})
+  - [0977.有序数组的平方]({{< relref "/04_Leetcode/0997.Squares-Of-A-Sorted-Array.md" >}})
   - [1476.子矩形查询]({{< relref "/04_Leetcode/1476.Subrectangle-Queries.md" >}})
   - [1535.找出数组游戏的赢家]({{< relref "/04_Leetcode/1535.Find-The-Winner-Of-An-Array-Game.md" >}})
   - [面试题.17.10.主要元素]({{< relref "/04_Leetcode/Interview.04.17.Find-Majority-Element-Lcci.md" >}})
