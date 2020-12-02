@@ -4643,12 +4643,13 @@ We start at the starting point, and one move consists of walking one space in on
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0867.Transpose-Matrix/</guid>
-      <description>867. Transpose Matrix #  题目 #  Given a matrix A, return the transpose of A.
-The transpose of a matrix is the matrix flipped over it&amp;rsquo;s main diagonal, switching the row and column indices of the matrix.
-Example 1:
-Input: [[1,2,3],[4,5,6],[7,8,9]] Output: [[1,4,7],[2,5,8],[3,6,9]]  Example 2:
-Input: [[1,2,3],[4,5,6]] Output: [[1,4],[2,5],[3,6]]  Note:
- 1 &amp;lt;= A.length &amp;lt;= 1000 1 &amp;lt;= A[0].length &amp;lt;= 1000  题目大意 #  给定一个矩阵 A， 返回 A 的转置矩阵。矩阵的转置是指将矩阵的主对角线翻转，交换矩阵的行索引与列索引。</description>
+      <description>867. 转置矩阵 #  Difficulty: 简单
+给定一个矩阵 A， 返回 A 的转置矩阵。
+矩阵的转置是指将矩阵的主对角线翻转，交换矩阵的行索引与列索引。
+示例 1：
+输入：[[1,2,3],[4,5,6],[7,8,9]] 输出：[[1,4,7],[2,5,8],[3,6,9]] 示例 2：
+输入：[[1,2,3],[4,5,6]] 输出：[[1,4],[2,5],[3,6]] 提示：
+ 1 &amp;lt;= A.length &amp;lt;= 1000 1 &amp;lt;= A[0].length &amp;lt;= 1000  题解 #  题解一：直接复制 #  class Solution { public int[][] transpose(int[][] A) { int first = A.length; int second = A[0].length; int[][] result = new int[second][first]; for (int i = 0; i &amp;lt; second; i++) { for (int j = 0; j &amp;lt; first; j++) { result[i][j] = A[j][i]; } } return result; } } 复杂度分析 #    时间复杂度：O(R * C)，其中 R 和 C 是给定矩阵 A 的行数和列数。</description>
     </item>
     
     <item>
@@ -6259,6 +6260,20 @@ Input: nums = [1,1,2,2], n = 2 Output: [1,2,1,2] Constraints:</description>
     
     <item>
       <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/1476.Subrectangle-Queries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/1476.Subrectangle-Queries/</guid>
+      <description>1476. 子矩形查询 #  Difficulty: 中等
+请你实现一个类 SubrectangleQueries ，它的构造函数的参数是一个 rows x cols 的矩形（这里用整数矩阵表示），并支持以下两种操作：
+1. updateSubrectangle(int row1, int col1, int row2, int col2, int newValue)
+ 用 newValue 更新以 (row1,col1) 为左上角且以 (row2,col2) 为右下角的子矩形。  2. getValue(int row, int col)
+ 返回矩形中坐标 (row,col) 的当前值。  示例 1：
+输入： [&amp;quot;SubrectangleQueries&amp;quot;,&amp;quot;getValue&amp;quot;,&amp;quot;updateSubrectangle&amp;quot;,&amp;quot;getValue&amp;quot;,&amp;quot;getValue&amp;quot;,&amp;quot;updateSubrectangle&amp;quot;,&amp;quot;getValue&amp;quot;,&amp;quot;getValue&amp;quot;] [[[[1,2,1],[4,3,4],[3,2,1],[1,1,1]]],[0,2],[0,0,3,2,5],[0,2],[3,1],[3,0,3,2,10],[3,1],[0,2]] 输出： [null,1,null,5,5,null,10,5] 解释： SubrectangleQueries subrectangleQueries = new SubrectangleQueries([[1,2,1],[4,3,4],[3,2,1],[1,1,1]]); // 初始的 (4x3) 矩形如下： // 1 2 1 // 4 3 4 // 3 2 1 // 1 1 1 subrectangleQueries.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://dongzl.github.io/leetcode-java/04_Leetcode/1480.Running-Sum-of-1d-Array/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -6462,6 +6477,22 @@ For example, if nums = [6,1,7,4,1]:
  5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 返回:
 3 解释：和为 22 的路径有：[5,4,11,2], [5,8,4,5], [4,11,7] 提示：
  节点总数 &amp;lt;= 10000  题解 #  题解一：BSF + DFS（BSF 使用 Queue 数据结构） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { private int result; public int pathSum(TreeNode root, int sum) { if (root == null) { return 0; } Queue&amp;lt;TreeNode&amp;gt; queue = new LinkedList&amp;lt;&amp;gt;(); queue.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/Interview.04.17.Find-Majority-Element-Lcci/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/Interview.04.17.Find-Majority-Element-Lcci/</guid>
+      <description>面试题 17.10. 主要元素 #  Difficulty: 简单
+数组中占比超过一半的元素称之为主要元素。给定一个整数数组，找到它的主要元素。若没有，返回-1。
+示例 1：
+输入：[1,2,5,9,5,9,5,5,5] 输出：5 示例 2：
+输入：[3,2] 输出：-1 示例 3：
+输入：[2,2,1,1,1,2,2] 输出：2 说明：
+你有办法在时间复杂度为 O(N)，空间复杂度为 O(1) 内完成吗？
+题解 #  题解一：线性法 + 哈希 #  class Solution { public int majorityElement(int[] nums) { int length = nums.length; Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; length; i++) { Integer count = map.getOrDefault(nums[i], 0); if (count + 1 &amp;gt; length / 2) { return nums[i]; } else { map.</description>
     </item>
     
     <item>

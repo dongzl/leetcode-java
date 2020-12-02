@@ -4,19 +4,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="867. Transpose Matrix #  题目 #  Given a matrix A, return the transpose of A.
-The transpose of a matrix is the matrix flipped over it&rsquo;s main diagonal, switching the row and column indices of the matrix.
-Example 1:
-Input: [[1,2,3],[4,5,6],[7,8,9]] Output: [[1,4,7],[2,5,8],[3,6,9]]  Example 2:
-Input: [[1,2,3],[4,5,6]] Output: [[1,4],[2,5],[3,6]]  Note:
- 1 &lt;= A.length &lt;= 1000 1 &lt;= A[0].length &lt;= 1000  题目大意 #  给定一个矩阵 A， 返回 A 的转置矩阵。矩阵的转置是指将矩阵的主对角线翻转，交换矩阵的行索引与列索引。">
+<meta name="description" content="867. 转置矩阵 #  Difficulty: 简单
+给定一个矩阵 A， 返回 A 的转置矩阵。
+矩阵的转置是指将矩阵的主对角线翻转，交换矩阵的行索引与列索引。
+示例 1：
+输入：[[1,2,3],[4,5,6],[7,8,9]] 输出：[[1,4,7],[2,5,8],[3,6,9]] 示例 2：
+输入：[[1,2,3],[4,5,6]] 输出：[[1,4],[2,5],[3,6]] 提示：
+ 1 &lt;= A.length &lt;= 1000 1 &lt;= A[0].length &lt;= 1000  题解 #  题解一：直接复制 #  class Solution { public int[][] transpose(int[][] A) { int first = A.length; int second = A[0].length; int[][] result = new int[second][first]; for (int i = 0; i &lt; second; i&#43;&#43;) { for (int j = 0; j &lt; first; j&#43;&#43;) { result[i][j] = A[j][i]; } } return result; } } 复杂度分析 #    时间复杂度：O(R * C)，其中 R 和 C 是给定矩阵 A 的行数和列数。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="867. Transpose Matrix #  题目 #  Given a matrix A, return the transpose of A.
-The transpose of a matrix is the matrix flipped over it&rsquo;s main diagonal, switching the row and column indices of the matrix.
-Example 1:
-Input: [[1,2,3],[4,5,6],[7,8,9]] Output: [[1,4,7],[2,5,8],[3,6,9]]  Example 2:
-Input: [[1,2,3],[4,5,6]] Output: [[1,4],[2,5],[3,6]]  Note:
- 1 &lt;= A.length &lt;= 1000 1 &lt;= A[0].length &lt;= 1000  题目大意 #  给定一个矩阵 A， 返回 A 的转置矩阵。矩阵的转置是指将矩阵的主对角线翻转，交换矩阵的行索引与列索引。" />
+<meta property="og:description" content="867. 转置矩阵 #  Difficulty: 简单
+给定一个矩阵 A， 返回 A 的转置矩阵。
+矩阵的转置是指将矩阵的主对角线翻转，交换矩阵的行索引与列索引。
+示例 1：
+输入：[[1,2,3],[4,5,6],[7,8,9]] 输出：[[1,4,7],[2,5,8],[3,6,9]] 示例 2：
+输入：[[1,2,3],[4,5,6]] 输出：[[1,4],[2,5],[3,6]] 提示：
+ 1 &lt;= A.length &lt;= 1000 1 &lt;= A[0].length &lt;= 1000  题解 #  题解一：直接复制 #  class Solution { public int[][] transpose(int[][] A) { int first = A.length; int second = A[0].length; int[][] result = new int[second][first]; for (int i = 0; i &lt; second; i&#43;&#43;) { for (int j = 0; j &lt; first; j&#43;&#43;) { result[i][j] = A[j][i]; } } return result; } } 复杂度分析 #    时间复杂度：O(R * C)，其中 R 和 C 是给定矩阵 A 的行数和列数。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0867.Transpose-Matrix/" />
 <meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
@@ -24,7 +26,7 @@ Input: [[1,2,3],[4,5,6]] Output: [[1,4],[2,5],[3,6]]  Note:
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.b79f9e93f5bf61307298800b26014fd69669fd9aaf6f106e4a707319dec85db2.js" integrity="sha256-t5&#43;ek/W/YTBymIALJgFP1pZp/ZqvbxBuSnBzGd7IXbI="></script>
+<script defer src="/leetcode-java/en.search.min.30948b47515aa820b8af2b14b430e97adb7cae1bd9889c6ff1a2d7d21bf63bc0.js" integrity="sha256-MJSLR1FaqCC4rysUtDDpett8rhvZiJxv8aLX0hv2O8A="></script>
 
 
 <script async>
@@ -747,7 +749,13 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/03_Topic/Array/">第三章 Array</a>
 <ul>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0001.Two-Sum/">0001.Two-Sum</a></li>
+  <a href="/leetcode-java/04_Leetcode/0001.Two-Sum/">0001.两数之和</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0867.Transpose-Matrix/"class=active>0867.转置矩阵</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/1476.Subrectangle-Queries/">1476.子矩形查询.md</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Interview.04.17.Find-Majority-Element-Lcci/">面试题.17.10.主要元素</a></li>
 </ul>
 </li>
 <li>
@@ -839,64 +847,59 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="867-transpose-matrixhttpsleetcodecomproblemstranspose-matrix">
+  <article class="markdown"><h1 id="867-转置矩阵httpsleetcode-cncomproblemstranspose-matrix">
   
-  <a href="https://leetcode.com/problems/transpose-matrix/">867. Transpose Matrix</a>
-  <a class="anchor" href="#867-transpose-matrixhttpsleetcodecomproblemstranspose-matrix">#</a>
+  <a href="https://leetcode-cn.com/problems/transpose-matrix/">867. 转置矩阵</a>
+  <a class="anchor" href="#867-%e8%bd%ac%e7%bd%ae%e7%9f%a9%e9%98%b5httpsleetcode-cncomproblemstranspose-matrix">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
-</h2>
-<p>Given a matrix <code>A</code>, return the transpose of <code>A</code>.</p>
-<p>The transpose of a matrix is the matrix flipped over it&rsquo;s main diagonal, switching the row and column indices of the matrix.</p>
-<p><strong>Example 1</strong>:</p>
-<pre><code>Input: [[1,2,3],[4,5,6],[7,8,9]]
-Output: [[1,4,7],[2,5,8],[3,6,9]]
-</code></pre>
-<p><strong>Example 2</strong>:</p>
-<pre><code>Input: [[1,2,3],[4,5,6]]
-Output: [[1,4],[2,5],[3,6]]
-</code></pre>
-<p><strong>Note</strong>:</p>
+<p>Difficulty: <strong>简单</strong></p>
+<p>给定一个矩阵 <code>A</code>， 返回 <code>A</code> 的转置矩阵。</p>
+<p>矩阵的转置是指将矩阵的主对角线翻转，交换矩阵的行索引与列索引。</p>
+<p><strong>示例 1：</strong></p>
+<pre><code>输入：[[1,2,3],[4,5,6],[7,8,9]]
+输出：[[1,4,7],[2,5,8],[3,6,9]]
+</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入：[[1,2,3],[4,5,6]]
+输出：[[1,4],[2,5],[3,6]]
+</code></pre><p><strong>提示：</strong></p>
 <ol>
 <li><code>1 &lt;= A.length &lt;= 1000</code></li>
 <li><code>1 &lt;= A[0].length &lt;= 1000</code></li>
 </ol>
-<h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
+<h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
 </h2>
-<p>给定一个矩阵 A， 返回 A 的转置矩阵。矩阵的转置是指将矩阵的主对角线翻转，交换矩阵的行索引与列索引。</p>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
-</h2>
+<h3 id="题解一直接复制">
+  题解一：直接复制
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%b8%80%e7%9b%b4%e6%8e%a5%e5%a4%8d%e5%88%b6">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> <span style="color:#a6e22e">transpose</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> A<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> first <span style="color:#f92672">=</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> second <span style="color:#f92672">=</span> A<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>second<span style="color:#f92672">][</span>first<span style="color:#f92672">];</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> second<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> first<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                result<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> A<span style="color:#f92672">[</span>j<span style="color:#f92672">][</span>i<span style="color:#f92672">];</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="复杂度分析">
+  复杂度分析
+  <a class="anchor" href="#%e5%a4%8d%e6%9d%82%e5%ba%a6%e5%88%86%e6%9e%90">#</a>
+</h4>
 <ul>
-<li>给出一个矩阵，顺时针旋转 90°</li>
-<li>解题思路很简单，直接模拟即可。</li>
+<li>
+<p>时间复杂度：O(R * C)，其中 R 和 C 是给定矩阵 A 的行数和列数。</p>
+</li>
+<li>
+<p>空间复杂度：O(R * C)。</p>
+</li>
 </ul>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">transpose</span>(<span style="color:#a6e22e">A</span> [][]<span style="color:#66d9ef">int</span>) [][]<span style="color:#66d9ef">int</span> {
-	<span style="color:#a6e22e">row</span>, <span style="color:#a6e22e">col</span>, <span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> len(<span style="color:#a6e22e">A</span>), len(<span style="color:#a6e22e">A</span>[<span style="color:#ae81ff">0</span>]), make([][]<span style="color:#66d9ef">int</span>, len(<span style="color:#a6e22e">A</span>[<span style="color:#ae81ff">0</span>]))
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">result</span> {
-		<span style="color:#a6e22e">result</span>[<span style="color:#a6e22e">i</span>] = make([]<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">row</span>)
-	}
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#a6e22e">row</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> &lt; <span style="color:#a6e22e">col</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span> {
-			<span style="color:#a6e22e">result</span>[<span style="color:#a6e22e">j</span>][<span style="color:#a6e22e">i</span>] = <span style="color:#a6e22e">A</span>[<span style="color:#a6e22e">i</span>][<span style="color:#a6e22e">j</span>]
-		}
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>
-}
-
-</code></pre></div></article>
+</article>
  
       
 
