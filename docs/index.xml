@@ -3644,11 +3644,13 @@ You need to help them find out their common interest with the least list inde
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0628.Maximum-Product-of-Three-Numbers/</guid>
-      <description>628. Maximum Product of Three Numbers #  题目 #  Given an integer array, find three numbers whose product is maximum and output the maximum product.
-Example 1:
-Input: [1,2,3] Output: 6  Example 2:
-Input: [1,2,3,4] Output: 24  Note:
- The length of the given array will be in range [3,10^4] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&amp;rsquo;t exceed the range of 32-bit signed integer.</description>
+      <description>628. 三个数的最大乘积 #  Difficulty: 简单
+给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。
+示例 1:
+输入: [1,2,3] 输出: 6 示例 2:
+输入: [1,2,3,4] 输出: 24 注意:
+ 给定的整型数组长度范围是[3,104]，数组中所有的元素范围是[-1000, 1000]。 输入的数组中任意三个数的乘积不会超出32位有符号整数的范围。  题解 #  题解一：排序 #  class Solution { public int maximumProduct(int[] nums) { Arrays.sort(nums); return Math.max(nums[0] * nums[1] * nums[nums.length - 1], nums[nums.length - 1] * nums[nums.length - 2] * nums[nums.length - 3]); } } 复杂度分析 #    时间复杂度：O(NlogN)，其中 N 是数组的长度。
+  空间复杂度：O(logN)，为排序使用的空间。</description>
     </item>
     
     <item>
@@ -5328,6 +5330,20 @@ Input: [1,17,8] Output: 2 Explanation: [1,8,17] and [17,8,1] are the valid permu
     
     <item>
       <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/0997.Squares-Of-A-Sorted-Array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0997.Squares-Of-A-Sorted-Array/</guid>
+      <description>977. 有序数组的平方 #  Difficulty: 简单
+给定一个按非递减顺序排序的整数数组 A，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。
+示例 1：
+输入：[-4,-1,0,3,10] 输出：[0,1,9,16,100] 示例 2：
+输入：[-7,-3,2,3,11] 输出：[4,9,9,49,121] 提示：
+ 1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A 已按非递减顺序排序。  题解 #  题解一：直接排序 #  class Solution { public int[] sortedSquares(int[] nums) { int[] result = new int[nums.length]; for (int i = 0; i &amp;lt; nums.length; i++) { result[i] = nums[i] * nums[i]; } Arrays.sort(result); return result; } } 复杂度分析 #    时间复杂度：O(nlogn)，其中 n 是数组 A 的长度。</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://dongzl.github.io/leetcode-java/04_Leetcode/0998.Maximum-Binary-Tree-II/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -6313,6 +6329,23 @@ Input: nums = [1,1,1,1] Output: 6 Explanation: Each pair in the array are good.<
  输入：root = [1,2,3,null,4], distance = 3 输出：1 解释：树的叶节点是 3 和 4 ，它们之间的最短路径的长度是 3 。这是唯一的好叶子节点对。 示例 2：
  输入：root = [1,2,3,4,5,6,7], distance = 3 输出：2 解释：好叶子节点对为 [4,5] 和 [6,7] ，最短路径长度都是 2 。但是叶子节点对 [4,6] 不满足要求，因为它们之间的最短路径长度为 4 。 示例 3：
 输入：root = [7,1,4,6,null,5,3,null,null,null,null,null,2], distance = 3 输出：1 解释：唯一的好叶子节点对是 [2,5] 。 示例 4：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/1535.Find-The-Winner-Of-An-Array-Game/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/1535.Find-The-Winner-Of-An-Array-Game/</guid>
+      <description>1535. 找出数组游戏的赢家 #  Difficulty: 中等
+给你一个由 不同 整数组成的整数数组 arr 和一个整数 k 。
+每回合游戏都在数组的前两个元素（即 arr[0] 和 arr[1] ）之间进行。比较 arr[0] 与 arr[1] 的大小，较大的整数将会取得这一回合的胜利并保留在位置 0 ，较小的整数移至数组的末尾。当一个整数赢得 k 个连续回合时，游戏结束，该整数就是比赛的 赢家 。
+返回赢得比赛的整数。
+题目数据 保证 游戏存在赢家。
+示例 1：
+输入：arr = [2,1,3,5,4,6,7], k = 2 输出：5 解释：一起看一下本场游戏每回合的情况：  因此将进行 4 回合比赛，其中 5 是赢家，因为它连胜 2 回合。 示例 2：
+输入：arr = [3,2,1], k = 10 输出：3 解释：3 将会在前 10 个回合中连续获胜。 示例 3：
+输入：arr = [1,9,8,2,3,7,6,4,5], k = 7 输出：9 示例 4：</description>
     </item>
     
     <item>

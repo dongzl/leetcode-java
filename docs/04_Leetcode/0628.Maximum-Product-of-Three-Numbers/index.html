@@ -4,17 +4,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="628. Maximum Product of Three Numbers #  题目 #  Given an integer array, find three numbers whose product is maximum and output the maximum product.
-Example 1:
-Input: [1,2,3] Output: 6  Example 2:
-Input: [1,2,3,4] Output: 24  Note:
- The length of the given array will be in range [3,10^4] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&rsquo;t exceed the range of 32-bit signed integer.">
+<meta name="description" content="628. 三个数的最大乘积 #  Difficulty: 简单
+给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。
+示例 1:
+输入: [1,2,3] 输出: 6 示例 2:
+输入: [1,2,3,4] 输出: 24 注意:
+ 给定的整型数组长度范围是[3,104]，数组中所有的元素范围是[-1000, 1000]。 输入的数组中任意三个数的乘积不会超出32位有符号整数的范围。  题解 #  题解一：排序 #  class Solution { public int maximumProduct(int[] nums) { Arrays.sort(nums); return Math.max(nums[0] * nums[1] * nums[nums.length - 1], nums[nums.length - 1] * nums[nums.length - 2] * nums[nums.length - 3]); } } 复杂度分析 #    时间复杂度：O(NlogN)，其中 N 是数组的长度。
+  空间复杂度：O(logN)，为排序使用的空间。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="628. Maximum Product of Three Numbers #  题目 #  Given an integer array, find three numbers whose product is maximum and output the maximum product.
-Example 1:
-Input: [1,2,3] Output: 6  Example 2:
-Input: [1,2,3,4] Output: 24  Note:
- The length of the given array will be in range [3,10^4] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&rsquo;t exceed the range of 32-bit signed integer." />
+<meta property="og:description" content="628. 三个数的最大乘积 #  Difficulty: 简单
+给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。
+示例 1:
+输入: [1,2,3] 输出: 6 示例 2:
+输入: [1,2,3,4] 输出: 24 注意:
+ 给定的整型数组长度范围是[3,104]，数组中所有的元素范围是[-1000, 1000]。 输入的数组中任意三个数的乘积不会超出32位有符号整数的范围。  题解 #  题解一：排序 #  class Solution { public int maximumProduct(int[] nums) { Arrays.sort(nums); return Math.max(nums[0] * nums[1] * nums[nums.length - 1], nums[nums.length - 1] * nums[nums.length - 2] * nums[nums.length - 3]); } } 复杂度分析 #    时间复杂度：O(NlogN)，其中 N 是数组的长度。
+  空间复杂度：O(logN)，为排序使用的空间。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0628.Maximum-Product-of-Three-Numbers/" />
 <meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
@@ -22,7 +26,7 @@ Input: [1,2,3,4] Output: 24  Note:
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.30948b47515aa820b8af2b14b430e97adb7cae1bd9889c6ff1a2d7d21bf63bc0.js" integrity="sha256-MJSLR1FaqCC4rysUtDDpett8rhvZiJxv8aLX0hv2O8A="></script>
+<script defer src="/leetcode-java/en.search.min.d840b4d538608dcae41e147a41f74e80eed17946e2fab7a1e95ea91857d386ee.js" integrity="sha256-2EC01ThgjcrkHhR6QfdOgO7ReUbi&#43;reh6V6pGFfThu4="></script>
 
 
 <script async>
@@ -747,9 +751,15 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0001.Two-Sum/">0001.两数之和</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0628.Maximum-Product-of-Three-Numbers/"class=active>0628.三个数的最大乘积</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0867.Transpose-Matrix/">0867.转置矩阵</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/1476.Subrectangle-Queries/">1476.子矩形查询.md</a></li>
+  <a href="/leetcode-java/04_Leetcode/0997.Squares-Of-A-Sorted-Array/">0977.有序数组的平方</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/1476.Subrectangle-Queries/">1476.子矩形查询</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/1535.Find-The-Winner-Of-An-Array-Game/">1535.找出数组游戏的赢家</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/Interview.04.17.Find-Majority-Element-Lcci/">面试题.17.10.主要元素</a></li>
 </ul>
@@ -843,101 +853,92 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="628-maximum-product-of-three-numbershttpsleetcodecomproblemsmaximum-product-of-three-numbers">
+  <article class="markdown"><h1 id="628-三个数的最大乘积httpsleetcode-cncomproblemsmaximum-product-of-three-numbers">
   
-  <a href="https://leetcode.com/problems/maximum-product-of-three-numbers/">628. Maximum Product of Three Numbers</a>
-  <a class="anchor" href="#628-maximum-product-of-three-numbershttpsleetcodecomproblemsmaximum-product-of-three-numbers">#</a>
+  <a href="https://leetcode-cn.com/problems/maximum-product-of-three-numbers/">628. 三个数的最大乘积</a>
+  <a class="anchor" href="#628-%e4%b8%89%e4%b8%aa%e6%95%b0%e7%9a%84%e6%9c%80%e5%a4%a7%e4%b9%98%e7%a7%afhttpsleetcode-cncomproblemsmaximum-product-of-three-numbers">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
-</h2>
-<p>Given an integer array, find three numbers whose product is maximum and output the maximum product.</p>
-<p><strong>Example 1</strong>:</p>
-<pre><code>Input: [1,2,3]
-Output: 6
-</code></pre>
-<p><strong>Example 2</strong>:</p>
-<pre><code>Input: [1,2,3,4]
-Output: 24
-</code></pre>
-<p><strong>Note</strong>:</p>
-<ol>
-<li>The length of the given array will be in range [3,10^4] and all elements are in the range [-1000, 1000].</li>
-<li>Multiplication of any three numbers in the input won&rsquo;t exceed the range of 32-bit signed integer.</li>
-</ol>
-<h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
-</h2>
+<p>Difficulty: <strong>简单</strong></p>
 <p>给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。</p>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
+<p><strong>示例 1:</strong></p>
+<pre><code>输入: [1,2,3]
+输出: 6
+</code></pre><p><strong>示例 2:</strong></p>
+<pre><code>输入: [1,2,3,4]
+输出: 24
+</code></pre><p><strong>注意:</strong></p>
+<ol>
+<li>给定的整型数组长度范围是[3,10<sup>4</sup>]，数组中所有的元素范围是[-1000, 1000]。</li>
+<li>输入的数组中任意三个数的乘积不会超出32位有符号整数的范围。</li>
+</ol>
+<h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
 </h2>
+<h3 id="题解一排序">
+  题解一：排序
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%b8%80%e6%8e%92%e5%ba%8f">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maximumProduct</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> nums<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> nums<span style="color:#f92672">[</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">],</span> nums<span style="color:#f92672">[</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> nums<span style="color:#f92672">[</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 2<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> nums<span style="color:#f92672">[</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 3<span style="color:#f92672">]);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="复杂度分析">
+  复杂度分析
+  <a class="anchor" href="#%e5%a4%8d%e6%9d%82%e5%ba%a6%e5%88%86%e6%9e%90">#</a>
+</h4>
 <ul>
-<li>给出一个数组，要求求出这个数组中任意挑 3 个数能组成的乘积最大的值。</li>
-<li>题目的 test case 数据量比较大，如果用排序的话，时间复杂度高，可以直接考虑模拟，挑出 3 个数组成乘积最大值，必然是一个正数和二个负数，或者三个正数。那么选出最大的三个数和最小的二个数，对比一下就可以求出最大值了。时间复杂度 O(n)</li>
+<li>
+<p>时间复杂度：O(NlogN)，其中 N 是数组的长度。</p>
+</li>
+<li>
+<p>空间复杂度：O(logN)，为排序使用的空间。</p>
+</li>
 </ul>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
-
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;sort&#34;</span>
-)
-
-<span style="color:#75715e">// 解法一 排序，时间复杂度 O(n log n)
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">maximumProduct</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
-	<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">nums</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-	}
-	<span style="color:#a6e22e">res</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>
-	<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">nums</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">3</span> {
-		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">nums</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-			<span style="color:#a6e22e">res</span> = <span style="color:#a6e22e">res</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">i</span>]
-		}
-		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
-	}
-	<span style="color:#a6e22e">sort</span>.<span style="color:#a6e22e">Ints</span>(<span style="color:#a6e22e">nums</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">nums</span>[len(<span style="color:#a6e22e">nums</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">nums</span>[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">nums</span>[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">nums</span>[len(<span style="color:#a6e22e">nums</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], <span style="color:#a6e22e">nums</span>[len(<span style="color:#a6e22e">nums</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">nums</span>[len(<span style="color:#a6e22e">nums</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">nums</span>[len(<span style="color:#a6e22e">nums</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>])
-}
-
-<span style="color:#75715e">// 解法二 模拟，时间复杂度 O(n)
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">maximumProduct1</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
-	<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#ae81ff">63</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#ae81ff">63</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#ae81ff">63</span>
-	<span style="color:#a6e22e">n4</span>, <span style="color:#a6e22e">n5</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span> &gt; <span style="color:#a6e22e">n1</span> {
-			<span style="color:#a6e22e">n3</span> = <span style="color:#a6e22e">n2</span>
-			<span style="color:#a6e22e">n2</span> = <span style="color:#a6e22e">n1</span>
-			<span style="color:#a6e22e">n1</span> = <span style="color:#a6e22e">v</span>
-		} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span> &gt; <span style="color:#a6e22e">n2</span> {
-			<span style="color:#a6e22e">n3</span> = <span style="color:#a6e22e">n2</span>
-			<span style="color:#a6e22e">n2</span> = <span style="color:#a6e22e">v</span>
-		} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span> &gt; <span style="color:#a6e22e">n3</span> {
-			<span style="color:#a6e22e">n3</span> = <span style="color:#a6e22e">v</span>
-		}
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span> &lt; <span style="color:#a6e22e">n4</span> {
-			<span style="color:#a6e22e">n5</span> = <span style="color:#a6e22e">n4</span>
-			<span style="color:#a6e22e">n4</span> = <span style="color:#a6e22e">v</span>
-		} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span> &lt; <span style="color:#a6e22e">n5</span> {
-			<span style="color:#a6e22e">n5</span> = <span style="color:#a6e22e">v</span>
-		}
-	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">n2</span><span style="color:#f92672">*</span><span style="color:#a6e22e">n3</span> &gt; <span style="color:#a6e22e">n4</span><span style="color:#f92672">*</span><span style="color:#a6e22e">n5</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">n3</span>
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">n4</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">n5</span>
-}
-
-</code></pre></div></article>
+<h3 id="题解二">
+  题解二：
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%ba%8c">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maximumProduct</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> min1 <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_VALUE</span><span style="color:#f92672">,</span> min2 <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_VALUE</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> max1 <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MIN_VALUE</span><span style="color:#f92672">,</span> max2 <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MIN_VALUE</span><span style="color:#f92672">,</span> max3 <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MIN_VALUE</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n <span style="color:#f92672">:</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;</span> min1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                min2 <span style="color:#f92672">=</span> min1<span style="color:#f92672">;</span>
+                min1 <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;</span> min2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                min2 <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;</span> max1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                max3 <span style="color:#f92672">=</span> max2<span style="color:#f92672">;</span>
+                max2 <span style="color:#f92672">=</span> max1<span style="color:#f92672">;</span>
+                max1 <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;</span> max2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                max3 <span style="color:#f92672">=</span> max2<span style="color:#f92672">;</span>
+                max2 <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;</span> max3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                max3 <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>min1 <span style="color:#f92672">*</span> min2 <span style="color:#f92672">*</span> max1<span style="color:#f92672">,</span> max1 <span style="color:#f92672">*</span> max2 <span style="color:#f92672">*</span> max3<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="复杂度分析-1">
+  复杂度分析
+  <a class="anchor" href="#%e5%a4%8d%e6%9d%82%e5%ba%a6%e5%88%86%e6%9e%90-1">#</a>
+</h4>
+<ul>
+<li>
+<p>时间复杂度：O(N)。</p>
+</li>
+<li>
+<p>空间复杂度：O(1)。</p>
+</li>
+</ul>
+</article>
  
       
 
