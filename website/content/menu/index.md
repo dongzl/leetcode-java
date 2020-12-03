@@ -15,6 +15,7 @@ headless: true
   - [0977.有序数组的平方]({{< relref "/04_Leetcode/0997.Squares-Of-A-Sorted-Array.md" >}})
   - [1476.子矩形查询]({{< relref "/04_Leetcode/1476.Subrectangle-Queries.md" >}})
   - [1535.找出数组游戏的赢家]({{< relref "/04_Leetcode/1535.Find-The-Winner-Of-An-Array-Game.md" >}})
+  - [1550.存在连续三个奇数的数组]({{< relref "/04_Leetcode/1550.Three-Consecutive-Odds.md" >}})
   - [面试题.17.10.主要元素]({{< relref "/04_Leetcode/Interview.04.17.Find-Majority-Element-Lcci.md" >}})
 - [第四章 Linked List]({{< relref "/03_Topic/LinkedList.md" >}})
 - [第五章 Tree]({{< relref "/03_Topic/Tree.md" >}})
