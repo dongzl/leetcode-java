@@ -10,6 +10,8 @@ headless: true
   - [2.1 Segment Tree]({{< relref "/02_Template/Segment_Tree.md" >}})
 - [第三章 Array]({{< relref "/03_Topic/Array.md" >}})
   - [0001.两数之和]({{< relref "/04_Leetcode/0001.Two-Sum.md" >}})
+  - [0219.存在重复元素.II]({{< relref "/04_Leetcode/0219.Contains-Duplicate-II.md" >}})
+  - [0228.汇总区间]({{< relref "/04_Leetcode/0228.Summary-Ranges.md" >}})
   - [0628.三个数的最大乘积]({{< relref "/04_Leetcode/0628.Maximum-Product-of-Three-Numbers.md" >}})
   - [0867.转置矩阵]({{< relref "/04_Leetcode/0867.Transpose-Matrix.md" >}})
   - [0977.有序数组的平方]({{< relref "/04_Leetcode/0997.Squares-Of-A-Sorted-Array.md" >}})
