@@ -4,23 +4,27 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="219. Contains Duplicate II #  题目 #  Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
-Example 1:
- Input: nums = [1,2,3,1], k = 3 Output: true Example 2:
- Input: nums = [1,0,1,1], k = 1 Output: true Example 3:">
+<meta name="description" content="219. 存在重复元素 II #  Difficulty: 简单
+给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引_ i_ 和_ j_，使得 **nums [i] = nums [j]**，并且 _i_ 和 _j_ 的差的 **绝对值** 至多为 _k_。
+示例 1:
+输入: nums = [1,2,3,1], k = 3 输出: true 示例 2:
+输入: nums = [1,0,1,1], k = 1 输出: true 示例 3:
+输入: nums = [1,2,3,1,2,3], k = 2 输出: false 题解 #  题解一：哈希表结构 #  class Solution { public boolean containsNearbyDuplicate(int[] nums, int k) { Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;(); for (int i = 0; i &lt; nums.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="219. Contains Duplicate II #  题目 #  Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
-Example 1:
- Input: nums = [1,2,3,1], k = 3 Output: true Example 2:
- Input: nums = [1,0,1,1], k = 1 Output: true Example 3:" />
+<meta property="og:description" content="219. 存在重复元素 II #  Difficulty: 简单
+给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引_ i_ 和_ j_，使得 **nums [i] = nums [j]**，并且 _i_ 和 _j_ 的差的 **绝对值** 至多为 _k_。
+示例 1:
+输入: nums = [1,2,3,1], k = 3 输出: true 示例 2:
+输入: nums = [1,0,1,1], k = 1 输出: true 示例 3:
+输入: nums = [1,2,3,1,2,3], k = 2 输出: false 题解 #  题解一：哈希表结构 #  class Solution { public boolean containsNearbyDuplicate(int[] nums, int k) { Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;(); for (int i = 0; i &lt; nums." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0219.Contains-Duplicate-II/" />
-<meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
+<meta property="article:modified_time" content="2020-12-04T12:03:19+08:00" />
 <title>0219. Contains Duplicate I I | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.d840b4d538608dcae41e147a41f74e80eed17946e2fab7a1e95ea91857d386ee.js" integrity="sha256-2EC01ThgjcrkHhR6QfdOgO7ReUbi&#43;reh6V6pGFfThu4="></script>
+<script defer src="/leetcode-java/en.search.min.18d9933dc80c7e9adf4af38809df29d03de4be3654e3c417205ab020b1ba9cad.js" integrity="sha256-GNmTPcgMfprfSvOICd8p0D3kvjZU48QXIFqwILG6nK0="></script>
 
 
 <script async>
@@ -745,6 +749,10 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0001.Two-Sum/">0001.两数之和</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0219.Contains-Duplicate-II/"class=active>0219.存在重复元素.II</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0228.Summary-Ranges/">0228.汇总区间</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0628.Maximum-Product-of-Three-Numbers/">0628.三个数的最大乘积</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0867.Transpose-Matrix/">0867.转置矩阵</a></li>
@@ -754,6 +762,8 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/04_Leetcode/1476.Subrectangle-Queries/">1476.子矩形查询</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/1535.Find-The-Winner-Of-An-Array-Game/">1535.找出数组游戏的赢家</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/1550.Three-Consecutive-Odds/">1550.存在连续三个奇数的数组</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/Interview.04.17.Find-Majority-Element-Lcci/">面试题.17.10.主要元素</a></li>
 </ul>
@@ -847,69 +857,88 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="219-contains-duplicate-iihttpsleetcodecomproblemscontains-duplicate-ii">
+  <article class="markdown"><h1 id="219-存在重复元素-iihttpsleetcode-cncomproblemscontains-duplicate-ii">
   
-  <a href="https://leetcode.com/problems/contains-duplicate-ii/">219. Contains Duplicate II</a>
-  <a class="anchor" href="#219-contains-duplicate-iihttpsleetcodecomproblemscontains-duplicate-ii">#</a>
+  <a href="https://leetcode-cn.com/problems/contains-duplicate-ii/">219. 存在重复元素 II</a>
+  <a class="anchor" href="#219-%e5%ad%98%e5%9c%a8%e9%87%8d%e5%a4%8d%e5%85%83%e7%b4%a0-iihttpsleetcode-cncomproblemscontains-duplicate-ii">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
+<p>Difficulty: <strong>简单</strong></p>
+<p>给定一个整数数组和一个整数 <em>k</em>，判断数组中是否存在两个不同的索引_ i_ 和_ j_，使得 **nums [i] = nums [j]**，并且 _i_ 和 _j_ 的差的 **绝对值** 至多为 _k_。</p>
+<p><strong>示例 1:</strong></p>
+<pre><code>输入: nums = [1,2,3,1], k = 3
+输出: true
+</code></pre><p><strong>示例 2:</strong></p>
+<pre><code>输入: nums = [1,0,1,1], k = 1
+输出: true
+</code></pre><p><strong>示例 3:</strong></p>
+<pre><code>输入: nums = [1,2,3,1,2,3], k = 2
+输出: false
+</code></pre><h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
 </h2>
-<p>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.</p>
-<p><strong>Example 1</strong>:</p>
-<pre><code>
-Input: nums = [1,2,3,1], k = 3
-Output: true
-
-</code></pre><p><strong>Example 2</strong>:</p>
-<pre><code>
-Input: nums = [1,0,1,1], k = 1
-Output: true
-
-</code></pre><p><strong>Example 3</strong>:</p>
-<pre><code>
-Input: nums = [1,2,3,1,2,3], k = 2
-Output: false
-
-</code></pre><h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
-</h2>
-<p>这是一道简单题，如果数组里面有重复数字，并且重复数字的下标差值小于等于 K 就输出 true，如果没有重复数字或者下标差值超过了 K ，则输出 flase。</p>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
-</h2>
-<p>这道题可以维护一个只有 K 个元素的 map，每次只需要判断这个 map 里面是否存在这个元素即可。如果存在就代表重复数字的下标差值在 K 以内。map 的长度如果超过了 K 以后就删除掉 i-k 的那个元素，这样一直维护 map 里面只有 K 个元素。</p>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">containsNearbyDuplicate</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">k</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
-	<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">nums</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">k</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-	}
-	<span style="color:#a6e22e">record</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>]<span style="color:#66d9ef">bool</span>, len(<span style="color:#a6e22e">nums</span>))
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">nums</span> {
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">found</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">record</span>[<span style="color:#a6e22e">n</span>]; <span style="color:#a6e22e">found</span> {
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
-		}
-		<span style="color:#a6e22e">record</span>[<span style="color:#a6e22e">n</span>] = <span style="color:#66d9ef">true</span>
-		<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">record</span>) <span style="color:#f92672">==</span> <span style="color:#a6e22e">k</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> {
-			delete(<span style="color:#a6e22e">record</span>, <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#a6e22e">k</span>])
-		}
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-}
-
-</code></pre></div></article>
+<h3 id="题解一哈希表结构">
+  题解一：哈希表结构
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%b8%80%e5%93%88%e5%b8%8c%e8%a1%a8%e7%bb%93%e6%9e%84">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">containsNearbyDuplicate</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Map<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">containsKey</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]))</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">&lt;=</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+            map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">],</span> i<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="复杂度分析">
+  复杂度分析
+  <a class="anchor" href="#%e5%a4%8d%e6%9d%82%e5%ba%a6%e5%88%86%e6%9e%90">#</a>
+</h4>
+<ul>
+<li>
+<p>时间复杂度：O(n)。</p>
+</li>
+<li>
+<p>空间复杂度：O(n)。</p>
+</li>
+</ul>
+<h3 id="题解二哈希表结构">
+  题解二：哈希表结构
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%ba%8c%e5%93%88%e5%b8%8c%e8%a1%a8%e7%bb%93%e6%9e%84">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">containsNearbyDuplicate</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Set<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> set <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> <span style="color:#f92672">++</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]))</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            set<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                set<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> k<span style="color:#f92672">]);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="复杂度分析-1">
+  复杂度分析
+  <a class="anchor" href="#%e5%a4%8d%e6%9d%82%e5%ba%a6%e5%88%86%e6%9e%90-1">#</a>
+</h4>
+<ul>
+<li>
+<p>时间复杂度：O(n)。</p>
+</li>
+<li>
+<p>空间复杂度：O(min(n, k))。</p>
+</li>
+</ul>
+</article>
  
       
 
@@ -919,9 +948,9 @@ Output: false
 
 
 
-  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/a7377273c0f6cbe691676b820e68cba67fd3f353" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/2add7a473379704af32d4be1cd4c060e662012d5" title='Last modified by Zonglei Dong | Dec 4, 2020' target="_blank" rel="noopener">
       <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 26, 2020</span>
+      <span>Dec 4, 2020</span>
     </a>
   </div>
 

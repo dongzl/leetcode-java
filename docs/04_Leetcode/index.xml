@@ -1991,10 +1991,12 @@ Example 1:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0219.Contains-Duplicate-II/</guid>
-      <description>219. Contains Duplicate II #  题目 #  Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
-Example 1:
- Input: nums = [1,2,3,1], k = 3 Output: true Example 2:
- Input: nums = [1,0,1,1], k = 1 Output: true Example 3:</description>
+      <description>219. 存在重复元素 II #  Difficulty: 简单
+给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引_ i_ 和_ j_，使得 **nums [i] = nums [j]**，并且 _i_ 和 _j_ 的差的 **绝对值** 至多为 _k_。
+示例 1:
+输入: nums = [1,2,3,1], k = 3 输出: true 示例 2:
+输入: nums = [1,0,1,1], k = 1 输出: true 示例 3:
+输入: nums = [1,2,3,1,2,3], k = 2 输出: false 题解 #  题解一：哈希表结构 #  class Solution { public boolean containsNearbyDuplicate(int[] nums, int k) { Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; nums.</description>
     </item>
     
     <item>
@@ -2072,6 +2074,21 @@ Input:
  4 / \ 7 2 / \ / \ 9 6 3 1 Trivia:
 This problem was inspired by this original tweet by Max Howell:
  Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so f*** off.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/0228.Summary-Ranges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0228.Summary-Ranges/</guid>
+      <description>228. 汇总区间 #  Difficulty: 简单
+给定一个无重复元素的有序整数数组 nums 。
+返回 恰好覆盖数组中所有数字 的 最小有序 区间范围列表。也就是说，nums 的每个元素都恰好被某个区间范围所覆盖，并且不存在属于某个范围但不属于 nums 的数字 x 。
+列表中的每个区间范围 [a,b] 应该按如下格式输出：
+ &amp;quot;a-&amp;gt;b&amp;quot; ，如果 a != b &amp;quot;a&amp;quot; ，如果 a == b  示例 1：
+输入：nums = [0,1,2,4,5,7] 输出：[&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] 解释：区间范围是： [0,2] --&amp;gt; &amp;quot;0-&amp;gt;2&amp;quot; [4,5] --&amp;gt; &amp;quot;4-&amp;gt;5&amp;quot; [7,7] --&amp;gt; &amp;quot;7&amp;quot; 示例 2：
+输入：nums = [0,2,3,4,6,8,9] 输出：[&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] 解释：区间范围是： [0,0] --&amp;gt; &amp;quot;0&amp;quot; [2,4] --&amp;gt; &amp;quot;2-&amp;gt;4&amp;quot; [6,6] --&amp;gt; &amp;quot;6&amp;quot; [8,9] --&amp;gt; &amp;quot;8-&amp;gt;9&amp;quot; 示例 3：</description>
     </item>
     
     <item>
@@ -6317,6 +6334,20 @@ Input: nums = [1,1,1,1] Output: 6 Explanation: Each pair in the array are good.<
 输入：arr = [2,1,3,5,4,6,7], k = 2 输出：5 解释：一起看一下本场游戏每回合的情况：  因此将进行 4 回合比赛，其中 5 是赢家，因为它连胜 2 回合。 示例 2：
 输入：arr = [3,2,1], k = 10 输出：3 解释：3 将会在前 10 个回合中连续获胜。 示例 3：
 输入：arr = [1,9,8,2,3,7,6,4,5], k = 7 输出：9 示例 4：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/1550.Three-Consecutive-Odds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/1550.Three-Consecutive-Odds/</guid>
+      <description>1550. 存在连续三个奇数的数组 #  Difficulty: 简单
+给你一个整数数组 arr，请你判断数组中是否存在连续三个元素都是奇数的情况：如果存在，请返回 true ；否则，返回 false 。
+示例 1：
+输入：arr = [2,6,4,1] 输出：false 解释：不存在连续三个元素都是奇数的情况。 示例 2：
+输入：arr = [1,2,34,3,4,5,7,23,12] 输出：true 解释：存在连续三个元素都是奇数的情况，即 [5,7,23] 。 提示：
+ 1 &amp;lt;= arr.length &amp;lt;= 1000 1 &amp;lt;= arr[i] &amp;lt;= 1000  题解 #  题解一：枚举 #  class Solution { public boolean threeConsecutiveOdds(int[] arr) { boolean result = false; for (int i = 0; i &amp;lt; arr.length - 2; i++) { result = (arr[i] % 2 !</description>
     </item>
     
     <item>
