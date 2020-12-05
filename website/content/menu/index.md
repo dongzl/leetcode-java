@@ -21,7 +21,7 @@ headless: true
   - [1550.存在连续三个奇数的数组]({{< relref "/04_Leetcode/1550.Three-Consecutive-Odds.md" >}})
   - [面试题.17.10.主要元素]({{< relref "/04_Leetcode/Interview.04.17.Find-Majority-Element-Lcci.md" >}})
 - [第四章 Linked List]({{< relref "/03_Topic/LinkedList.md" >}})
-  — [0024.两两交换链表中的节点]({{< relref "/04_Leetcode/0024.Swap-Nodes-in-Pairs.md" >}})
+  - [0024.两两交换链表中的节点]({{< relref "/04_Leetcode/0024.Swap-Nodes-in-Pairs.md" >}})
   - [0203.移除链表元素]({{< relref "/04_Leetcode/0203.Remove-Linked-List-Elements.md" >}})
   - [0876.链表的中间结点]({{< relref "/04_Leetcode/0876.Middle-of-the-Linked-List.md" >}})
   - [面试题.02.02.返回倒数第k个节点]({{< relref "/04_Leetcode/Interview.02.02.Kth-Node-From-End-Of-List-Lcci.md" >}})
