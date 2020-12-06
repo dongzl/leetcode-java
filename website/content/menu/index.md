@@ -46,4 +46,8 @@ headless: true
   - [Offer.32-II]({{< relref "/04_Leetcode/Offer.32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof.md" >}})
   - [Offer.54]({{< relref "/04_Leetcode/Offer.54.Er-Cha-Sou-Suo-Shu-De-Di-Kda-Jie-Dian-Lcof.md" >}})
   - [Offer.55-II]({{< relref "/04_Leetcode/Offer.55.II.Ping-Heng-Er-Cha-Shu-Lcof.md" >}})
+- [第六章 DFS]({{< relref "/03_Topic/DFS.md" >}})
+  - [0129.求根到叶子节点数字之和]({{< relref "/04_Leetcode/0129.Sum-Root-to-Leaf-Numbers.md" >}})
+  - [0872.叶子相似的树]({{< relref "/04_Leetcode/0872.Leaf-Similar-Trees.md" >}})
+  - [面试题.16.19.水域大小]({{< relref "/04_Leetcode/Interview.16.19.Pond-Sizes-Lcci.md" >}})
 <br />
