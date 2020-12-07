@@ -49,6 +49,8 @@ headless: true
 - [第六章 DFS]({{< relref "/03_Topic/DFS.md" >}})
   - [0129.求根到叶子节点数字之和]({{< relref "/04_Leetcode/0129.Sum-Root-to-Leaf-Numbers.md" >}})
   - [0563.二叉树的坡度]({{< relref "/04_Leetcode/0563.Binary-Tree-Tilt.md" >}})
-  - [0872.叶子相似的树]({{< relref "/04_Leetcode/0872.Leaf-Similar-Trees.md" >}})
+  - [0563.二叉树的坡度]({{< relref "/04_Leetcode/0563.Binary-Tree-Tilt.md" >}})
+  - [0690.员工的重要性]({{< relref "/04_Leetcode/0690.Employee-Importance.md" >}})
   - [面试题.16.19.水域大小]({{< relref "/04_Leetcode/Interview.16.19.Pond-Sizes-Lcci.md" >}})
+  - [剑指.Offer.55-I.二叉树的深度]({{< relref "/04_Leetcode/Offer.55.I.Er-Cha-Shu-De-Shen-Du-Lcof.md" >}})
 <br />
