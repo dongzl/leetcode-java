@@ -53,4 +53,6 @@ headless: true
   - [0690.员工的重要性]({{< relref "/04_Leetcode/0690.Employee-Importance.md" >}})
   - [面试题.16.19.水域大小]({{< relref "/04_Leetcode/Interview.16.19.Pond-Sizes-Lcci.md" >}})
   - [剑指.Offer.55-I.二叉树的深度]({{< relref "/04_Leetcode/Offer.55.I.Er-Cha-Shu-De-Shen-Du-Lcof.md" >}})
+- [第七章 位运算]({{< relref "/03_Topic/DFS.md" >}})
+  - [0268.丢失的数字]({{< relref "/04_Leetcode/0268.Missing-Number.md" >}})
 <br />
