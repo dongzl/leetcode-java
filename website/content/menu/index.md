@@ -29,6 +29,7 @@ headless: true
   - [剑指.Offer.22.链表中倒数第k个节点]({{< relref "/04_Leetcode/Offer.22.Lian-Biao-Zhong-Dao-Shu-Di-Kge-Jie-Dian-Lcof.md" >}})
 - [第五章 Tree]({{< relref "/03_Topic/Tree.md" >}})
   - [0094.Binary-Tree-Inorder-Traversal]({{< relref "/04_Leetcode/0094.Binary-Tree-Inorder-Traversal.md" >}})
+  - [0096.不同的二叉搜索树]({{< relref "/04_Leetcode/0096.Unique-Binary-Search-Trees.md" >}})
   - [0103.Binary-Tree-Zigzag-Level-Order-Traversal]({{< relref "/04_Leetcode/0103.Binary-Tree-Zigzag-Level-Order-Traversal.md" >}})
   - [0110.Balanced-Binary-Tree]({{< relref "/04_Leetcode/0110.Balanced-Binary-Tree.md" >}})
   - [0112.Path-Sum]({{< relref "/04_Leetcode/0112.Path-Sum.md" >}})
