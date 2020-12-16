@@ -4,25 +4,29 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="268. Missing Number #  题目 #  Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
-Example 1:
-Input: [3,0,1] Output: 2  Example 2:
-Input: [9,6,4,2,3,5,7,0,1] Output: 8  Note:Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
-题目大意 #  给定一个包含 0, 1, 2, &hellip;, n 中 n 个数的序列，找出 0 .">
+<meta name="description" content="268. 丢失的数字 #  Difficulty: 简单
+给定一个包含 [0, n] 中 n 个数的数组 nums ，找出 [0, n] 这个范围内没有出现在数组中的那个数。
+进阶：
+ 你能否实现线性时间复杂度、仅使用额外常数空间的算法解决此问题?  示例 1：
+输入：nums = [3,0,1] 输出：2 解释：n = 3，因为有 3 个数字，所以所有的数字都在范围 [0,3] 内。2 是丢失的数字，因为它没有出现在 nums 中。 示例 2：
+输入：nums = [0,1] 输出：2 解释：n = 2，因为有 2 个数字，所以所有的数字都在范围 [0,2] 内。2 是丢失的数字，因为它没有出现在 nums 中。 示例 3：
+输入：nums = [9,6,4,2,3,5,7,0,1] 输出：8 解释：n = 9，因为有 9 个数字，所以所有的数字都在范围 [0,9] 内。8 是丢失的数字，因为它没有出现在 nums 中。 示例 4：">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="268. Missing Number #  题目 #  Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
-Example 1:
-Input: [3,0,1] Output: 2  Example 2:
-Input: [9,6,4,2,3,5,7,0,1] Output: 8  Note:Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
-题目大意 #  给定一个包含 0, 1, 2, &hellip;, n 中 n 个数的序列，找出 0 ." />
+<meta property="og:description" content="268. 丢失的数字 #  Difficulty: 简单
+给定一个包含 [0, n] 中 n 个数的数组 nums ，找出 [0, n] 这个范围内没有出现在数组中的那个数。
+进阶：
+ 你能否实现线性时间复杂度、仅使用额外常数空间的算法解决此问题?  示例 1：
+输入：nums = [3,0,1] 输出：2 解释：n = 3，因为有 3 个数字，所以所有的数字都在范围 [0,3] 内。2 是丢失的数字，因为它没有出现在 nums 中。 示例 2：
+输入：nums = [0,1] 输出：2 解释：n = 2，因为有 2 个数字，所以所有的数字都在范围 [0,2] 内。2 是丢失的数字，因为它没有出现在 nums 中。 示例 3：
+输入：nums = [9,6,4,2,3,5,7,0,1] 输出：8 解释：n = 9，因为有 9 个数字，所以所有的数字都在范围 [0,9] 内。8 是丢失的数字，因为它没有出现在 nums 中。 示例 4：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0268.Missing-Number/" />
-<meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
+<meta property="article:modified_time" content="2020-12-08T19:43:40+08:00" />
 <title>0268. Missing Number | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.4e6d6d593c1c67e6d34e5a354d31b5c51cde5d79ddaa44c62d6a7a50d13211a6.js" integrity="sha256-Tm1tWTwcZ&#43;bTTlo1TTG1xRzeXXndqkTGLWp6UNEyEaY="></script>
+<script defer src="/leetcode-java/en.search.min.b31f808bd16b9b102ffb5d3fd392558031ba47a083e7b33ef9837bceeeb172a2.js" integrity="sha256-sx&#43;Ai9FrmxAv&#43;10/05JVgDG6R6CD57M&#43;&#43;YN7zu6xcqI="></script>
 
 
 <script async>
@@ -791,6 +795,8 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0094.Binary-Tree-Inorder-Traversal/">0094.Binary-Tree-Inorder-Traversal</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0096.Unique-Binary-Search-Trees/">0096.不同的二叉搜索树</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0103.Binary-Tree-Zigzag-Level-Order-Traversal/">0103.Binary-Tree-Zigzag-Level-Order-Traversal</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
@@ -801,6 +807,10 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0606.Construct-String-From-Binary-Tree/">0606.根据二叉树创建字符串</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0617.Merge-Two-Binary-Trees/">0617.合并二叉树</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0814.Binary-Tree-Pruning/">0814.Binary-Tree-Pruning</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0865.Smallest-Subtree-With-All-The-Deepest-Nodes/">0865.Smallest-Subtree-With-All-The-Deepest-Nodes</a></li>
@@ -808,6 +818,8 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/04_Leetcode/0897.Increasing-Order-Search-Tree/">0897.Increasing-Order-Search-Tree</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0998.Maximum-Binary-Tree-II/">0998.Maximum-Binary-Tree-II</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/1022.Sum-Of-Root-To-Leaf-Binary-Numbers/">1022.从根到叶的二进制数之和</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/1530.Number-Of-Good-Leaf-Nodes-Pairs/">1530.Number-Of-Good-Leaf-Nodes-Pairs</a></li>
 <li>
@@ -818,6 +830,8 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/04_Leetcode/Interview.04.12.Paths-With-Sum-Lcci/">Interview.04.12</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/Offer.26.Shu-De-Zi-Jie-Gou-Lcof/">Offer.26</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.28.Dui-Cheng-De-Er-Cha-Shu-Lcof/">剑指.Offer.28.对称的二叉树</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/Offer.32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof/">Offer.32-II</a></li>
 <li>
@@ -832,9 +846,22 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0129.Sum-Root-to-Leaf-Numbers/">0129.求根到叶子节点数字之和</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0872.Leaf-Similar-Trees/">0872.叶子相似的树</a></li>
+  <a href="/leetcode-java/04_Leetcode/0563.Binary-Tree-Tilt/">0563.二叉树的坡度</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Interview.16.19.Pond-Sizes-Lcci/">面试题.16.19.水域大小</a>
+  <a href="/leetcode-java/04_Leetcode/0563.Binary-Tree-Tilt/">0563.二叉树的坡度</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0690.Employee-Importance/">0690.员工的重要性</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Interview.16.19.Pond-Sizes-Lcci/">面试题.16.19.水域大小</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.55.I.Er-Cha-Shu-De-Shen-Du-Lcof/">剑指.Offer.55-I.二叉树的深度</a></li>
+</ul>
+</li>
+<li>
+  <a href="/leetcode-java/03_Topic/DFS/">第七章 位运算</a>
+<ul>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0268.Missing-Number/"class=active>0268.丢失的数字</a>
 <br /></li>
 </ul>
 </li>
@@ -883,53 +910,91 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="268-missing-numberhttpsleetcodecomproblemsmissing-number">
+  <article class="markdown"><h1 id="268-丢失的数字httpsleetcode-cncomproblemsmissing-number">
   
-  <a href="https://leetcode.com/problems/missing-number/">268. Missing Number</a>
-  <a class="anchor" href="#268-missing-numberhttpsleetcodecomproblemsmissing-number">#</a>
+  <a href="https://leetcode-cn.com/problems/missing-number/">268. 丢失的数字</a>
+  <a class="anchor" href="#268-%e4%b8%a2%e5%a4%b1%e7%9a%84%e6%95%b0%e5%ad%97httpsleetcode-cncomproblemsmissing-number">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
-</h2>
-<p>Given an array containing n distinct numbers taken from <code>0, 1, 2, ..., n</code>, find the one that is missing from the array.</p>
-<p><strong>Example 1</strong>:</p>
-<pre><code>Input: [3,0,1]
-Output: 2
-</code></pre>
-<p><strong>Example 2</strong>:</p>
-<pre><code>Input: [9,6,4,2,3,5,7,0,1]
-Output: 8
-</code></pre>
-<p><strong>Note</strong>:Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?</p>
-<h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
-</h2>
-<p>给定一个包含 0, 1, 2, &hellip;, n 中 n 个数的序列，找出 0 .. n 中没有出现在序列中的那个数。算法应该具有线性时间复杂度。你能否仅使用额外常数空间来实现?</p>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
-</h2>
+<p>Difficulty: <strong>简单</strong></p>
+<p>给定一个包含 <code>[0, n]</code> 中 <code>n</code> 个数的数组 <code>nums</code> ，找出 <code>[0, n]</code> 这个范围内没有出现在数组中的那个数。</p>
+<p><strong>进阶：</strong></p>
 <ul>
-<li>要求找出 <code>0, 1, 2, ..., n</code> 中缺失的那个数。还是利用异或的性质，<code>X^X = 0</code>。这里我们需要构造一个 X，用数组下标就可以了。数字下标是从 <code>[0，n-1]</code>，数字是 <code>[0，n]</code>，依次把数组里面的数组进行异或，把结果和 n 再异或一次，中和掉出现的数字，剩下的那个数字就是之前没有出现过的，缺失的数字。</li>
+<li>你能否实现线性时间复杂度、仅使用额外常数空间的算法解决此问题?</li>
 </ul>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
+<p><strong>示例 1：</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">输入：nums <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>3,0,1<span style="color:#f92672">]</span>
+输出：2
+解释：n <span style="color:#f92672">=</span> 3，因为有 <span style="color:#ae81ff">3</span> 个数字，所以所有的数字都在范围 <span style="color:#f92672">[</span>0,3<span style="color:#f92672">]</span> 内。2 是丢失的数字，因为它没有出现在 nums 中。
+</code></pre></div><p><strong>示例 2：</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">输入：nums <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>0,1<span style="color:#f92672">]</span>
+输出：2
+解释：n <span style="color:#f92672">=</span> 2，因为有 <span style="color:#ae81ff">2</span> 个数字，所以所有的数字都在范围 <span style="color:#f92672">[</span>0,2<span style="color:#f92672">]</span> 内。2 是丢失的数字，因为它没有出现在 nums 中。
+</code></pre></div><p><strong>示例 3：</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">输入：nums <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>9,6,4,2,3,5,7,0,1<span style="color:#f92672">]</span>
+输出：8
+解释：n <span style="color:#f92672">=</span> 9，因为有 <span style="color:#ae81ff">9</span> 个数字，所以所有的数字都在范围 <span style="color:#f92672">[</span>0,9<span style="color:#f92672">]</span> 内。8 是丢失的数字，因为它没有出现在 nums 中。
+</code></pre></div><p><strong>示例 4：</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">输入：nums <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>
+输出：1
+解释：n <span style="color:#f92672">=</span> 1，因为有 <span style="color:#ae81ff">1</span> 个数字，所以所有的数字都在范围 <span style="color:#f92672">[</span>0,1<span style="color:#f92672">]</span> 内。1 是丢失的数字，因为它没有出现在 nums 中。
+</code></pre></div><p><strong>提示：</strong></p>
+<ul>
+<li><code>n == nums.length</code></li>
+<li><code>1 &lt;= n &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+<li><code>0 &lt;= nums[i] &lt;= n</code></li>
+<li><code>nums</code> 中的所有数字都 <strong>独一无二</strong></li>
+</ul>
+<h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
 </h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">missingNumber</span>(<span style="color:#a6e22e">nums</span> []<span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
-	<span style="color:#a6e22e">xor</span>, <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> = <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">nums</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-		<span style="color:#a6e22e">xor</span> = <span style="color:#a6e22e">xor</span> ^ <span style="color:#a6e22e">i</span> ^ <span style="color:#a6e22e">nums</span>[<span style="color:#a6e22e">i</span>]
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">xor</span> ^ <span style="color:#a6e22e">i</span>
-}
-
-</code></pre></div></article>
+<h3 id="题解一暴力求解">
+  题解一：暴力求解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%b8%80%e6%9a%b4%e5%8a%9b%e6%b1%82%e8%a7%a3">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">missingNumber</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">!=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> i<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>复杂度分析</strong></p>
+<ul>
+<li>
+<p>时间复杂度：O(N)。</p>
+</li>
+<li>
+<p>空间复杂度：O(1)。</p>
+</li>
+</ul>
+<h3 id="题解二位运算">
+  题解二：位运算
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%ba%8c%e4%bd%8d%e8%bf%90%e7%ae%97">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">missingNumber</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> missing <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            missing <span style="color:#f92672">^=</span> i <span style="color:#f92672">^</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> missing<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>复杂度分析</strong></p>
+<ul>
+<li>
+<p>时间复杂度：O(N)。</p>
+</li>
+<li>
+<p>空间复杂度：O(1)。</p>
+</li>
+</ul>
+</article>
  
       
 
@@ -939,9 +1004,9 @@ Output: 8
 
 
 
-  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/a7377273c0f6cbe691676b820e68cba67fd3f353" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/13f4fab0fe02fe2e7849a502d6ccd0bbe0f08b01" title='Last modified by Zonglei Dong | Dec 8, 2020' target="_blank" rel="noopener">
       <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 26, 2020</span>
+      <span>Dec 8, 2020</span>
     </a>
   </div>
 

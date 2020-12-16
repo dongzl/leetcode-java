@@ -4,21 +4,41 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="993. Cousins in Binary Tree #  题目 #  In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k&#43;1.
-Two nodes of a binary tree are cousins if they have the same depth, but have different parents.
-We are given the root of a binary tree with unique values, and the values x and y of two different nodes in the tree.">
+<meta name="description" content="993. 二叉树的堂兄弟节点 #  Difficulty: 简单
+在二叉树中，根节点位于深度 0 处，每个深度为 k 的节点的子节点位于深度 k&#43;1 处。
+如果二叉树的两个节点深度相同，但父节点不同，则它们是一对_堂兄弟节点_。
+我们给出了具有唯一值的二叉树的根节点 root，以及树中两个不同节点的值 x 和 y。
+只有与值 x 和 y 对应的节点是堂兄弟节点时，才返回 true。否则，返回 false。
+示例 1：
+
+输入：root = [1,2,3,4], x = 4, y = 3 输出：false 示例 2：
+
+输入：root = [1,2,3,null,4,null,5], x = 5, y = 4 输出：true 示例 3：
+ 
+输入：root = [1,2,3,null,4], x = 2, y = 3 输出：false 提示：
+ 二叉树的节点数介于 2 到 100 之间。 每个节点的值都是唯一的、范围为 1 到 100 的整数。  题解 #  题解一：DFS（广度优先搜索） #  /** * Definition for a binary tree node.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="993. Cousins in Binary Tree #  题目 #  In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k&#43;1.
-Two nodes of a binary tree are cousins if they have the same depth, but have different parents.
-We are given the root of a binary tree with unique values, and the values x and y of two different nodes in the tree." />
+<meta property="og:description" content="993. 二叉树的堂兄弟节点 #  Difficulty: 简单
+在二叉树中，根节点位于深度 0 处，每个深度为 k 的节点的子节点位于深度 k&#43;1 处。
+如果二叉树的两个节点深度相同，但父节点不同，则它们是一对_堂兄弟节点_。
+我们给出了具有唯一值的二叉树的根节点 root，以及树中两个不同节点的值 x 和 y。
+只有与值 x 和 y 对应的节点是堂兄弟节点时，才返回 true。否则，返回 false。
+示例 1：
+
+输入：root = [1,2,3,4], x = 4, y = 3 输出：false 示例 2：
+
+输入：root = [1,2,3,null,4,null,5], x = 5, y = 4 输出：true 示例 3：
+ 
+输入：root = [1,2,3,null,4], x = 2, y = 3 输出：false 提示：
+ 二叉树的节点数介于 2 到 100 之间。 每个节点的值都是唯一的、范围为 1 到 100 的整数。  题解 #  题解一：DFS（广度优先搜索） #  /** * Definition for a binary tree node." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0993.Cousins-in-Binary-Tree/" />
-<meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
+<meta property="article:modified_time" content="2020-12-08T18:32:56+08:00" />
 <title>0993. Cousins in Binary Tree | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.4e6d6d593c1c67e6d34e5a354d31b5c51cde5d79ddaa44c62d6a7a50d13211a6.js" integrity="sha256-Tm1tWTwcZ&#43;bTTlo1TTG1xRzeXXndqkTGLWp6UNEyEaY="></script>
+<script defer src="/leetcode-java/en.search.min.b31f808bd16b9b102ffb5d3fd392558031ba47a083e7b33ef9837bceeeb172a2.js" integrity="sha256-sx&#43;Ai9FrmxAv&#43;10/05JVgDG6R6CD57M&#43;&#43;YN7zu6xcqI="></script>
 
 
 <script async>
@@ -787,6 +807,8 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0094.Binary-Tree-Inorder-Traversal/">0094.Binary-Tree-Inorder-Traversal</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0096.Unique-Binary-Search-Trees/">0096.不同的二叉搜索树</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0103.Binary-Tree-Zigzag-Level-Order-Traversal/">0103.Binary-Tree-Zigzag-Level-Order-Traversal</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
@@ -797,6 +819,10 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0606.Construct-String-From-Binary-Tree/">0606.根据二叉树创建字符串</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0617.Merge-Two-Binary-Trees/">0617.合并二叉树</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0814.Binary-Tree-Pruning/">0814.Binary-Tree-Pruning</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0865.Smallest-Subtree-With-All-The-Deepest-Nodes/">0865.Smallest-Subtree-With-All-The-Deepest-Nodes</a></li>
@@ -804,6 +830,8 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/04_Leetcode/0897.Increasing-Order-Search-Tree/">0897.Increasing-Order-Search-Tree</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0998.Maximum-Binary-Tree-II/">0998.Maximum-Binary-Tree-II</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/1022.Sum-Of-Root-To-Leaf-Binary-Numbers/">1022.从根到叶的二进制数之和</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/1530.Number-Of-Good-Leaf-Nodes-Pairs/">1530.Number-Of-Good-Leaf-Nodes-Pairs</a></li>
 <li>
@@ -814,6 +842,8 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/04_Leetcode/Interview.04.12.Paths-With-Sum-Lcci/">Interview.04.12</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/Offer.26.Shu-De-Zi-Jie-Gou-Lcof/">Offer.26</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.28.Dui-Cheng-De-Er-Cha-Shu-Lcof/">剑指.Offer.28.对称的二叉树</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/Offer.32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof/">Offer.32-II</a></li>
 <li>
@@ -828,9 +858,22 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0129.Sum-Root-to-Leaf-Numbers/">0129.求根到叶子节点数字之和</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0872.Leaf-Similar-Trees/">0872.叶子相似的树</a></li>
+  <a href="/leetcode-java/04_Leetcode/0563.Binary-Tree-Tilt/">0563.二叉树的坡度</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Interview.16.19.Pond-Sizes-Lcci/">面试题.16.19.水域大小</a>
+  <a href="/leetcode-java/04_Leetcode/0563.Binary-Tree-Tilt/">0563.二叉树的坡度</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0690.Employee-Importance/">0690.员工的重要性</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Interview.16.19.Pond-Sizes-Lcci/">面试题.16.19.水域大小</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.55.I.Er-Cha-Shu-De-Shen-Du-Lcof/">剑指.Offer.55-I.二叉树的深度</a></li>
+</ul>
+</li>
+<li>
+  <a href="/leetcode-java/03_Topic/DFS/">第七章 位运算</a>
+<ul>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0268.Missing-Number/">0268.丢失的数字</a>
 <br /></li>
 </ul>
 </li>
@@ -879,167 +922,89 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="993-cousins-in-binary-treehttpsleetcodecomproblemscousins-in-binary-tree">
+  <article class="markdown"><h1 id="993-二叉树的堂兄弟节点httpsleetcode-cncomproblemscousins-in-binary-tree">
   
-  <a href="https://leetcode.com/problems/cousins-in-binary-tree/">993. Cousins in Binary Tree</a>
-  <a class="anchor" href="#993-cousins-in-binary-treehttpsleetcodecomproblemscousins-in-binary-tree">#</a>
+  <a href="https://leetcode-cn.com/problems/cousins-in-binary-tree/">993. 二叉树的堂兄弟节点</a>
+  <a class="anchor" href="#993-%e4%ba%8c%e5%8f%89%e6%a0%91%e7%9a%84%e5%a0%82%e5%85%84%e5%bc%9f%e8%8a%82%e7%82%b9httpsleetcode-cncomproblemscousins-in-binary-tree">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
-</h2>
-<p>In a binary tree, the root node is at depth <code>0</code>, and children of each depth <code>k</code> node are at depth <code>k+1</code>.</p>
-<p>Two nodes of a binary tree are <em>cousins</em> if they have the same depth, but have <strong>different parents</strong>.</p>
-<p>We are given the <code>root</code> of a binary tree with unique values, and the values <code>x</code> and <code>y</code> of two different nodes in the tree.</p>
-<p>Return <code>true</code> if and only if the nodes corresponding to the values <code>x</code> and <code>y</code> are cousins.</p>
-<p><strong>Example 1</strong>:</p>
-<p>
-  <img src="https://assets.leetcode.com/uploads/2019/02/12/q1248-01.png" alt="" /></p>
-<pre><code>Input: root = [1,2,3,4], x = 4, y = 3
-Output: false
-</code></pre>
-<p><strong>Example 2</strong>:</p>
-<p>
-  <img src="https://assets.leetcode.com/uploads/2019/02/12/q1248-02.png" alt="" /></p>
-<pre><code>Input: root = [1,2,3,null,4,null,5], x = 5, y = 4
-Output: true
-</code></pre>
-<p><strong>Example 3</strong>:</p>
-<p>
-  <img src="https://assets.leetcode.com/uploads/2019/02/13/q1248-03.png" alt="" /></p>
-<pre><code>Input: root = [1,2,3,null,4], x = 2, y = 3
-Output: false
-</code></pre>
-<p><strong>Note</strong>:</p>
-<ol>
-<li>The number of nodes in the tree will be between <code>2</code> and <code>100</code>.</li>
-<li>Each node has a unique integer value from <code>1</code> to <code>100</code>.</li>
-</ol>
-<h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
-</h2>
-<p>在二叉树中，根节点位于深度 0 处，每个深度为 k 的节点的子节点位于深度 k+1 处。如果二叉树的两个节点深度相同，但父节点不同，则它们是一对堂兄弟节点。我们给出了具有唯一值的二叉树的根节点 root，以及树中两个不同节点的值 x 和 y。只有与值 x 和 y 对应的节点是堂兄弟节点时，才返回 true。否则，返回 false。</p>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
-</h2>
-<ul>
-<li>给出一个二叉树，和 x ，y 两个值，要求判断这两个值是不是兄弟结点。兄弟结点的定义：都位于同一层，并且父结点是同一个结点。</li>
-<li>这一题有 3 种解题方法，DFS、BFS、递归。思路都不难。</li>
-</ul>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
+<p>Difficulty: <strong>简单</strong></p>
+<p>在二叉树中，根节点位于深度 <code>0</code> 处，每个深度为 <code>k</code> 的节点的子节点位于深度 <code>k+1</code> 处。</p>
+<p>如果二叉树的两个节点深度相同，但<strong>父节点不同</strong>，则它们是一对_堂兄弟节点_。</p>
+<p>我们给出了具有唯一值的二叉树的根节点 <code>root</code>，以及树中两个不同节点的值 <code>x</code> 和 <code>y</code>。</p>
+<p>只有与值 <code>x</code> 和 <code>y</code> 对应的节点是堂兄弟节点时，才返回 <code>true</code>。否则，返回 <code>false</code>。</p>
+<p><strong>示例 1：<br>
 
-<span style="color:#75715e">/**
+  <img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/02/16/q1248-01.png" alt="" /></strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">输入：root <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>1,2,3,4<span style="color:#f92672">]</span>, x <span style="color:#f92672">=</span> 4, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+输出：false
+</code></pre></div><p><strong>示例 2：<br>
+
+  <img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/02/16/q1248-02.png" alt="" /></strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">输入：root <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>1,2,3,null,4,null,5<span style="color:#f92672">]</span>, x <span style="color:#f92672">=</span> 5, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+输出：true
+</code></pre></div><p><strong>示例 3：</strong></p>
+<p><strong>
+  <img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/02/16/q1248-03.png" alt="" /></strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">输入：root <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>1,2,3,null,4<span style="color:#f92672">]</span>, x <span style="color:#f92672">=</span> 2, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+输出：false
+</code></pre></div><p><strong>提示：</strong></p>
+<ol>
+<li>二叉树的节点数介于 <code>2</code> 到 <code>100</code> 之间。</li>
+<li>每个节点的值都是唯一的、范围为 <code>1</code> 到 <code>100</code> 的整数。</li>
+</ol>
+<h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
+</h2>
+<h3 id="题解一dfs广度优先搜索">
+  题解一：DFS（广度优先搜索）
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%b8%80dfs%e5%b9%bf%e5%ba%a6%e4%bc%98%e5%85%88%e6%90%9c%e7%b4%a2">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * Definition for a binary tree node.
-</span><span style="color:#75715e"> * type TreeNode struct {
-</span><span style="color:#75715e"> *     Val int
-</span><span style="color:#75715e"> *     Left *TreeNode
-</span><span style="color:#75715e"> *     Right *TreeNode
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode() {}
+</span><span style="color:#75715e"> *     TreeNode(int val) { this.val = val; }
+</span><span style="color:#75715e"> *     TreeNode(int val, TreeNode left, TreeNode right) {
+</span><span style="color:#75715e"> *         this.val = val;
+</span><span style="color:#75715e"> *         this.left = left;
+</span><span style="color:#75715e"> *         this.right = right;
+</span><span style="color:#75715e"> *     }
 </span><span style="color:#75715e"> * }
 </span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
 
-<span style="color:#75715e">// 解法一 递归
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">isCousins</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>, <span style="color:#a6e22e">x</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-	}
-	<span style="color:#a6e22e">levelX</span>, <span style="color:#a6e22e">levelY</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findLevel</span>(<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">1</span>), <span style="color:#a6e22e">findLevel</span>(<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">y</span>, <span style="color:#ae81ff">1</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">levelX</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">levelY</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-	}
-	<span style="color:#66d9ef">return</span> !<span style="color:#a6e22e">haveSameParents</span>(<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>)
-}
+    Map<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> depthMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+    Map<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> TreeNode<span style="color:#f92672">&gt;</span> parentMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findLevel</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">level</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">x</span> {
-		<span style="color:#a6e22e">leftLevel</span>, <span style="color:#a6e22e">rightLevel</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findLevel</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">level</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>), <span style="color:#a6e22e">findLevel</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">level</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">leftLevel</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">rightLevel</span>
-		}
-		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">leftLevel</span>
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">level</span>
-}
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isCousins</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        helper<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>depthMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>x<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> depthMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>y<span style="color:#f92672">))</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">(</span>parentMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>x<span style="color:#f92672">)</span> <span style="color:#f92672">!=</span> parentMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>y<span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">haveSameParents</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-	}
-	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>.<span style="color:#a6e22e">Val</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>.<span style="color:#a6e22e">Val</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">y</span>) <span style="color:#f92672">||</span>
-		(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>.<span style="color:#a6e22e">Val</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>.<span style="color:#a6e22e">Val</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">x</span>) {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">haveSameParents</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">haveSameParents</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>)
-}
-
-<span style="color:#75715e">// 解法二 BFS
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">mark</span> <span style="color:#66d9ef">struct</span> {
-	<span style="color:#a6e22e">prev</span>  <span style="color:#66d9ef">int</span>
-	<span style="color:#a6e22e">depth</span> <span style="color:#66d9ef">int</span>
-}
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">isCousinsBFS</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>, <span style="color:#a6e22e">x</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-	}
-	<span style="color:#a6e22e">queue</span> <span style="color:#f92672">:=</span> []<span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>{<span style="color:#a6e22e">root</span>}
-	<span style="color:#a6e22e">visited</span> <span style="color:#f92672">:=</span> [<span style="color:#ae81ff">101</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">mark</span>{}
-	<span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span>] = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">mark</span>{<span style="color:#a6e22e">prev</span>: <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">depth</span>: <span style="color:#ae81ff">1</span>}
-
-	<span style="color:#66d9ef">for</span> len(<span style="color:#a6e22e">queue</span>) &gt; <span style="color:#ae81ff">0</span> {
-		<span style="color:#a6e22e">node</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">queue</span>[<span style="color:#ae81ff">0</span>]
-		<span style="color:#a6e22e">queue</span> = <span style="color:#a6e22e">queue</span>[<span style="color:#ae81ff">1</span>:]
-		<span style="color:#a6e22e">depth</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Val</span>].<span style="color:#a6e22e">depth</span>
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-			<span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span>.<span style="color:#a6e22e">Val</span>] = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">mark</span>{<span style="color:#a6e22e">prev</span>: <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Val</span>, <span style="color:#a6e22e">depth</span>: <span style="color:#a6e22e">depth</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>}
-			<span style="color:#a6e22e">queue</span> = append(<span style="color:#a6e22e">queue</span>, <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span>)
-		}
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-			<span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span>.<span style="color:#a6e22e">Val</span>] = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">mark</span>{<span style="color:#a6e22e">prev</span>: <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Val</span>, <span style="color:#a6e22e">depth</span>: <span style="color:#a6e22e">depth</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>}
-			<span style="color:#a6e22e">queue</span> = append(<span style="color:#a6e22e">queue</span>, <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span>)
-		}
-	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">x</span>] <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">y</span>] <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">x</span>].<span style="color:#a6e22e">depth</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">y</span>].<span style="color:#a6e22e">depth</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">x</span>].<span style="color:#a6e22e">prev</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">y</span>].<span style="color:#a6e22e">prev</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
-}
-
-<span style="color:#75715e">// 解法三 DFS
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">isCousinsDFS</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>, <span style="color:#a6e22e">x</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">depth1</span>, <span style="color:#a6e22e">depth2</span>, <span style="color:#a6e22e">parent1</span>, <span style="color:#a6e22e">parent2</span> <span style="color:#66d9ef">int</span>
-	<span style="color:#a6e22e">dfsCousins</span>(<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">parent1</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">depth1</span>)
-	<span style="color:#a6e22e">dfsCousins</span>(<span style="color:#a6e22e">root</span>, <span style="color:#a6e22e">y</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">parent2</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">depth2</span>)
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">depth1</span> &gt; <span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">depth1</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">depth2</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">parent1</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">parent2</span>
-}
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">dfsCousins</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>, <span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">depth</span>, <span style="color:#a6e22e">last</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">parent</span>, <span style="color:#a6e22e">res</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">int</span>) {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span>
-	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">val</span> {
-		<span style="color:#f92672">*</span><span style="color:#a6e22e">res</span> = <span style="color:#a6e22e">depth</span>
-		<span style="color:#f92672">*</span><span style="color:#a6e22e">parent</span> = <span style="color:#a6e22e">last</span>
-		<span style="color:#66d9ef">return</span>
-	}
-	<span style="color:#a6e22e">depth</span><span style="color:#f92672">++</span>
-	<span style="color:#a6e22e">dfsCousins</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>, <span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">depth</span>, <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span>, <span style="color:#a6e22e">parent</span>, <span style="color:#a6e22e">res</span>)
-	<span style="color:#a6e22e">dfsCousins</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>, <span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">depth</span>, <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Val</span>, <span style="color:#a6e22e">parent</span>, <span style="color:#a6e22e">res</span>)
-}
-
-</code></pre></div></article>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">helper</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> TreeNode parent<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        depthMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">,</span> parent <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">?</span> 0 <span style="color:#f92672">:</span> depthMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>parent<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+        parentMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">,</span> parent<span style="color:#f92672">);</span>
+        helper<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> node<span style="color:#f92672">);</span>
+        helper<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> node<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>复杂度分析</strong></p>
+<ul>
+<li>
+<p>时间复杂度：O(N)。</p>
+</li>
+<li>
+<p>空间复杂度：O(N)。</p>
+</li>
+</ul>
+</article>
  
       
 
@@ -1049,9 +1014,9 @@ Output: false
 
 
 
-  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/a7377273c0f6cbe691676b820e68cba67fd3f353" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/3a3b84fdfec75422ef6150482a3976cf33ead8d7" title='Last modified by Zonglei Dong | Dec 8, 2020' target="_blank" rel="noopener">
       <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 26, 2020</span>
+      <span>Dec 8, 2020</span>
     </a>
   </div>
 

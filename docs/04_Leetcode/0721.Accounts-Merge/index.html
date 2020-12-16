@@ -4,19 +4,29 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="721. Accounts Merge #  题目 #  Given a list accounts, each element accounts[i] is a list of strings, where the first element accounts[i][0] is a name, and the rest of the elements are emailsrepresenting emails of the account.
-Now, we would like to merge these accounts. Two accounts definitely belong to the same person if there is some email that is common to both accounts. Note that even if two accounts have the same name, they may belong to different people as people could have the same name.">
+<meta name="description" content="721. 账户合并 #  Difficulty: 中等
+给定一个列表 accounts，每个元素 accounts[i] 是一个字符串列表，其中第一个元素 accounts[i][0] 是 名称 (name)，其余元素是 emails 表示该帐户的邮箱地址。
+现在，我们想合并这些帐户。如果两个帐户都有一些共同的邮件地址，则两个帐户必定属于同一个人。请注意，即使两个帐户具有相同的名称，它们也可能属于不同的人，因为人们可能具有相同的名称。一个人最初可以拥有任意数量的帐户，但其所有帐户都具有相同的名称。
+合并帐户后，按以下格式返回帐户：每个帐户的第一个元素是名称，其余元素是按顺序排列的邮箱地址。accounts 本身可以以任意顺序返回。
+例子 1:
+Input: accounts = [[&#34;John&#34;, &#34;johnsmith@mail.com&#34;, &#34;john00@mail.com&#34;], [&#34;John&#34;, &#34;johnnybravo@mail.com&#34;], [&#34;John&#34;, &#34;johnsmith@mail.com&#34;, &#34;john_newyork@mail.com&#34;], [&#34;Mary&#34;, &#34;mary@mail.com&#34;]] Output: [[&#34;John&#34;, &#39;john00@mail.com&#39;, &#39;john_newyork@mail.com&#39;, &#39;johnsmith@mail.com&#39;], [&#34;John&#34;, &#34;johnnybravo@mail.com&#34;], [&#34;Mary&#34;, &#34;mary@mail.com&#34;]] Explanation: 第一个和第三个 John 是同一个人，因为他们有共同的电子邮件 &#34;johnsmith@mail.com&#34;。 第二个 John 和 Mary 是不同的人，因为他们的电子邮件地址没有被其他帐户使用。 我们可以以任何顺序返回这些列表，例如答案[[&#39;Mary&#39;，&#39;mary@mail.com&#39;]，[&#39;John&#39;，&#39;johnnybravo@mail.com&#39;]， [&#39;John&#39;，&#39;john00@mail.com&#39;，&#39;john_newyork@mail.com&#39;，&#39;johnsmith@mail.com&#39;]]仍然会被接受。 注意：
+ accounts的长度将在[1，1000]的范围内。 accounts[i]的长度将在[1，10]的范围内。 accounts[i][j]的长度将在[1，30]的范围内。  题解 #  题解一：DFS（深度优先搜索） #  class Solution { public List&lt;List&lt;String&gt;&gt; accountsMerge(List&lt;List&lt;String&gt;&gt; accounts) { Map&lt;String, String&gt; emailToName = new HashMap(); Map&lt;String, ArrayList&lt;String&gt;&gt; graph = new HashMap(); for (List&lt;String&gt; account: accounts) { String name = &#34;&#34;; for (String email : account) { if (name == &#34;&#34;) { name = email; continue; } graph.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="721. Accounts Merge #  题目 #  Given a list accounts, each element accounts[i] is a list of strings, where the first element accounts[i][0] is a name, and the rest of the elements are emailsrepresenting emails of the account.
-Now, we would like to merge these accounts. Two accounts definitely belong to the same person if there is some email that is common to both accounts. Note that even if two accounts have the same name, they may belong to different people as people could have the same name." />
+<meta property="og:description" content="721. 账户合并 #  Difficulty: 中等
+给定一个列表 accounts，每个元素 accounts[i] 是一个字符串列表，其中第一个元素 accounts[i][0] 是 名称 (name)，其余元素是 emails 表示该帐户的邮箱地址。
+现在，我们想合并这些帐户。如果两个帐户都有一些共同的邮件地址，则两个帐户必定属于同一个人。请注意，即使两个帐户具有相同的名称，它们也可能属于不同的人，因为人们可能具有相同的名称。一个人最初可以拥有任意数量的帐户，但其所有帐户都具有相同的名称。
+合并帐户后，按以下格式返回帐户：每个帐户的第一个元素是名称，其余元素是按顺序排列的邮箱地址。accounts 本身可以以任意顺序返回。
+例子 1:
+Input: accounts = [[&#34;John&#34;, &#34;johnsmith@mail.com&#34;, &#34;john00@mail.com&#34;], [&#34;John&#34;, &#34;johnnybravo@mail.com&#34;], [&#34;John&#34;, &#34;johnsmith@mail.com&#34;, &#34;john_newyork@mail.com&#34;], [&#34;Mary&#34;, &#34;mary@mail.com&#34;]] Output: [[&#34;John&#34;, &#39;john00@mail.com&#39;, &#39;john_newyork@mail.com&#39;, &#39;johnsmith@mail.com&#39;], [&#34;John&#34;, &#34;johnnybravo@mail.com&#34;], [&#34;Mary&#34;, &#34;mary@mail.com&#34;]] Explanation: 第一个和第三个 John 是同一个人，因为他们有共同的电子邮件 &#34;johnsmith@mail.com&#34;。 第二个 John 和 Mary 是不同的人，因为他们的电子邮件地址没有被其他帐户使用。 我们可以以任何顺序返回这些列表，例如答案[[&#39;Mary&#39;，&#39;mary@mail.com&#39;]，[&#39;John&#39;，&#39;johnnybravo@mail.com&#39;]， [&#39;John&#39;，&#39;john00@mail.com&#39;，&#39;john_newyork@mail.com&#39;，&#39;johnsmith@mail.com&#39;]]仍然会被接受。 注意：
+ accounts的长度将在[1，1000]的范围内。 accounts[i]的长度将在[1，10]的范围内。 accounts[i][j]的长度将在[1，30]的范围内。  题解 #  题解一：DFS（深度优先搜索） #  class Solution { public List&lt;List&lt;String&gt;&gt; accountsMerge(List&lt;List&lt;String&gt;&gt; accounts) { Map&lt;String, String&gt; emailToName = new HashMap(); Map&lt;String, ArrayList&lt;String&gt;&gt; graph = new HashMap(); for (List&lt;String&gt; account: accounts) { String name = &#34;&#34;; for (String email : account) { if (name == &#34;&#34;) { name = email; continue; } graph." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0721.Accounts-Merge/" />
-<meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
+<meta property="article:modified_time" content="2020-12-07T09:49:29+08:00" />
 <title>0721. Accounts Merge | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.4e6d6d593c1c67e6d34e5a354d31b5c51cde5d79ddaa44c62d6a7a50d13211a6.js" integrity="sha256-Tm1tWTwcZ&#43;bTTlo1TTG1xRzeXXndqkTGLWp6UNEyEaY="></script>
+<script defer src="/leetcode-java/en.search.min.b31f808bd16b9b102ffb5d3fd392558031ba47a083e7b33ef9837bceeeb172a2.js" integrity="sha256-sx&#43;Ai9FrmxAv&#43;10/05JVgDG6R6CD57M&#43;&#43;YN7zu6xcqI="></script>
 
 
 <script async>
@@ -785,6 +795,8 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0094.Binary-Tree-Inorder-Traversal/">0094.Binary-Tree-Inorder-Traversal</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0096.Unique-Binary-Search-Trees/">0096.不同的二叉搜索树</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0103.Binary-Tree-Zigzag-Level-Order-Traversal/">0103.Binary-Tree-Zigzag-Level-Order-Traversal</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
@@ -795,6 +807,10 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0606.Construct-String-From-Binary-Tree/">0606.根据二叉树创建字符串</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0617.Merge-Two-Binary-Trees/">0617.合并二叉树</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0814.Binary-Tree-Pruning/">0814.Binary-Tree-Pruning</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0865.Smallest-Subtree-With-All-The-Deepest-Nodes/">0865.Smallest-Subtree-With-All-The-Deepest-Nodes</a></li>
@@ -802,6 +818,8 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/04_Leetcode/0897.Increasing-Order-Search-Tree/">0897.Increasing-Order-Search-Tree</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0998.Maximum-Binary-Tree-II/">0998.Maximum-Binary-Tree-II</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/1022.Sum-Of-Root-To-Leaf-Binary-Numbers/">1022.从根到叶的二进制数之和</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/1530.Number-Of-Good-Leaf-Nodes-Pairs/">1530.Number-Of-Good-Leaf-Nodes-Pairs</a></li>
 <li>
@@ -812,6 +830,8 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/04_Leetcode/Interview.04.12.Paths-With-Sum-Lcci/">Interview.04.12</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/Offer.26.Shu-De-Zi-Jie-Gou-Lcof/">Offer.26</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.28.Dui-Cheng-De-Er-Cha-Shu-Lcof/">剑指.Offer.28.对称的二叉树</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/Offer.32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof/">Offer.32-II</a></li>
 <li>
@@ -826,9 +846,22 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0129.Sum-Root-to-Leaf-Numbers/">0129.求根到叶子节点数字之和</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0872.Leaf-Similar-Trees/">0872.叶子相似的树</a></li>
+  <a href="/leetcode-java/04_Leetcode/0563.Binary-Tree-Tilt/">0563.二叉树的坡度</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Interview.16.19.Pond-Sizes-Lcci/">面试题.16.19.水域大小</a>
+  <a href="/leetcode-java/04_Leetcode/0563.Binary-Tree-Tilt/">0563.二叉树的坡度</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0690.Employee-Importance/">0690.员工的重要性</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Interview.16.19.Pond-Sizes-Lcci/">面试题.16.19.水域大小</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.55.I.Er-Cha-Shu-De-Shen-Du-Lcof/">剑指.Offer.55-I.二叉树的深度</a></li>
+</ul>
+</li>
+<li>
+  <a href="/leetcode-java/03_Topic/DFS/">第七章 位运算</a>
+<ul>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0268.Missing-Number/">0268.丢失的数字</a>
 <br /></li>
 </ul>
 </li>
@@ -877,153 +910,92 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="721-accounts-mergehttpsleetcodecomproblemsaccounts-merge">
+  <article class="markdown"><h1 id="721-账户合并httpsleetcode-cncomproblemsaccounts-merge">
   
-  <a href="https://leetcode.com/problems/accounts-merge/">721. Accounts Merge</a>
-  <a class="anchor" href="#721-accounts-mergehttpsleetcodecomproblemsaccounts-merge">#</a>
+  <a href="https://leetcode-cn.com/problems/accounts-merge/">721. 账户合并</a>
+  <a class="anchor" href="#721-%e8%b4%a6%e6%88%b7%e5%90%88%e5%b9%b6httpsleetcode-cncomproblemsaccounts-merge">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
-</h2>
-<p>Given a list <code>accounts</code>, each element <code>accounts[i]</code> is a list of strings, where the first element <code>accounts[i][0]</code> is a name, and the rest of the elements are emailsrepresenting emails of the account.</p>
-<p>Now, we would like to merge these accounts. Two accounts definitely belong to the same person if there is some email that is common to both accounts. Note that even if two accounts have the same name, they may belong to different people as people could have the same name. A person can have any number of accounts initially, but all of their accounts definitely have the same name.</p>
-<p>After merging the accounts, return the accounts in the following format: the first element of each account is the name, and the rest of the elements are emails <strong>in sorted order</strong>. The accounts themselves can be returned in any order.</p>
-<p><strong>Example 1</strong>:</p>
-<pre><code>Input: 
-accounts = [[&quot;John&quot;, &quot;johnsmith@mail.com&quot;, &quot;john00@mail.com&quot;], [&quot;John&quot;, &quot;johnnybravo@mail.com&quot;], [&quot;John&quot;, &quot;johnsmith@mail.com&quot;, &quot;john_newyork@mail.com&quot;], [&quot;Mary&quot;, &quot;mary@mail.com&quot;]]
-Output: [[&quot;John&quot;, 'john00@mail.com', 'john_newyork@mail.com', 'johnsmith@mail.com'],  [&quot;John&quot;, &quot;johnnybravo@mail.com&quot;], [&quot;Mary&quot;, &quot;mary@mail.com&quot;]]
+<p>Difficulty: <strong>中等</strong></p>
+<p>给定一个列表 <code>accounts</code>，每个元素 <code>accounts[i]</code> 是一个字符串列表，其中第一个元素 <code>accounts[i][0]</code> 是 <em>名称 (name)</em>，其余元素是 <em>emails</em> 表示该帐户的邮箱地址。</p>
+<p>现在，我们想合并这些帐户。如果两个帐户都有一些共同的邮件地址，则两个帐户必定属于同一个人。请注意，即使两个帐户具有相同的名称，它们也可能属于不同的人，因为人们可能具有相同的名称。一个人最初可以拥有任意数量的帐户，但其所有帐户都具有相同的名称。</p>
+<p>合并帐户后，按以下格式返回帐户：每个帐户的第一个元素是名称，其余元素是按顺序排列的邮箱地址。accounts 本身可以以任意顺序返回。</p>
+<p><strong>例子 1:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Input: 
+accounts <span style="color:#f92672">=</span> <span style="color:#f92672">[[</span><span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;johnsmith@mail.com&#34;</span>, <span style="color:#e6db74">&#34;john00@mail.com&#34;</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;johnnybravo@mail.com&#34;</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;johnsmith@mail.com&#34;</span>, <span style="color:#e6db74">&#34;john_newyork@mail.com&#34;</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Mary&#34;</span>, <span style="color:#e6db74">&#34;mary@mail.com&#34;</span><span style="color:#f92672">]]</span>
+Output: <span style="color:#f92672">[[</span><span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#39;john00@mail.com&#39;</span>, <span style="color:#e6db74">&#39;john_newyork@mail.com&#39;</span>, <span style="color:#e6db74">&#39;johnsmith@mail.com&#39;</span><span style="color:#f92672">]</span>,  <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;johnnybravo@mail.com&#34;</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Mary&#34;</span>, <span style="color:#e6db74">&#34;mary@mail.com&#34;</span><span style="color:#f92672">]]</span>
 Explanation: 
-The first and third John's are the same person as they have the common email &quot;johnsmith@mail.com&quot;.
-The second John and Mary are different people as none of their email addresses are used by other accounts.
-We could return these lists in any order, for example the answer [['Mary', 'mary@mail.com'], ['John', 'johnnybravo@mail.com'], 
-['John', 'john00@mail.com', 'john_newyork@mail.com', 'johnsmith@mail.com']] would still be accepted.
-</code></pre>
-<p><strong>Note</strong>:</p>
+  第一个和第三个 John 是同一个人，因为他们有共同的电子邮件 <span style="color:#e6db74">&#34;johnsmith@mail.com&#34;</span>。 
+  第二个 John 和 Mary 是不同的人，因为他们的电子邮件地址没有被其他帐户使用。
+  我们可以以任何顺序返回这些列表，例如答案<span style="color:#f92672">[[</span><span style="color:#e6db74">&#39;Mary&#39;</span>，<span style="color:#e6db74">&#39;mary@mail.com&#39;</span><span style="color:#f92672">]</span>，<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;John&#39;</span>，<span style="color:#e6db74">&#39;johnnybravo@mail.com&#39;</span><span style="color:#f92672">]</span>，
+  <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;John&#39;</span>，<span style="color:#e6db74">&#39;john00@mail.com&#39;</span>，<span style="color:#e6db74">&#39;john_newyork@mail.com&#39;</span>，<span style="color:#e6db74">&#39;johnsmith@mail.com&#39;</span><span style="color:#f92672">]]</span>仍然会被接受。
+
+</code></pre></div><p><strong>注意：</strong></p>
 <ul>
-<li>The length of <code>accounts</code> will be in the range <code>[1, 1000]</code>.</li>
-<li>The length of <code>accounts[i]</code> will be in the range <code>[1, 10]</code>.</li>
-<li>The length of <code>accounts[i][j]</code> will be in the range <code>[1, 30]</code>.</li>
+<li><code>accounts</code>的长度将在<code>[1，1000]</code>的范围内。</li>
+<li><code>accounts[i]</code>的长度将在<code>[1，10]</code>的范围内。</li>
+<li><code>accounts[i][j]</code>的长度将在<code>[1，30]</code>的范围内。</li>
 </ul>
-<h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
+<h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
 </h2>
-<p>给定一个列表 accounts，每个元素 accounts[i] 是一个字符串列表，其中第一个元素 accounts[i][0] 是 名称 (name)，其余元素是 emails 表示该帐户的邮箱地址。现在，我们想合并这些帐户。如果两个帐户都有一些共同的邮件地址，则两个帐户必定属于同一个人。请注意，即使两个帐户具有相同的名称，它们也可能属于不同的人，因为人们可能具有相同的名称。一个人最初可以拥有任意数量的帐户，但其所有帐户都具有相同的名称。合并帐户后，按以下格式返回帐户：每个帐户的第一个元素是名称，其余元素是按顺序排列的邮箱地址。accounts 本身可以以任意顺序返回。</p>
-<p>注意：</p>
+<h3 id="题解一dfs深度优先搜索">
+  题解一：DFS（深度优先搜索）
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%b8%80dfs%e6%b7%b1%e5%ba%a6%e4%bc%98%e5%85%88%e6%90%9c%e7%b4%a2">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">accountsMerge</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> accounts<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> emailToName <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">();</span>
+        Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> graph <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> account<span style="color:#f92672">:</span> accounts<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String email <span style="color:#f92672">:</span> account<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    name <span style="color:#f92672">=</span> email<span style="color:#f92672">;</span>
+                    <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span>
+                graph<span style="color:#f92672">.</span><span style="color:#a6e22e">computeIfAbsent</span><span style="color:#f92672">(</span>email<span style="color:#f92672">,</span> x<span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;()).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>account<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>1<span style="color:#f92672">));</span>
+                graph<span style="color:#f92672">.</span><span style="color:#a6e22e">computeIfAbsent</span><span style="color:#f92672">(</span>account<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>1<span style="color:#f92672">),</span> x<span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;()).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>email<span style="color:#f92672">);</span>
+                emailToName<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>email<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> seen <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">();</span>
+        List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> ans <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String email<span style="color:#f92672">:</span> graph<span style="color:#f92672">.</span><span style="color:#a6e22e">keySet</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>seen<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>email<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                seen<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>email<span style="color:#f92672">);</span>
+                Stack<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">();</span>
+                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>email<span style="color:#f92672">);</span>
+                List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> component <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">();</span>
+                <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">empty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+                    String node <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+                    component<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">);</span>
+                    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String nei<span style="color:#f92672">:</span> graph<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>node<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>seen<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>nei<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                            seen<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>nei<span style="color:#f92672">);</span>
+                            stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>nei<span style="color:#f92672">);</span>
+                        <span style="color:#f92672">}</span>
+                    <span style="color:#f92672">}</span>
+                <span style="color:#f92672">}</span>
+                Collections<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>component<span style="color:#f92672">);</span>
+                component<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> emailToName<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>email<span style="color:#f92672">));</span>
+                ans<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>component<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> ans<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>复杂度分析</strong></p>
 <ul>
-<li>accounts 的长度将在 [1，1000] 的范围内。</li>
-<li>accounts[i] 的长度将在 [1，10] 的范围内。</li>
-<li>accounts[i][j] 的长度将在 [1，30] 的范围内。</li>
+<li>
+<p>时间复杂度：</p>
+</li>
+<li>
+<p>空间复杂度：</p>
+</li>
 </ul>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
-</h2>
-<ul>
-<li>给出一堆账户和对应的邮箱。要求合并同一个人的多个邮箱账户。如果判断是同一个人呢？如果这个人名和所属的其中之一的邮箱是相同的，就判定这是同一个人的邮箱，那么就合并这些邮箱。</li>
-<li>这题的解题思路是并查集。不过如果用暴力合并的方法，时间复杂度非常差。优化方法是先把每组数据都进行编号，人编号，每个邮箱都进行编号。这个映射关系用 <code>map</code> 记录起来。如果利用并查集的 <code>union()</code> 操作，把这些编号都进行合并。最后把人的编号和对应邮箱的编号拼接起来。</li>
-<li>这一题有 2 处比较“坑”的是，不需要合并的用户的邮箱列表也是需要排序和去重的，同一个人的所有邮箱集合都要合并到一起。具体见测试用例。不过题目中也提到了这些点，也不能算题目坑，只能归自己没注意这些边界情况。</li>
-</ul>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
-
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;sort&#34;</span>
-
-	<span style="color:#e6db74">&#34;github.com/halfrost/LeetCode-Go/template&#34;</span>
-)
-
-<span style="color:#75715e">// 解法一 并查集优化搜索解法
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">accountsMerge</span>(<span style="color:#a6e22e">accounts</span> [][]<span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">r</span> [][]<span style="color:#66d9ef">string</span>) {
-	<span style="color:#a6e22e">uf</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">template</span>.<span style="color:#a6e22e">UnionFind</span>{}
-	<span style="color:#a6e22e">uf</span>.<span style="color:#a6e22e">Init</span>(len(<span style="color:#a6e22e">accounts</span>))
-	<span style="color:#75715e">// emailToID 将所有的 email 邮箱都拆开，拆开与 id(数组下标) 对应
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// idToName 将 id(数组下标) 与 name 对应
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">// idToEmails 将 id(数组下标) 与整理好去重以后的 email 组对应
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">emailToID</span>, <span style="color:#a6e22e">idToName</span>, <span style="color:#a6e22e">idToEmails</span>, <span style="color:#a6e22e">res</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>), make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>]<span style="color:#66d9ef">string</span>), make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>][]<span style="color:#66d9ef">string</span>), [][]<span style="color:#66d9ef">string</span>{}
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">acc</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">accounts</span> {
-		<span style="color:#a6e22e">idToName</span>[<span style="color:#a6e22e">id</span>] = <span style="color:#a6e22e">acc</span>[<span style="color:#ae81ff">0</span>]
-		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">acc</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-			<span style="color:#a6e22e">pid</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">emailToID</span>[<span style="color:#a6e22e">acc</span>[<span style="color:#a6e22e">i</span>]]
-			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">ok</span> {
-				<span style="color:#a6e22e">uf</span>.<span style="color:#a6e22e">Union</span>(<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">pid</span>)
-			}
-			<span style="color:#a6e22e">emailToID</span>[<span style="color:#a6e22e">acc</span>[<span style="color:#a6e22e">i</span>]] = <span style="color:#a6e22e">id</span>
-		}
-	}
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">email</span>, <span style="color:#a6e22e">id</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">emailToID</span> {
-		<span style="color:#a6e22e">pid</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">uf</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">id</span>)
-		<span style="color:#a6e22e">idToEmails</span>[<span style="color:#a6e22e">pid</span>] = append(<span style="color:#a6e22e">idToEmails</span>[<span style="color:#a6e22e">pid</span>], <span style="color:#a6e22e">email</span>)
-	}
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">emails</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">idToEmails</span> {
-		<span style="color:#a6e22e">name</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">idToName</span>[<span style="color:#a6e22e">id</span>]
-		<span style="color:#a6e22e">sort</span>.<span style="color:#a6e22e">Strings</span>(<span style="color:#a6e22e">emails</span>)
-		<span style="color:#a6e22e">res</span> = append(<span style="color:#a6e22e">res</span>, append([]<span style="color:#66d9ef">string</span>{<span style="color:#a6e22e">name</span>}, <span style="color:#a6e22e">emails</span><span style="color:#f92672">...</span>))
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
-}
-
-<span style="color:#75715e">// 解法二 并查集暴力解法
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">accountsMerge1</span>(<span style="color:#a6e22e">accounts</span> [][]<span style="color:#66d9ef">string</span>) [][]<span style="color:#66d9ef">string</span> {
-	<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">accounts</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#66d9ef">return</span> [][]<span style="color:#66d9ef">string</span>{}
-	}
-	<span style="color:#a6e22e">uf</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">visited</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">template</span>.<span style="color:#a6e22e">UnionFind</span>{}, [][]<span style="color:#66d9ef">string</span>{}, <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>]<span style="color:#66d9ef">bool</span>{}
-	<span style="color:#a6e22e">uf</span>.<span style="color:#a6e22e">Init</span>(len(<span style="color:#a6e22e">accounts</span>))
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">accounts</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> &lt; len(<span style="color:#a6e22e">accounts</span>); <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span> {
-			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">accounts</span>[<span style="color:#a6e22e">i</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#a6e22e">accounts</span>[<span style="color:#a6e22e">j</span>][<span style="color:#ae81ff">0</span>] {
-				<span style="color:#a6e22e">tmpA</span>, <span style="color:#a6e22e">tmpB</span>, <span style="color:#a6e22e">flag</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">accounts</span>[<span style="color:#a6e22e">i</span>][<span style="color:#ae81ff">1</span>:], <span style="color:#a6e22e">accounts</span>[<span style="color:#a6e22e">j</span>][<span style="color:#ae81ff">1</span>:], <span style="color:#66d9ef">false</span>
-				<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> &lt; len(<span style="color:#a6e22e">tmpA</span>); <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span> {
-					<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">k</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">k</span> &lt; len(<span style="color:#a6e22e">tmpB</span>); <span style="color:#a6e22e">k</span><span style="color:#f92672">++</span> {
-						<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">tmpA</span>[<span style="color:#a6e22e">j</span>] <span style="color:#f92672">==</span> <span style="color:#a6e22e">tmpB</span>[<span style="color:#a6e22e">k</span>] {
-							<span style="color:#a6e22e">flag</span> = <span style="color:#66d9ef">true</span>
-							<span style="color:#66d9ef">break</span>
-						}
-					}
-					<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">flag</span> {
-						<span style="color:#66d9ef">break</span>
-					}
-				}
-				<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">flag</span> {
-					<span style="color:#a6e22e">uf</span>.<span style="color:#a6e22e">Union</span>(<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span>)
-				}
-			}
-		}
-	}
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">accounts</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">i</span>] {
-			<span style="color:#66d9ef">continue</span>
-		}
-		<span style="color:#a6e22e">emails</span>, <span style="color:#a6e22e">account</span>, <span style="color:#a6e22e">tmpMap</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">accounts</span>[<span style="color:#a6e22e">i</span>][<span style="color:#ae81ff">1</span>:], []<span style="color:#66d9ef">string</span>{<span style="color:#a6e22e">accounts</span>[<span style="color:#a6e22e">i</span>][<span style="color:#ae81ff">0</span>]}, <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
-		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> &lt; len(<span style="color:#a6e22e">accounts</span>); <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span> {
-			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">uf</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">j</span>) <span style="color:#f92672">==</span> <span style="color:#a6e22e">uf</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">i</span>) {
-				<span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">j</span>] = <span style="color:#66d9ef">true</span>
-				<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">accounts</span>[<span style="color:#a6e22e">j</span>][<span style="color:#ae81ff">1</span>:] {
-					<span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">v</span>] = <span style="color:#a6e22e">v</span>
-				}
-			}
-		}
-		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">emails</span> {
-			<span style="color:#a6e22e">tmpMap</span>[<span style="color:#a6e22e">v</span>] = <span style="color:#a6e22e">v</span>
-		}
-		<span style="color:#a6e22e">emails</span> = []<span style="color:#66d9ef">string</span>{}
-		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">tmpMap</span> {
-			<span style="color:#a6e22e">emails</span> = append(<span style="color:#a6e22e">emails</span>, <span style="color:#a6e22e">key</span>)
-		}
-		<span style="color:#a6e22e">sort</span>.<span style="color:#a6e22e">Strings</span>(<span style="color:#a6e22e">emails</span>)
-		<span style="color:#a6e22e">account</span> = append(<span style="color:#a6e22e">account</span>, <span style="color:#a6e22e">emails</span><span style="color:#f92672">...</span>)
-		<span style="color:#a6e22e">res</span> = append(<span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">account</span>)
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>
-}
-
-</code></pre></div></article>
+</article>
  
       
 
@@ -1033,9 +1005,9 @@ We could return these lists in any order, for example the answer [['Mary', 'mary
 
 
 
-  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/a7377273c0f6cbe691676b820e68cba67fd3f353" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/f3e3df282a27352dcd29e3f4ece22b2a5c30c5ae" title='Last modified by Zonglei Dong | Dec 7, 2020' target="_blank" rel="noopener">
       <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 26, 2020</span>
+      <span>Dec 7, 2020</span>
     </a>
   </div>
 

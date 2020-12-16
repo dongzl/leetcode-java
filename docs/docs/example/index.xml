@@ -5,11 +5,7 @@
     <link>https://dongzl.github.io/leetcode-java/docs/example/</link>
     <description>Recent content in Example Site on LeetCode Cookbook</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://dongzl.github.io/leetcode-java/docs/example/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://dongzl.github.io/leetcode-java/docs/example/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://dongzl.github.io/leetcode-java/docs/example/hidden/</link>

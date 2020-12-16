@@ -5,11 +5,7 @@
     <link>https://dongzl.github.io/leetcode-java/docs/shortcodes/section/</link>
     <description>Recent content on LeetCode Cookbook</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://dongzl.github.io/leetcode-java/docs/shortcodes/section/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://dongzl.github.io/leetcode-java/docs/shortcodes/section/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://dongzl.github.io/leetcode-java/docs/shortcodes/section/page1/</link>

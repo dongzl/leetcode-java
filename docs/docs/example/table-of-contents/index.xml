@@ -5,11 +5,7 @@
     <link>https://dongzl.github.io/leetcode-java/docs/example/table-of-contents/</link>
     <description>Recent content on LeetCode Cookbook</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://dongzl.github.io/leetcode-java/docs/example/table-of-contents/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://dongzl.github.io/leetcode-java/docs/example/table-of-contents/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>With ToC</title>
       <link>https://dongzl.github.io/leetcode-java/docs/example/table-of-contents/with-toc/</link>

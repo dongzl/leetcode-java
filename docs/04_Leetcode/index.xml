@@ -5,11 +5,7 @@
     <link>https://dongzl.github.io/leetcode-java/04_Leetcode/</link>
     <description>Recent content in 第四章 on LeetCode Cookbook</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://dongzl.github.io/leetcode-java/04_Leetcode/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://dongzl.github.io/leetcode-java/04_Leetcode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://dongzl.github.io/leetcode-java/04_Leetcode/0001.Two-Sum/</link>
@@ -502,7 +498,7 @@ Input: 2.00000, -2 Output: 0.25000 Explanation: 2-2 = 1/22 = 1/4 = 0.25  Note:
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0051.N-Queens/</guid>
       <description>51. N-Queens #  题目 #  The n-queens puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
  Given an integer n, return all distinct solutions to the n-queens puzzle.
-Each solution contains a distinct board configuration of the n-queens&amp;rsquo; placement, where &#39;Q&#39; and &#39;.&#39; both indicate a queen and an empty space respectively.
+Each solution contains a distinct board configuration of the n-queens&#39; placement, where &#39;Q&#39; and &#39;.&#39; both indicate a queen and an empty space respectively.
 Example:
 Input: 4 Output: [ [&amp;quot;.</description>
     </item>
@@ -982,9 +978,10 @@ Input: 3 Output: [ [1,null,3,2], [3,2,null,1], [3,1,null,null,2], [2,1,3], [1,nu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0096.Unique-Binary-Search-Trees/</guid>
-      <description>96. Unique Binary Search Trees #  题目 #  Given n, how many structurally unique BST&amp;rsquo;s (binary search trees) that store values 1 &amp;hellip; n?
-Example:
-Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  题目大意 #  给定一个整数 n，求以 1 &amp;hellip; n 为节点组成的二叉搜索树有多少种？</description>
+      <description>96. 不同的二叉搜索树 #  Difficulty: 中等
+给定一个整数 n，求以 1 &amp;hellip; n 为节点组成的二叉搜索树有多少种？
+示例:
+输入: 3 输出: 5 解释: 给定 n = 3, 一共有 5 种不同结构的二叉搜索树: 1 3 3 2 1 \  / / / \  \  3 2 1 1 3 2 / / \  \  2 1 2 3 题解 #  题解一：DP（动态规划） #  class Solution { public int numTrees(int n) { int[] result = new int[n + 1]; result[0] = 1; result[1] = 1; for (int i = 2; i &amp;lt;= n; i++) { for (int j = 1; j &amp;lt;= i; j++) { result[i] += result[j - 1] * result[i - j]; } } return result[n]; } } 复杂度分析</description>
     </item>
     
     <item>
@@ -1044,7 +1041,7 @@ Bonus points if you could solve it both recursively and iteratively.</descriptio
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0102.Binary-Tree-Level-Order-Traversal/</guid>
-      <description>102. Binary Tree Level Order Traversal #  题目 #  Given a binary tree, return the level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level).
+      <description>102. Binary Tree Level Order Traversal #  题目 #  Given a binary tree, return the level order traversal of its nodes&#39; values. (ie, from left to right, level by level).
 For Example:
 Given binary tree [3,9,20,null,null,15,7],
  3 / \ 9 20 / \ 15 7 return its level order traversal as:
@@ -1116,7 +1113,7 @@ inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0107.Binary-Tree-Level-Order-Traversal-II/</guid>
-      <description>107. Binary Tree Level Order Traversal II #  题目 #  Given a binary tree, return the bottom-up level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level from leaf to root).
+      <description>107. Binary Tree Level Order Traversal II #  题目 #  Given a binary tree, return the bottom-up level order traversal of its nodes&#39; values. (ie, from left to right, level by level from leaf to root).
 For Example:
 Given binary tree [3,9,20,null,null,15,7],
  3 / \ 9 20 / \ 15 7 return its bottom-up level order traversal as:
@@ -1449,7 +1446,7 @@ Example 1:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0144.Binary-Tree-Preorder-Traversal/</guid>
-      <description>144. Binary Tree Preorder Traversal #  题目 #  Given a binary tree, return the preorder traversal of its nodes&amp;rsquo; values.
+      <description>144. Binary Tree Preorder Traversal #  题目 #  Given a binary tree, return the preorder traversal of its nodes&#39; values.
 Example:
  Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3] Follow up: Recursive solution is trivial, could you do it iteratively?
 题目大意 #  先根遍历一颗树。
@@ -1463,7 +1460,7 @@ Example:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0145.Binary-Tree-Postorder-Traversal/</guid>
-      <description>145. Binary Tree Postorder Traversal #  题目 #  Given a binary tree, return the postorder traversal of its nodes&amp;rsquo; values.
+      <description>145. Binary Tree Postorder Traversal #  题目 #  Given a binary tree, return the postorder traversal of its nodes&#39; values.
 Example:
  Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1] Follow up: Recursive solution is trivial, could you do it iteratively?
 题目大意 #  后根遍历一颗树。
@@ -2293,11 +2290,13 @@ Input: 8 Output: true Explanation: 8 = 2 × 2 × 2 Example 3:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0268.Missing-Number/</guid>
-      <description>268. Missing Number #  题目 #  Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
-Example 1:
-Input: [3,0,1] Output: 2  Example 2:
-Input: [9,6,4,2,3,5,7,0,1] Output: 8  Note:Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
-题目大意 #  给定一个包含 0, 1, 2, &amp;hellip;, n 中 n 个数的序列，找出 0 .</description>
+      <description>268. 丢失的数字 #  Difficulty: 简单
+给定一个包含 [0, n] 中 n 个数的数组 nums ，找出 [0, n] 这个范围内没有出现在数组中的那个数。
+进阶：
+ 你能否实现线性时间复杂度、仅使用额外常数空间的算法解决此问题?  示例 1：
+输入：nums = [3,0,1] 输出：2 解释：n = 3，因为有 3 个数字，所以所有的数字都在范围 [0,3] 内。2 是丢失的数字，因为它没有出现在 nums 中。 示例 2：
+输入：nums = [0,1] 输出：2 解释：n = 2，因为有 2 个数字，所以所有的数字都在范围 [0,2] 内。2 是丢失的数字，因为它没有出现在 nums 中。 示例 3：
+输入：nums = [9,6,4,2,3,5,7,0,1] 输出：8 解释：n = 9，因为有 9 个数字，所以所有的数字都在范围 [0,9] 内。8 是丢失的数字，因为它没有出现在 nums 中。 示例 4：</description>
     </item>
     
     <item>
@@ -3536,9 +3535,13 @@ Input: [1,4,3,2] Output: 4 Explanation: n is 2, and the maximum sum of pairs is 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0563.Binary-Tree-Tilt/</guid>
-      <description>563. Binary Tree Tilt #  题目 #  Given a binary tree, return the tilt of the whole tree.
-The tilt of a tree node is defined as the absolute difference between the sum of all left subtree node values and the sum of all right subtree node values. Null node has tilt 0.
-The tilt of the whole tree is defined as the sum of all nodes&amp;rsquo; tilt.</description>
+      <description>563. 二叉树的坡度 #  Difficulty: 简单
+给定一个二叉树，计算 整个树 的坡度 。
+一个树的 节点的坡度 定义即为，该节点左子树的节点之和和右子树节点之和的 差的绝对值 。如果没有左子树的话，左子树的节点之和为 0 ；没有右子树的话也是一样。空结点的坡度是 0 。
+整个树 的坡度就是其所有节点的坡度之和。
+示例 1：
+ 输入：root = [1,2,3] 输出：1 解释： 节点 2 的坡度：|0-0| = 0（没有子节点） 节点 3 的坡度：|0-0| = 0（没有子节点） 节点 1 的坡度：|2-3| = 1（左子树就是左子节点，所以和是 2 ；右子树就是右子节点，所以和是 3 ） 坡度总和：0 + 0 + 1 = 1 示例 2：
+ 输入：root = [4,2,9,3,5,null,7] 输出：15 解释： 节点 3 的坡度：|0-0| = 0（没有子节点） 节点 5 的坡度：|0-0| = 0（没有子节点） 节点 7 的坡度：|0-0| = 0（没有子节点） 节点 2 的坡度：|3-5| = 2（左子树就是左子节点，所以和是 3 ；右子树就是右子节点，所以和是 5 ） 节点 9 的坡度：|0-7| = 7（没有左子树，所以和是 0 ；右子树正好是右子节点，所以和是 7 ） 节点 4 的坡度：|(3+5+2)-(9+7)| = |10-16| = 6（左子树值为 3、5 和 2 ，和是 10 ；右子树值为 9 和 7 ，和是 16 ） 坡度总和：0 + 0 + 0 + 2 + 7 + 6 = 15 示例 3：</description>
     </item>
     
     <item>
@@ -3631,6 +3634,34 @@ You need to count and return the number of maximum integers in the matrix after 
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0599.Minimum-Index-Sum-of-Two-Lists/</guid>
       <description>599. Minimum Index Sum of Two Lists #  题目 #  Suppose Andy and Doris want to choose a restaurant for dinner, and they both have a list of favorite restaurants represented by strings.
 You need to help them find out their common interest with the least list index sum. If there is a choice tie between answers, output all of them with no order requirement. You could assume there always exists an answer.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/0606.Construct-String-From-Binary-Tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0606.Construct-String-From-Binary-Tree/</guid>
+      <description>606. 根据二叉树创建字符串 #  Difficulty: 简单
+你需要采用前序遍历的方式，将一个二叉树转换成一个由括号和整数组成的字符串。
+空节点则用一对空括号 &amp;ldquo;()&amp;rdquo; 表示。而且你需要省略所有不影响字符串与原始二叉树之间的一对一映射关系的空括号对。
+示例 1:
+输入: 二叉树: [1,2,3,4] 1 / \  2 3 / 4 输出: &amp;#34;1(2(4))(3)&amp;#34; 解释: 原本将是“1(2(4)())(3())”， 在你省略所有不必要的空括号对之后， 它将是“1(2(4))(3)”。 示例 2:
+输入: 二叉树: [1,2,3,null,4] 1 / \  2 3 \  4 输出: &amp;#34;1(2()(4))(3)&amp;#34; 解释: 和第一个示例相似， 除了我们不能省略第一个对括号来中断输入和输出之间的一对一映射关系。 题解 #  题解一： #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public String tree2str(TreeNode t) { if (t == null) { return &amp;#34;&amp;#34;; } if (t.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/0617.Merge-Two-Binary-Trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0617.Merge-Two-Binary-Trees/</guid>
+      <description>617. 合并二叉树 #  Difficulty: 简单
+给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。
+你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则**不为 **NULL 的节点将直接作为新二叉树的节点。
+示例 1:
+输入: Tree 1 Tree 2 1 2 / \ / \ 3 2 1 3 / \ \ 5 4 7 输出: 合并后的树: 3 / \ 4 5 / \ \ 5 4 7 注意: 合并必须从两个树的根节点开始。
+题解 #  题解一：递归 #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode mergeTrees(TreeNode t1, TreeNode t2) { if (t1 == null &amp;amp;&amp;amp; t2 == null) { return null; } if (t1 == null) { return t2; } if (t2 == null) { return t1; } TreeNode node = new TreeNode(t1.</description>
     </item>
     
     <item>
@@ -3829,6 +3860,21 @@ The given input is a directed graph that started as a rooted tree with N nodes (
     
     <item>
       <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/0690.Employee-Importance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0690.Employee-Importance/</guid>
+      <description>690. 员工的重要性 #  Difficulty: 简单
+给定一个保存员工信息的数据结构，它包含了员工唯一的id，重要度 和 直系下属的id。
+比如，员工1是员工2的领导，员工2是员工3的领导。他们相应的重要度为15, 10, 5。那么员工1的数据结构是[1, 15, [2]]，员工2的数据结构是[2, 10, [3]]，员工3的数据结构是[3, 5, []]。注意虽然员工3也是员工1的一个下属，但是由于并不是直系下属，因此没有体现在员工1的数据结构中。
+现在输入一个公司的所有员工信息，以及单个员工id，返回这个员工和他所有下属的重要度之和。
+示例 1:
+输入: [[1, 5, [2, 3]], [2, 3, []], [3, 3, []]], 1 输出: 11 解释: 员工1自身的重要度是5，他有两个直系下属2和3，而且2和3的重要度均为3。因此员工1的总重要度是 5 + 3 + 3 = 11。 注意:
+ 一个员工最多有一个直系领导，但是可以有多个直系下属 员工数量不超过2000。  题解 #  题解一：DFS（深度优先遍历） #  /* // Definition for Employee. class Employee { public int id; public int importance; public List&amp;lt;Integer&amp;gt; subordinates; }; */ class Solution { int result = 0; public int getImportance(List&amp;lt;Employee&amp;gt; employees, int id) { Map&amp;lt;Integer, Employee&amp;gt; map = new HashMap&amp;lt;&amp;gt;(); for (Employee e : employees) { map.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://dongzl.github.io/leetcode-java/04_Leetcode/0693.Binary-Number-with-Alternating-Bits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -3846,7 +3892,7 @@ Input: 11 Output: False Explanation: The binary representation of 11 is: 1011.</
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0695.Max-Area-of-Island/</guid>
-      <description>695. Max Area of Island #  题目 #  Given a non-empty 2D array grid of 0&amp;rsquo;s and 1&amp;rsquo;s, an island is a group of 1&#39;s (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
+      <description>695. Max Area of Island #  题目 #  Given a non-empty 2D array grid of 0&amp;rsquo;s and 1&amp;rsquo;s, an island is a group of 1&amp;rsquo;s (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
 Find the maximum area of an island in the given 2D array. (If there is no island, the maximum area is 0.)
 Example 1:</description>
     </item>
@@ -4015,8 +4061,13 @@ Input: words = [&amp;quot;w&amp;quot;,&amp;quot;wo&amp;quot;,&amp;quot;wor&amp;q
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0721.Accounts-Merge/</guid>
-      <description>721. Accounts Merge #  题目 #  Given a list accounts, each element accounts[i] is a list of strings, where the first element accounts[i][0] is a name, and the rest of the elements are emailsrepresenting emails of the account.
-Now, we would like to merge these accounts. Two accounts definitely belong to the same person if there is some email that is common to both accounts. Note that even if two accounts have the same name, they may belong to different people as people could have the same name.</description>
+      <description>721. 账户合并 #  Difficulty: 中等
+给定一个列表 accounts，每个元素 accounts[i] 是一个字符串列表，其中第一个元素 accounts[i][0] 是 名称 (name)，其余元素是 emails 表示该帐户的邮箱地址。
+现在，我们想合并这些帐户。如果两个帐户都有一些共同的邮件地址，则两个帐户必定属于同一个人。请注意，即使两个帐户具有相同的名称，它们也可能属于不同的人，因为人们可能具有相同的名称。一个人最初可以拥有任意数量的帐户，但其所有帐户都具有相同的名称。
+合并帐户后，按以下格式返回帐户：每个帐户的第一个元素是名称，其余元素是按顺序排列的邮箱地址。accounts 本身可以以任意顺序返回。
+例子 1:
+Input: accounts = [[&amp;#34;John&amp;#34;, &amp;#34;johnsmith@mail.com&amp;#34;, &amp;#34;john00@mail.com&amp;#34;], [&amp;#34;John&amp;#34;, &amp;#34;johnnybravo@mail.com&amp;#34;], [&amp;#34;John&amp;#34;, &amp;#34;johnsmith@mail.com&amp;#34;, &amp;#34;john_newyork@mail.com&amp;#34;], [&amp;#34;Mary&amp;#34;, &amp;#34;mary@mail.com&amp;#34;]] Output: [[&amp;#34;John&amp;#34;, &amp;#39;john00@mail.com&amp;#39;, &amp;#39;john_newyork@mail.com&amp;#39;, &amp;#39;johnsmith@mail.com&amp;#39;], [&amp;#34;John&amp;#34;, &amp;#34;johnnybravo@mail.com&amp;#34;], [&amp;#34;Mary&amp;#34;, &amp;#34;mary@mail.com&amp;#34;]] Explanation: 第一个和第三个 John 是同一个人，因为他们有共同的电子邮件 &amp;#34;johnsmith@mail.com&amp;#34;。 第二个 John 和 Mary 是不同的人，因为他们的电子邮件地址没有被其他帐户使用。 我们可以以任何顺序返回这些列表，例如答案[[&amp;#39;Mary&amp;#39;，&amp;#39;mary@mail.com&amp;#39;]，[&amp;#39;John&amp;#39;，&amp;#39;johnnybravo@mail.com&amp;#39;]， [&amp;#39;John&amp;#39;，&amp;#39;john00@mail.com&amp;#39;，&amp;#39;john_newyork@mail.com&amp;#39;，&amp;#39;johnsmith@mail.com&amp;#39;]]仍然会被接受。 注意：
+ accounts的长度将在[1，1000]的范围内。 accounts[i]的长度将在[1，10]的范围内。 accounts[i][j]的长度将在[1，30]的范围内。  题解 #  题解一：DFS（深度优先搜索） #  class Solution { public List&amp;lt;List&amp;lt;String&amp;gt;&amp;gt; accountsMerge(List&amp;lt;List&amp;lt;String&amp;gt;&amp;gt; accounts) { Map&amp;lt;String, String&amp;gt; emailToName = new HashMap(); Map&amp;lt;String, ArrayList&amp;lt;String&amp;gt;&amp;gt; graph = new HashMap(); for (List&amp;lt;String&amp;gt; account: accounts) { String name = &amp;#34;&amp;#34;; for (String email : account) { if (name == &amp;#34;&amp;#34;) { name = email; continue; } graph.</description>
     </item>
     
     <item>
@@ -5306,9 +5357,19 @@ Example 1:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0993.Cousins-in-Binary-Tree/</guid>
-      <description>993. Cousins in Binary Tree #  题目 #  In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k+1.
-Two nodes of a binary tree are cousins if they have the same depth, but have different parents.
-We are given the root of a binary tree with unique values, and the values x and y of two different nodes in the tree.</description>
+      <description>993. 二叉树的堂兄弟节点 #  Difficulty: 简单
+在二叉树中，根节点位于深度 0 处，每个深度为 k 的节点的子节点位于深度 k+1 处。
+如果二叉树的两个节点深度相同，但父节点不同，则它们是一对_堂兄弟节点_。
+我们给出了具有唯一值的二叉树的根节点 root，以及树中两个不同节点的值 x 和 y。
+只有与值 x 和 y 对应的节点是堂兄弟节点时，才返回 true。否则，返回 false。
+示例 1：
+
+输入：root = [1,2,3,4], x = 4, y = 3 输出：false 示例 2：
+
+输入：root = [1,2,3,null,4,null,5], x = 5, y = 4 输出：true 示例 3：
+ 
+输入：root = [1,2,3,null,4], x = 2, y = 3 输出：false 提示：
+ 二叉树的节点数介于 2 到 100 之间。 每个节点的值都是唯一的、范围为 1 到 100 的整数。  题解 #  题解一：DFS（广度优先搜索） #  /** * Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -5471,6 +5532,23 @@ Return the number of land squares in the grid for which we cannot walk off the
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/1021.Remove-Outermost-Parentheses/</guid>
       <description>1021. Remove Outermost Parentheses #  题目 #  A valid parentheses string is either empty (&amp;quot;&amp;quot;), &amp;ldquo;(&amp;rdquo; + A + &amp;ldquo;)&amp;rdquo;, or A + B, where A and B are valid parentheses strings, and + represents string concatenation. For example, &amp;ldquo;&amp;rdquo;, &amp;ldquo;()&amp;rdquo;, &amp;ldquo;(())()&amp;rdquo;, and &amp;ldquo;(()(()))&amp;rdquo; are all valid parentheses strings.
 A valid parentheses string S is primitive if it is nonempty, and there does not exist a way to split it into S = A+B, with A and B nonempty valid parentheses strings.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/1022.Sum-Of-Root-To-Leaf-Binary-Numbers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/1022.Sum-Of-Root-To-Leaf-Binary-Numbers/</guid>
+      <description>1022. 从根到叶的二进制数之和 #  Difficulty: 简单
+给出一棵二叉树，其上每个结点的值都是 0 或 1 。每一条从根到叶的路径都代表一个从最高有效位开始的二进制数。例如，如果路径为 0 -&amp;gt; 1 -&amp;gt; 1 -&amp;gt; 0 -&amp;gt; 1，那么它表示二进制数 01101，也就是 13 。
+对树上的每一片叶子，我们都要找出从根到该叶子的路径所表示的数字。
+返回这些数字之和。题目数据保证答案是一个 32 位 整数。
+示例 1：
+ 输入：root = [1,0,1,0,1,0,1] 输出：22 解释：(100) + (101) + (110) + (111) = 4 + 5 + 6 + 7 = 22 示例 2：
+输入：root = [0] 输出：0 示例 3：
+输入：root = [1] 输出：1 示例 4：
+输入：root = [1,1] 输出：3 提示：</description>
     </item>
     
     <item>
@@ -6048,7 +6126,7 @@ You can move according to the next rules:
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/1275.Find-Winner-on-a-Tic-Tac-Toe-Game/</guid>
       <description>1275. Find Winner on a Tic Tac Toe Game #  题目 #  Tic-tac-toe is played by two players A and B on a 3 x 3 grid.
 Here are the rules of Tic-Tac-Toe:
- Players take turns placing characters into empty squares (&amp;rdquo; &amp;ldquo;). The first player A always places &amp;ldquo;X&amp;rdquo; characters, while the second player B always places &amp;ldquo;O&amp;rdquo; characters. &amp;ldquo;X&amp;rdquo; and &amp;ldquo;O&amp;rdquo; characters are always placed into empty squares, never on filled ones.</description>
+ Players take turns placing characters into empty squares (&amp;quot; &amp;ldquo;). The first player A always places &amp;ldquo;X&amp;rdquo; characters, while the second player B always places &amp;ldquo;O&amp;rdquo; characters. &amp;ldquo;X&amp;rdquo; and &amp;ldquo;O&amp;rdquo; characters are always placed into empty squares, never on filled ones.</description>
     </item>
     
     <item>
@@ -6425,7 +6503,7 @@ Design a stream that returns the values in increasing order of their IDs by re
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/1657.Determine-if-Two-Strings-Are-Close/</guid>
       <description>1657. Determine if Two Strings Are Close #  题目 #  Two strings are considered close if you can attain one from the other using the following operations:
- Operation 1: Swap any two existing characters.  For example, abcde -&amp;gt; aecdb   Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character.  For example, aacabb -&amp;gt; bbcbaa (all a&#39;s turn into b&#39;s, and all b&#39;s turn into a&#39;s)    You can use the operations on either string as many times as necessary.</description>
+ Operation 1: Swap any two existing characters.  For example, abcde -&amp;gt; aecdb   Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character.  For example, aacabb -&amp;gt; bbcbaa (all a&amp;rsquo;s turn into b&amp;rsquo;s, and all b&amp;rsquo;s turn into a&amp;rsquo;s)    You can use the operations on either string as many times as necessary.</description>
     </item>
     
     <item>
@@ -6467,7 +6545,7 @@ Input: word1 = [&amp;quot;ab&amp;quot;, &amp;quot;c&amp;quot;], word2 = [&amp;qu
       
       <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/1663.Smallest-String-With-A-Given-Numeric-Value/</guid>
       <description>1663. Smallest String With A Given Numeric Value #  题目 #  The numeric value of a lowercase character is defined as its position (1-indexed) in the alphabet, so the numeric value of a is 1, the numeric value of b is 2, the numeric value of c is 3, and so on.
-The numeric value of a string consisting of lowercase characters is defined as the sum of its characters&amp;rsquo; numeric values.</description>
+The numeric value of a string consisting of lowercase characters is defined as the sum of its characters&#39; numeric values.</description>
     </item>
     
     <item>
@@ -6626,6 +6704,24 @@ B是A的子结构， 即 A中有出现和B相同的结构和节点值。
     
     <item>
       <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/Offer.28.Dui-Cheng-De-Er-Cha-Shu-Lcof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/Offer.28.Dui-Cheng-De-Er-Cha-Shu-Lcof/</guid>
+      <description>剑指 Offer 28. 对称的二叉树 #  Difficulty: 简单
+请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。
+例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
+ 1 / \ 2 2 / \ / \ 3 4 4 3 但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
+1 / \ 2 2 \ \ 3 3 示例 1：
+输入：root = [1,2,2,3,4,4,3] 输出：true 示例 2：
+输入：root = [1,2,2,null,3,null,3] 输出：false 限制：
+0 &amp;lt;= 节点个数 &amp;lt;= 1000
+注意：本题与主站 101 题相同：
+题解 #  题解一：递归 #  /** * Definition for a binary tree node.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://dongzl.github.io/leetcode-java/04_Leetcode/Offer.32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -6653,6 +6749,22 @@ B是A的子结构， 即 A中有出现和B相同的结构和节点值。
 输入: root = [5,3,6,2,4,null,null,1], k = 3 5 / \ 3 6 / \ 2 4 / 1 输出: 4 限制：
 1 ≤ k ≤ 二叉搜索树元素个数
 题解 #  题解一：递归方法（二叉树的中序遍历变型（右根左遍历）） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int kthLargest(TreeNode root, int k) { List&amp;lt;Integer&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); inOrder(root, list); return list.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/Offer.55.I.Er-Cha-Shu-De-Shen-Du-Lcof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/Offer.55.I.Er-Cha-Shu-De-Shen-Du-Lcof/</guid>
+      <description>剑指 Offer 55 - I. 二叉树的深度 #  Difficulty: 简单
+输入一棵二叉树的根节点，求该树的深度。从根节点到叶节点依次经过的节点（含根、叶节点）形成树的一条路径，最长路径的长度为树的深度。
+例如：
+给定二叉树 [3,9,20,null,null,15,7]，
+3 / \  9 20 / \  15 7 返回它的最大深度 3 。
+提示：
+ 节点总数 &amp;lt;= 10000  注意：本题与主站 104 题相同：
+题解 #  题解一：DFS（广度优先搜索） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int maxDepth(TreeNode root) { if(root == null) { return 0; } return Math.</description>
     </item>
     
     <item>
