@@ -4,25 +4,25 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="114. Flatten Binary Tree to Linked List #  题目 #  Given a binary tree, flatten it to a linked list in-place.
-For example, given the following tree:
- 1 / \ 2 5 / \ \ 3 4 6  The flattened tree should look like:
-1 \ 2 \ 3 \ 4 \ 5 \ 6  题目大意 #  给定一个二叉树，原地将它展开为链表。
-解题思路 #    要求把二叉树“打平”，按照先根遍历的顺序，把树的结点都放在右结点中。">
+<meta name="description" content="114. 二叉树展开为链表 #  Difficulty: 中等
+给定一个二叉树，将它展开为一个单链表。
+例如，给定二叉树
+ 1 / \ 2 5 / \ \ 3 4 6 将其展开为：
+1 \ 2 \ 3 \ 4 \ 5 \ 6 题解 #  题解一：二叉树前序遍历（DFS） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode() {} * TreeNode(int val) { this.val = val; } * TreeNode(int val, TreeNode left, TreeNode right) { * this.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="114. Flatten Binary Tree to Linked List #  题目 #  Given a binary tree, flatten it to a linked list in-place.
-For example, given the following tree:
- 1 / \ 2 5 / \ \ 3 4 6  The flattened tree should look like:
-1 \ 2 \ 3 \ 4 \ 5 \ 6  题目大意 #  给定一个二叉树，原地将它展开为链表。
-解题思路 #    要求把二叉树“打平”，按照先根遍历的顺序，把树的结点都放在右结点中。" />
+<meta property="og:description" content="114. 二叉树展开为链表 #  Difficulty: 中等
+给定一个二叉树，将它展开为一个单链表。
+例如，给定二叉树
+ 1 / \ 2 5 / \ \ 3 4 6 将其展开为：
+1 \ 2 \ 3 \ 4 \ 5 \ 6 题解 #  题解一：二叉树前序遍历（DFS） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode() {} * TreeNode(int val) { this.val = val; } * TreeNode(int val, TreeNode left, TreeNode right) { * this." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0114.Flatten-Binary-Tree-to-Linked-List/" />
-<meta property="article:modified_time" content="2020-11-26T17:07:12+08:00" />
+<meta property="article:modified_time" content="2021-01-19T17:20:08+08:00" />
 <title>0114. Flatten Binary Tree to Linked List | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.b31f808bd16b9b102ffb5d3fd392558031ba47a083e7b33ef9837bceeeb172a2.js" integrity="sha256-sx&#43;Ai9FrmxAv&#43;10/05JVgDG6R6CD57M&#43;&#43;YN7zu6xcqI="></script>
+<script defer src="/leetcode-java/en.search.min.eee79e0c10bee0e0a027f09dca6aeb54324bf9bd946ecd142515f8f2d701f46f.js" integrity="sha256-7ueeDBC&#43;4OCgJ/CdymrrVDJL&#43;b2Ubs0UJRX48tcB9G8="></script>
 
 
 <script async>
@@ -789,51 +789,61 @@ https://github.com/alex-shpak/hugo-book
   <a href="/leetcode-java/03_Topic/Tree/">第五章 Tree</a>
 <ul>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0094.Binary-Tree-Inorder-Traversal/">0094.Binary-Tree-Inorder-Traversal</a></li>
+  <a href="/leetcode-java/04_Leetcode/0094.Binary-Tree-Inorder-Traversal/">0094.二叉树的中序遍历</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0096.Unique-Binary-Search-Trees/">0096.不同的二叉搜索树</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0103.Binary-Tree-Zigzag-Level-Order-Traversal/">0103.Binary-Tree-Zigzag-Level-Order-Traversal</a></li>
+  <a href="/leetcode-java/04_Leetcode/0103.Binary-Tree-Zigzag-Level-Order-Traversal/">0103.二叉树的锯齿形层次遍历</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.Balanced-Binary-Tree</a></li>
+  <a href="/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/">0110.平衡二叉树</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0112.Path-Sum/">0112.Path-Sum</a></li>
+  <a href="/leetcode-java/04_Leetcode/0112.Path-Sum/">0112.路径总和</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0222.Count-Complete-Tree-Nodes/">0222.Count-Complete-Tree-Nodes</a></li>
+  <a href="/leetcode-java/04_Leetcode/0114.Flatten-Binary-Tree-to-Linked-List/"class=active>0114.二叉树展开为链表</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N-Ary-Tree-Preorder-Traversal</a></li>
+  <a href="/leetcode-java/04_Leetcode/0222.Count-Complete-Tree-Nodes/">0222.完全二叉树的节点个数</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0297.Serialize-And-Deserialize-Binary-Tree/">0297.二叉树的序列化与反序列化</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N叉树的前序遍历</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0606.Construct-String-From-Binary-Tree/">0606.根据二叉树创建字符串</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0617.Merge-Two-Binary-Trees/">0617.合并二叉树</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0814.Binary-Tree-Pruning/">0814.Binary-Tree-Pruning</a></li>
+  <a href="/leetcode-java/04_Leetcode/0814.Binary-Tree-Pruning/">0814.二叉树剪枝</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0865.Smallest-Subtree-With-All-The-Deepest-Nodes/">0865.Smallest-Subtree-With-All-The-Deepest-Nodes</a></li>
+  <a href="/leetcode-java/04_Leetcode/0865.Smallest-Subtree-With-All-The-Deepest-Nodes/">0865.具有所有最深节点的最小子树</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0897.Increasing-Order-Search-Tree/">0897.Increasing-Order-Search-Tree</a></li>
+  <a href="/leetcode-java/04_Leetcode/0897.Increasing-Order-Search-Tree/">0897.递增顺序查找树</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/0998.Maximum-Binary-Tree-II/">0998.Maximum-Binary-Tree-II</a></li>
+  <a href="/leetcode-java/04_Leetcode/0919.Complete-Binary-Tree-Inserter/">0919.完全二叉树插入器</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0938.Range-Sum-Of-Bst/">0938.二叉搜索树的范围和</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/0998.Maximum-Binary-Tree-II/">0998.最大二叉树-II</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/1022.Sum-Of-Root-To-Leaf-Binary-Numbers/">1022.从根到叶的二进制数之和</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/1530.Number-Of-Good-Leaf-Nodes-Pairs/">1530.Number-Of-Good-Leaf-Nodes-Pairs</a></li>
+  <a href="/leetcode-java/04_Leetcode/1530.Number-Of-Good-Leaf-Nodes-Pairs/">1530.好叶子节点对的数量</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Interview.04.03.List-Of-Depth-Lcci/">Interview.04.03</a></li>
+  <a href="/leetcode-java/04_Leetcode/Interview.04.03.List-Of-Depth-Lcci/">面试题.04.03.特定深度节点链表</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Interview.04.05.Legal-Binary-Search-Tree-Lcci/">Interview.04.05</a></li>
+  <a href="/leetcode-java/04_Leetcode/Interview.04.05.Legal-Binary-Search-Tree-Lcci/">面试题.04.05.合法二叉搜索树</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Interview.04.12.Paths-With-Sum-Lcci/">Interview.04.12</a></li>
+  <a href="/leetcode-java/04_Leetcode/Interview.04.12.Paths-With-Sum-Lcci/">面试题.04.12.求和路径</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Offer.26.Shu-De-Zi-Jie-Gou-Lcof/">Offer.26</a></li>
+  <a href="/leetcode-java/04_Leetcode/Offer.26.Shu-De-Zi-Jie-Gou-Lcof/">剑指.Offer.26.树的子结构</a></li>
+<li>
+  <a href="/leetcode-java/04_Leetcode/Offer.27.Er-Cha-Shu-De-Jing-Xiang-Lcof/">剑指.Offer.27.二叉树的镜像</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/Offer.28.Dui-Cheng-De-Er-Cha-Shu-Lcof/">剑指.Offer.28.对称的二叉树</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Offer.32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof/">Offer.32-II</a></li>
+  <a href="/leetcode-java/04_Leetcode/Offer.32.II.Cong-Shang-Dao-Xia-Da-Yin-Er-Cha-Shu-II-Lcof/">剑指.Offer.32-II.从上到下打印二叉树-II</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Offer.54.Er-Cha-Sou-Suo-Shu-De-Di-Kda-Jie-Dian-Lcof/">Offer.54</a></li>
+  <a href="/leetcode-java/04_Leetcode/Offer.54.Er-Cha-Sou-Suo-Shu-De-Di-Kda-Jie-Dian-Lcof/">剑指.Offer.54.二叉搜索树的第k大节点</a></li>
 <li>
-  <a href="/leetcode-java/04_Leetcode/Offer.55.II.Ping-Heng-Er-Cha-Shu-Lcof/">Offer.55-II</a></li>
+  <a href="/leetcode-java/04_Leetcode/Offer.55.II.Ping-Heng-Er-Cha-Shu-Lcof/">剑指.Offer.55-II.平衡二叉树</a></li>
 </ul>
 </li>
 <li>
@@ -906,24 +916,20 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="114-flatten-binary-tree-to-linked-listhttpsleetcodecomproblemsflatten-binary-tree-to-linked-list">
+  <article class="markdown"><h1 id="114-二叉树展开为链表httpsleetcode-cncomproblemsflatten-binary-tree-to-linked-list">
   
-  <a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/">114. Flatten Binary Tree to Linked List</a>
-  <a class="anchor" href="#114-flatten-binary-tree-to-linked-listhttpsleetcodecomproblemsflatten-binary-tree-to-linked-list">#</a>
+  <a href="https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/">114. 二叉树展开为链表</a>
+  <a class="anchor" href="#114-%e4%ba%8c%e5%8f%89%e6%a0%91%e5%b1%95%e5%bc%80%e4%b8%ba%e9%93%be%e8%a1%a8httpsleetcode-cncomproblemsflatten-binary-tree-to-linked-list">#</a>
 </h1>
-<h2 id="题目">
-  题目
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae">#</a>
-</h2>
-<p>Given a binary tree, flatten it to a linked list in-place.</p>
-<p>For example, given the following tree:</p>
+<p>Difficulty: <strong>中等</strong></p>
+<p>给定一个二叉树，将它展开为一个单链表。</p>
+<p>例如，给定二叉树</p>
 <pre><code>    1
    / \
   2   5
  / \   \
 3   4   6
-</code></pre>
-<p>The flattened tree should look like:</p>
+</code></pre><p>将其展开为：</p>
 <pre><code>1
  \
   2
@@ -935,181 +941,59 @@ https://github.com/alex-shpak/hugo-book
         5
          \
           6
-</code></pre>
-<h2 id="题目大意">
-  题目大意
-  <a class="anchor" href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f">#</a>
+</code></pre><h2 id="题解">
+  题解
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3">#</a>
 </h2>
-<p>给定一个二叉树，原地将它展开为链表。</p>
-<h2 id="解题思路">
-  解题思路
-  <a class="anchor" href="#%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af">#</a>
-</h2>
-<ul>
-<li>
-<p>要求把二叉树“打平”，按照先根遍历的顺序，把树的结点都放在右结点中。</p>
-</li>
-<li>
-<p>按照递归和非递归思路实现即可。</p>
-</li>
-<li>
-<p>递归的思路可以这么想：倒序遍历一颗树，即是先遍历右孩子，然后遍历左孩子，最后再遍历根节点。</p>
-<pre><code>          1
-     / \
-    2   5
-   / \   \
-  3   4   6
-  -----------        
-  pre = 5
-  cur = 4
-    
-      1
-     / 
-    2   
-   / \   
-  3   4
-       \
-        5
-         \
-          6
-  -----------        
-  pre = 4
-  cur = 3
-    
-      1
-     / 
-    2   
-   /   
-  3 
-   \
-    4
-     \
-      5
-       \
-        6
-  -----------        
-  cur = 2
-  pre = 3
-    
-      1
-     / 
-    2   
-     \
-      3 
-       \
-        4
-         \
-          5
-           \
-            6
-  -----------        
-  cur = 1
-  pre = 2
-    
-  1
-   \
-    2
-     \
-      3
-       \
-        4
-         \
-          5
-           \
-            6
-</code></pre>
-</li>
-<li>
-<p>可以先仿造先根遍历的代码，写出这个倒序遍历的逻辑：</p>
-<pre><code>  public void flatten(TreeNode root) {
-      if (root == null)
-          return;
-      flatten(root.right);
-      flatten(root.left);
-  }
-</code></pre>
-</li>
-<li>
-<p>实现了倒序遍历的逻辑以后，再进行结点之间的拼接：</p>
-<pre><code>  private TreeNode prev = null;
-    
-  public void flatten(TreeNode root) {
-      if (root == null)
-          return;
-      flatten(root.right);
-      flatten(root.left);
-      root.right = prev;
-      root.left = null;
-      prev = root;
-  }
-</code></pre>
-</li>
-</ul>
-<h2 id="代码">
-  代码
-  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
-<span style="color:#f92672">package</span> <span style="color:#a6e22e">leetcode</span>
-
-<span style="color:#75715e">/**
+<h3 id="题解一二叉树前序遍历dfs">
+  题解一：二叉树前序遍历（DFS）
+  <a class="anchor" href="#%e9%a2%98%e8%a7%a3%e4%b8%80%e4%ba%8c%e5%8f%89%e6%a0%91%e5%89%8d%e5%ba%8f%e9%81%8d%e5%8e%86dfs">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * Definition for a binary tree node.
-</span><span style="color:#75715e"> * type TreeNode struct {
-</span><span style="color:#75715e"> *     Val int
-</span><span style="color:#75715e"> *     Left *TreeNode
-</span><span style="color:#75715e"> *     Right *TreeNode
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode() {}
+</span><span style="color:#75715e"> *     TreeNode(int val) { this.val = val; }
+</span><span style="color:#75715e"> *     TreeNode(int val, TreeNode left, TreeNode right) {
+</span><span style="color:#75715e"> *         this.val = val;
+</span><span style="color:#75715e"> *         this.left = left;
+</span><span style="color:#75715e"> *         this.right = right;
+</span><span style="color:#75715e"> *     }
 </span><span style="color:#75715e"> * }
 </span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">flatten</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;();</span>
+        preOrderTraversal<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> list<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            TreeNode prev <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">),</span> current <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+            prev<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+            prev<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> current<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
 
-<span style="color:#75715e">// 解法一 非递归
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">flatten</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) {
-	<span style="color:#a6e22e">list</span>, <span style="color:#a6e22e">cur</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{}, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">TreeNode</span>{}
-	<span style="color:#a6e22e">preorder</span>(<span style="color:#a6e22e">root</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">list</span>)
-	<span style="color:#a6e22e">cur</span> = <span style="color:#a6e22e">root</span>
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">list</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-		<span style="color:#a6e22e">cur</span>.<span style="color:#a6e22e">Left</span> = <span style="color:#66d9ef">nil</span>
-		<span style="color:#a6e22e">cur</span>.<span style="color:#a6e22e">Right</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">TreeNode</span>{<span style="color:#a6e22e">Val</span>: <span style="color:#a6e22e">list</span>[<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">Left</span>: <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">Right</span>: <span style="color:#66d9ef">nil</span>}
-		<span style="color:#a6e22e">cur</span> = <span style="color:#a6e22e">cur</span>.<span style="color:#a6e22e">Right</span>
-	}
-	<span style="color:#66d9ef">return</span>
-}
-
-<span style="color:#75715e">// 解法二 递归
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">flatten1</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> (<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>) {
-		<span style="color:#66d9ef">return</span>
-	}
-	<span style="color:#a6e22e">flatten</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>)
-	<span style="color:#a6e22e">flatten</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>)
-	<span style="color:#a6e22e">currRight</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>
-	<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span> = <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>
-	<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span> = <span style="color:#66d9ef">nil</span>
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">root</span> = <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>
-	}
-	<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span> = <span style="color:#a6e22e">currRight</span>
-}
-
-<span style="color:#75715e">// 解法三 递归
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">flatten2</span>(<span style="color:#a6e22e">root</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span>
-	}
-	<span style="color:#a6e22e">flatten</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span>
-	}
-	<span style="color:#a6e22e">flatten</span>(<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>)
-	<span style="color:#a6e22e">p</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">p</span> = <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Right</span>
-	}
-	<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Right</span> = <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span>
-	<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Right</span> = <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span>
-	<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">Left</span> = <span style="color:#66d9ef">nil</span>
-}
-
-</code></pre></div></article>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">preOrderTraversal</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> list<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">);</span>
+        preOrderTraversal<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> list<span style="color:#f92672">);</span>
+        preOrderTraversal<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> list<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>复杂度分析</strong></p>
+<ul>
+<li>
+<p>时间复杂度：</p>
+</li>
+<li>
+<p>空间复杂度：</p>
+</li>
+</ul>
+</article>
  
       
 
@@ -1119,9 +1003,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/a7377273c0f6cbe691676b820e68cba67fd3f353" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/c89901a78d2f5f40129da3175b3a5da80b8eff25" title='Last modified by Zonglei Dong | Jan 19, 2021' target="_blank" rel="noopener">
       <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 26, 2020</span>
+      <span>Jan 19, 2021</span>
     </a>
   </div>
 
