@@ -1153,12 +1153,12 @@ Example:
       <description>110. 平衡二叉树 #  Difficulty: 简单
 给定一个二叉树，判断它是否是高度平衡的二叉树。
 本题中，一棵高度平衡二叉树定义为：
- 一个二叉树_每个节点 _的左右两个子树的高度差的绝对值不超过 1 。
+ 一个二叉树 每个节点 的左右两个子树的高度差的绝对值不超过 1 。
  示例 1：
  输入：root = [3,9,20,null,null,15,7] 输出：true 示例 2：
  输入：root = [1,2,2,3,3,null,null,4,4] 输出：false 示例 3：
 输入：root = [] 输出：true 提示：
- 树中的节点数在范围 [0, 5000] 内 -10&amp;lt;sup&amp;gt;4&amp;lt;/sup&amp;gt; &amp;lt;= Node.val &amp;lt;= 10&amp;lt;sup&amp;gt;4&amp;lt;/sup&amp;gt;  题解 #  解法一：递归求解（自顶向下） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode() {} * TreeNode(int val) { this.</description>
+ 树中的节点数在范围 [0, 5000] 内 $-10^4$ &amp;lt;= Node.val &amp;lt;= $10^4$  题解 #  解法一：递归求解（自顶向下） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode() {} * TreeNode(int val) { this.</description>
     </item>
     
     <item>
@@ -3087,6 +3087,20 @@ Find the number of boomerangs. You may assume that n will be at most 500 and coo
       <description>448. Find All Numbers Disappeared in an Array #  题目 #  Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 Find all the elements of [1, n] inclusive that do not appear in this array.
 Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dongzl.github.io/leetcode-java/04_Leetcode/0450.Delete-Node-In-A-Bst/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dongzl.github.io/leetcode-java/04_Leetcode/0450.Delete-Node-In-A-Bst/</guid>
+      <description>450. 删除二叉搜索树中的节点 #  Difficulty: 中等
+给定一个二叉搜索树的根节点 root 和一个值 key，删除二叉搜索树中的 **key **对应的节点，并保证二叉搜索树的性质不变。返回二叉搜索树（有可能被更新）的根节点的引用。
+一般来说，删除节点可分为两个步骤：
+ 首先找到需要删除的节点； 如果找到了，删除它。  说明： 要求算法时间复杂度为 O(h)，h 为树的高度。
+示例:
+root = [5,3,6,2,4,null,7] key = 3 5 / \ 3 6 / \ \ 2 4 7 给定需要删除的节点值是 3，所以我们首先找到 3 这个节点，然后删除它。 一个正确的答案是 [5,4,6,2,null,null,7], 如下图所示。 5 / \ 4 6 / \ 2 7 另一个正确答案是 [5,2,6,null,4,null,7]。 5 / \ 2 6 \ \ 4 7 题解 #  题解一： #  /** * Definition for a binary tree node.</description>
     </item>
     
     <item>

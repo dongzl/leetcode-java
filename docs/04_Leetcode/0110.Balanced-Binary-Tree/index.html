@@ -7,30 +7,30 @@
 <meta name="description" content="110. 平衡二叉树 #  Difficulty: 简单
 给定一个二叉树，判断它是否是高度平衡的二叉树。
 本题中，一棵高度平衡二叉树定义为：
- 一个二叉树_每个节点 _的左右两个子树的高度差的绝对值不超过 1 。
+ 一个二叉树 每个节点 的左右两个子树的高度差的绝对值不超过 1 。
  示例 1：
  输入：root = [3,9,20,null,null,15,7] 输出：true 示例 2：
  输入：root = [1,2,2,3,3,null,null,4,4] 输出：false 示例 3：
 输入：root = [] 输出：true 提示：
- 树中的节点数在范围 [0, 5000] 内 -10&lt;sup&gt;4&lt;/sup&gt; &lt;= Node.val &lt;= 10&lt;sup&gt;4&lt;/sup&gt;  题解 #  解法一：递归求解（自顶向下） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode() {} * TreeNode(int val) { this.">
+ 树中的节点数在范围 [0, 5000] 内 $-10^4$ &lt;= Node.val &lt;= $10^4$  题解 #  解法一：递归求解（自顶向下） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode() {} * TreeNode(int val) { this.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
 <meta property="og:description" content="110. 平衡二叉树 #  Difficulty: 简单
 给定一个二叉树，判断它是否是高度平衡的二叉树。
 本题中，一棵高度平衡二叉树定义为：
- 一个二叉树_每个节点 _的左右两个子树的高度差的绝对值不超过 1 。
+ 一个二叉树 每个节点 的左右两个子树的高度差的绝对值不超过 1 。
  示例 1：
  输入：root = [3,9,20,null,null,15,7] 输出：true 示例 2：
  输入：root = [1,2,2,3,3,null,null,4,4] 输出：false 示例 3：
 输入：root = [] 输出：true 提示：
- 树中的节点数在范围 [0, 5000] 内 -10&lt;sup&gt;4&lt;/sup&gt; &lt;= Node.val &lt;= 10&lt;sup&gt;4&lt;/sup&gt;  题解 #  解法一：递归求解（自顶向下） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode() {} * TreeNode(int val) { this." />
+ 树中的节点数在范围 [0, 5000] 内 $-10^4$ &lt;= Node.val &lt;= $10^4$  题解 #  解法一：递归求解（自顶向下） #  /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode() {} * TreeNode(int val) { this." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dongzl.github.io/leetcode-java/04_Leetcode/0110.Balanced-Binary-Tree/" />
-<meta property="article:modified_time" content="2020-11-26T18:30:23+08:00" />
+<meta property="article:modified_time" content="2021-02-24T14:13:52+08:00" />
 <title>0110. Balanced Binary Tree | LeetCode Cookbook</title>
 <link rel="manifest" href="/leetcode-java/manifest.json">
 <link rel="icon" href="/leetcode-java/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/leetcode-java/book.min.1cf8e09514d081e98d59a10c37d68862354c1b636fbdab1bfc1053e747f15b4c.css" integrity="sha256-HPjglRTQgemNWaEMN9aIYjVMG2Nvvasb/BBT50fxW0w=">
-<script defer src="/leetcode-java/en.search.min.eee79e0c10bee0e0a027f09dca6aeb54324bf9bd946ecd142515f8f2d701f46f.js" integrity="sha256-7ueeDBC&#43;4OCgJ/CdymrrVDJL&#43;b2Ubs0UJRX48tcB9G8="></script>
+<script defer src="/leetcode-java/en.search.min.a621e107fd493049dad2c866e38a8beba5bfd825df337fcaa7f80452cd844843.js" integrity="sha256-piHhB/1JMEna0shm44qL66W/2CXfM3/Kp/gEUs2ESEM="></script>
 
 
 <script async>
@@ -813,6 +813,8 @@ https://github.com/alex-shpak/hugo-book
 <li>
   <a href="/leetcode-java/04_Leetcode/0297.Serialize-And-Deserialize-Binary-Tree/">0297.二叉树的序列化与反序列化</a></li>
 <li>
+  <a href="/leetcode-java/04_Leetcode/0450.Delete-Node-In-A-Bst/">0450.删除二叉搜索树中的节点</a></li>
+<li>
   <a href="/leetcode-java/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal/">0589.N叉树的前序遍历</a></li>
 <li>
   <a href="/leetcode-java/04_Leetcode/0606.Construct-String-From-Binary-Tree/">0606.根据二叉树创建字符串</a></li>
@@ -933,7 +935,7 @@ https://github.com/alex-shpak/hugo-book
 <p>给定一个二叉树，判断它是否是高度平衡的二叉树。</p>
 <p>本题中，一棵高度平衡二叉树定义为：</p>
 <blockquote>
-<p>一个二叉树_每个节点 _的左右两个子树的高度差的绝对值不超过 1 。</p>
+<p>一个二叉树 <em>每个节点</em> 的左右两个子树的高度差的绝对值不超过 1 。</p>
 </blockquote>
 <p><strong>示例 1：</strong></p>
 <p>
@@ -951,7 +953,7 @@ https://github.com/alex-shpak/hugo-book
 </code></pre><p><strong>提示：</strong></p>
 <ul>
 <li>树中的节点数在范围 <code>[0, 5000]</code> 内</li>
-<li><code>-10&lt;sup&gt;4&lt;/sup&gt; &lt;= Node.val &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+<li><code>$-10^4$ &lt;= Node.val &lt;= $10^4$</code></li>
 </ul>
 <h2 id="题解">
   题解
@@ -992,7 +994,7 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><ul>
-<li>时间复杂度：O(n2)</li>
+<li>时间复杂度：O($n^2$)</li>
 <li>空间复杂度：O(n)</li>
 </ul>
 <h3 id="解法二递归求解自底向上">
@@ -1040,9 +1042,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/8ca97a85aa9d1f93f95dcfcba71c0a6b6651fe6f" title='Last modified by Zonglei Dong | Nov 26, 2020' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/dongzl/leetcode-java/commit/4288164b1596fc13ebcc040f761428913be52939" title='Last modified by Zonglei Dong | Feb 24, 2021' target="_blank" rel="noopener">
       <img src="/leetcode-java/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Nov 26, 2020</span>
+      <span>Feb 24, 2021</span>
     </a>
   </div>
 
@@ -1084,6 +1086,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="busuanzi_container_site_pv">本站总访问量: <span id="busuanzi_value_site_pv"></span> &nbsp;次</span>
 <span id="busuanzi_container_site_uv">您是本站第 <span id="busuanzi_value_site_uv"></span> &nbsp;位访问者</span>
 </div>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
         
