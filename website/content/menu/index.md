@@ -35,6 +35,7 @@ headless: true
   - [0112.路径总和]({{< relref "/04_Leetcode/0112.Path-Sum.md" >}})
   - [0114.二叉树展开为链表]({{< relref "/04_Leetcode/0114.Flatten-Binary-Tree-to-Linked-List.md" >}})
   - [0222.完全二叉树的节点个数]({{< relref "/04_Leetcode/0222.Count-Complete-Tree-Nodes.md" >}})
+  - [0230.二叉搜索树中第K小的元素]({{< relref "/04_Leetcode/0230.Kth-Smallest-Element-in-a-BST.md" >}})
   - [0297.二叉树的序列化与反序列化]({{< relref "/04_Leetcode/0297.Serialize-And-Deserialize-Binary-Tree.md" >}})
   - [0450.删除二叉搜索树中的节点]({{< relref "/04_Leetcode/0450.Delete-Node-In-A-Bst.md" >}})
   - [0589.N叉树的前序遍历]({{< relref "/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal.md" >}})
