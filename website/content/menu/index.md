@@ -56,6 +56,7 @@ headless: true
   - [1530.好叶子节点对的数量]({{< relref "/04_Leetcode/1530.Number-Of-Good-Leaf-Nodes-Pairs.md" >}})
   - [面试题.04.03.特定深度节点链表]({{< relref "/04_Leetcode/Interview.04.03.List-Of-Depth-Lcci.md" >}})
   - [面试题.04.05.合法二叉搜索树]({{< relref "/04_Leetcode/Interview.04.05.Legal-Binary-Search-Tree-Lcci.md" >}})
+  - [面试题.04.08.首个共同祖先]({{< relref "/04_Leetcode/Interview.04.08.First-Common-Ancestor-Lcci.md" >}})
   - [面试题.04.12.求和路径]({{< relref "/04_Leetcode/Interview.04.12.Paths-With-Sum-Lcci.md" >}})
   - [剑指.Offer.26.树的子结构]({{< relref "/04_Leetcode/Offer.26.Shu-De-Zi-Jie-Gou-Lcof.md" >}})
   - [剑指.Offer.27.二叉树的镜像]({{< relref "/04_Leetcode/Offer.27.Er-Cha-Shu-De-Jing-Xiang-Lcof.md" >}})
