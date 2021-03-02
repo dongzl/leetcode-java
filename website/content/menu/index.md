@@ -48,6 +48,7 @@ headless: true
   - [0897.递增顺序查找树]({{< relref "/04_Leetcode/0897.Increasing-Order-Search-Tree.md" >}})
   - [0919.完全二叉树插入器]({{< relref "/04_Leetcode/0919.Complete-Binary-Tree-Inserter.md" >}})
   - [0938.二叉搜索树的范围和]({{< relref "/04_Leetcode/0938.Range-Sum-Of-Bst.md" >}})
+  - [0958.二叉树的完全性检验]({{< relref "/04_Leetcode/0958.Check-Completeness-Of-A-Binary-Tree.md" >}})
   - [0979.在二叉树中分配硬币]({{< relref "/04_Leetcode/0979.Distribute-Coins-in-Binary-Tree.md" >}})
   - [0998.最大二叉树-II]({{< relref "/04_Leetcode/0998.Maximum-Binary-Tree-II.md" >}})
   - [1022.从根到叶的二进制数之和]({{< relref "/04_Leetcode/1022.Sum-Of-Root-To-Leaf-Binary-Numbers.md" >}})
