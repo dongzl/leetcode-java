@@ -42,6 +42,7 @@ headless: true
   - [0589.N叉树的前序遍历]({{< relref "/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal.md" >}})
   - [0606.根据二叉树创建字符串]({{< relref "/04_Leetcode/0606.Construct-String-From-Binary-Tree.md" >}})
   - [0617.合并二叉树]({{< relref "/04_Leetcode/0617.Merge-Two-Binary-Trees.md" >}})
+  - [0662.二叉树最大宽度]({{< relref "/04_Leetcode/0662.Maximum-Width-of-Binary-Tree.md" >}})
   - [0814.二叉树剪枝]({{< relref "/04_Leetcode/0814.Binary-Tree-Pruning.md" >}})
   - [0865.具有所有最深节点的最小子树]({{< relref "/04_Leetcode/0865.Smallest-Subtree-With-All-The-Deepest-Nodes.md" >}})
   - [889.根据前序和后序遍历构造二叉树]({{< relref "/04_Leetcode/0889.Construct-Binary-Tree-From-Preorder-And-Postorder-Traversal.md" >}})
