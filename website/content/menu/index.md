@@ -42,6 +42,7 @@ headless: true
   - [0230.二叉搜索树中第K小的元素]({{< relref "/04_Leetcode/0230.Kth-Smallest-Element-in-a-BST.md" >}})
   - [0297.二叉树的序列化与反序列化]({{< relref "/04_Leetcode/0297.Serialize-And-Deserialize-Binary-Tree.md" >}})
   - [0450.删除二叉搜索树中的节点]({{< relref "/04_Leetcode/0450.Delete-Node-In-A-Bst.md" >}})
+  - [0513.找树左下角的值]({{< relref "/04_Leetcode/0513.Find-Bottom-Left-Tree-Value.md" >}})
   - [0589.N叉树的前序遍历]({{< relref "/04_Leetcode/0589.N-Ary-Tree-Preorder-Traversal.md" >}})
   - [0606.根据二叉树创建字符串]({{< relref "/04_Leetcode/0606.Construct-String-From-Binary-Tree.md" >}})
   - [0617.合并二叉树]({{< relref "/04_Leetcode/0617.Merge-Two-Binary-Trees.md" >}})
