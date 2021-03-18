@@ -58,6 +58,7 @@ headless: true
   - [0998.最大二叉树-II]({{< relref "/04_Leetcode/0998.Maximum-Binary-Tree-II.md" >}})
   - [1022.从根到叶的二进制数之和]({{< relref "/04_Leetcode/1022.Sum-Of-Root-To-Leaf-Binary-Numbers.md" >}})
   - [1026.节点与其祖先之间的最大差值]({{< relref "/04_Leetcode/1026.Maximum-Difference-Between-Node-and-Ancestor.md" >}})
+  - [1038.把二叉搜索树转换为累加树]({{< relref "/04_Leetcode/1038.Binary-Search-Tree-To-Greater-Sum-Tree.md" >}})  
   - [1261.在受污染的二叉树中查找元素]({{< relref "/04_Leetcode/1261.Find-Elements-In-A-Contaminated-Binary-Tree.md" >}})
   - [1302.层数最深叶子节点的和]({{< relref "/04_Leetcode/1302.Deepest-Leaves-Sum.md" >}})
   - [1315.祖父节点值为偶数的节点和]({{< relref "/04_Leetcode/1315.Sum-Of-Nodes-With-Even-Valued-Grandparent.md" >}})
