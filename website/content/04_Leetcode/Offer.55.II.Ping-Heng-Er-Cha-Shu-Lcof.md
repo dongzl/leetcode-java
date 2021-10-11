@@ -71,3 +71,50 @@ class Solution {
     }
 }
 ```
+
+#### 复杂度分析
+
+- 时间复杂度：
+
+- 空间复杂度
+
+### 题解二：
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+
+    private boolean balanced = true;
+
+    public boolean isBalanced(TreeNode root) {
+        height(root);
+        return balanced;
+    }
+
+    private int height(TreeNode node) {
+        if (node == null || !balanced) {
+            return 0;
+        }
+        int leftHeight = height(node.left);
+        int rightHeight = height(node.right);
+        if (Math.abs(leftHeight - rightHeight) > 1) {
+            balanced = false;
+        }
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+}
+```
+
+#### 复杂度分析
+
+- 时间复杂度：
+
+- 空间复杂度
