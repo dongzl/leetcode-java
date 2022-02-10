@@ -87,4 +87,5 @@ headless: true
 <br />
 
 - [第八章 其他]({{< relref "/03_Topic/DFS.md" >}})
+  - [70.爬楼梯]({{< relref "/04_Leetcode/0070.Climbing-Stairs.md" >}})
   - [面试题.01.08.零矩阵]({{< relref "/04_Leetcode/Interview.01.08.Zero-Matrix-Lcci.md" >}})
